@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products | Dongguan Yuda PCB Co., Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f7fb; color: #222; }
+    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 20px; font-weight: 600; }
+    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
+    h1 { font-size: 24px; color: #0b3f8c; margin-top: 0; }
+    h2 { font-size: 18px; color: #0b3f8c; margin-top: 18px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px 18px; margin-bottom: 18px;
+            box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
+    ul { padding-left: 18px; font-size: 14px; }
+    p { font-size: 14px; }
+    .note { font-size: 13px; color: #666; margin-top: 10px; }
+    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Yuda PCB</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>PCB Products</h1>
+      <p>
+        Yuda PCB provides a wide range of PCB products similar to mainstream Dongguan PCB manufacturers,
+        covering standard FR-4 PCBs, multilayer boards and quick-turn prototypes.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Standard FR-4 PCBs</h2>
+      <p>General purpose PCBs for consumer electronics, power supplies, chargers and more.</p>
+      <ul>
+        <li>Single-sided and double-sided PCBs</li>
+        <li>Common board thickness and copper thickness</li>
+        <li>Green solder mask as standard, other colors available</li>
+        <li>Suitable for a wide range of applications</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Multilayer PCBs</h2>
+      <p>Multilayer FR-4 PCBs for communication, control and other complex systems.</p>
+      <ul>
+        <li>4–8 layer standard multilayer PCBs (higher on request)</li>
+        <li>Stack-up design support and impedance control</li>
+        <li>Fine line and via capability for high-density designs</li>
+        <li>Stable performance for signal integrity</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Prototype & Small Batch PCBs</h2>
+      <p>
+        Fast and flexible prototype and small batch service helps you verify design and enter
+        the market quicker.
+      </p>
+      <ul>
+        <li>Quick response quotation and engineering review</li>
+        <li>Flexible order quantity, suitable for R&D projects</li>
+        <li>Short lead time for urgent orders</li>
+        <li>Same technology base as volume production</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>OEM/ODM PCB Manufacturing</h2>
+      <p>
+        We support OEM/ODM customers and long-term cooperation with distributors and traders,
+        including stable production and continuous quality improvement.
+      </p>
+      <p class="note">
+        For more detailed product information and specifications, please send your Gerber files and
+        requirements to <strong>sales@yudapcb.com</strong>. We will provide the best solution according
+        to your needs.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
