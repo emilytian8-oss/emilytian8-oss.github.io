@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Products | Dongguan Yuda PCB Co., Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f7fb; color: #222; }
-    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 20px; font-weight: 600; }
-    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
-    h1 { font-size: 24px; color: #0b3f8c; margin-top: 0; }
-    h2 { font-size: 18px; color: #0b3f8c; margin-top: 18px; }
-    .card { background: #fff; border-radius: 10px; padding: 20px 18px; margin-bottom: 18px;
-            box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
-    ul { padding-left: 18px; font-size: 14px; }
-    p { font-size: 14px; }
-    .note { font-size: 13px; color: #666; margin-top: 10px; }
-    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; }
+    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-size:20px; font-weight:600; }
+    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
+    nav a:hover { text-decoration:underline; }
+
+    .hero { background: linear-gradient(135deg,#0b67ff,#0f3f9f); color:#fff; padding:30px 20px; text-align:center; }
+    .hero h1 { margin:0 0 10px; font-size:28px; }
+    .hero p { margin:0; opacity:.95; max-width:900px; margin-left:auto;margin-right:auto; }
+
+    main { max-width:1100px; margin:30px auto; padding:0 18px 40px; }
+    .section-title { font-size:22px; color:#0b3f8c; margin:18px 0; }
+
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+    .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(15,35,95,0.08); transition:transform .18s; }
+    .card:hover { transform:translateY(-6px); }
+    .card img { width:100%; height:170px; object-fit:cover; display:block; }
+    .card .body { padding:16px; }
+    .card h3 { margin:0 0 8px; color:#0b3f8c; font-size:18px; }
+    .card p { margin:0 0 12px; font-size:14px; color:#333; line-height:1.6; }
+    .card a.btn { display:inline-block; padding:8px 12px; border-radius:6px; background:#0b67ff; color:#fff; text-decoration:none; font-weight:600; font-size:14px; }
+    footer { text-align:center; font-size:13px; color:#888; padding:22px 10px 36px; }
+    @media (max-width:600px){ .card img{height:140px;} .hero h1{font-size:22px;} }
   </style>
 </head>
 <body>
@@ -33,63 +46,119 @@
     </nav>
   </header>
 
+  <section class="hero">
+    <h1>Our PCB Products</h1>
+    <p>We provide a broad range of PCB solutions: multilayer, HDI, high-frequency, rigid-flex, blind/buried vias, impedance-controlled boards and hybrid laminates.</p>
+  </section>
+
   <main>
-    <section class="card">
-      <h1>PCB Products</h1>
-      <p>
-        Yuda PCB provides a wide range of PCB products similar to mainstream Dongguan PCB manufacturers,
-        covering standard FR-4 PCBs, multilayer boards and quick-turn prototypes.
-      </p>
-    </section>
+    <h2 class="section-title">Product Categories</h2>
 
-    <section class="card">
-      <h2>Standard FR-4 PCBs</h2>
-      <p>General purpose PCBs for consumer electronics, power supplies, chargers and more.</p>
-      <ul>
-        <li>Single-sided and double-sided PCBs</li>
-        <li>Common board thickness and copper thickness</li>
-        <li>Green solder mask as standard, other colors available</li>
-        <li>Suitable for a wide range of applications</li>
-      </ul>
-    </section>
+    <div class="grid">
 
-    <section class="card">
-      <h2>Multilayer PCBs</h2>
-      <p>Multilayer FR-4 PCBs for communication, control and other complex systems.</p>
-      <ul>
-        <li>4–8 layer standard multilayer PCBs (higher on request)</li>
-        <li>Stack-up design support and impedance control</li>
-        <li>Fine line and via capability for high-density designs</li>
-        <li>Stable performance for signal integrity</li>
-      </ul>
-    </section>
+      <div class="card">
+        <img src="multilayer.png" alt="Multilayer PCB">
+        <div class="body">
+          <h3>Multilayer PCB</h3>
+          <p>Standard multilayer boards for telecom, industrial and consumer applications. Typical 4–40 layers, custom stack-ups available.</p>
+          <a class="btn" href="products.html#multilayer">View</a>
+        </div>
+      </div>
 
-    <section class="card">
-      <h2>Prototype & Small Batch PCBs</h2>
-      <p>
-        Fast and flexible prototype and small batch service helps you verify design and enter
-        the market quicker.
-      </p>
-      <ul>
-        <li>Quick response quotation and engineering review</li>
-        <li>Flexible order quantity, suitable for R&D projects</li>
-        <li>Short lead time for urgent orders</li>
-        <li>Same technology base as volume production</li>
-      </ul>
-    </section>
+      <div class="card">
+        <img src="hdi.png" alt="HDI PCB">
+        <div class="body">
+          <h3>HDI PCB</h3>
+          <p>High Density Interconnect with microvias and fine lines. Support up to 3rd‑order HDI (3+N+3) and stacked vias.</p>
+          <a class="btn" href="products.html#hdi">View</a>
+        </div>
+      </div>
 
-    <section class="card">
-      <h2>OEM/ODM PCB Manufacturing</h2>
-      <p>
-        We support OEM/ODM customers and long-term cooperation with distributors and traders,
-        including stable production and continuous quality improvement.
-      </p>
-      <p class="note">
-        For more detailed product information and specifications, please send your Gerber files and
-        requirements to <strong>sales@yudapcb.com</strong>. We will provide the best solution according
-        to your needs.
-      </p>
-    </section>
+      <div class="card">
+        <img src="high-frequency.png" alt="High Frequency PCB">
+        <div class="body">
+          <h3>High-Frequency PCB</h3>
+          <p>RF and microwave PCBs using Rogers, PTFE and other low-loss laminates for high-speed signal integrity.</p>
+          <a class="btn" href="products.html#highfreq">View</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="hybrid.png" alt="Rigid-Flex / Hybrid PCB">
+        <div class="body">
+          <h3>Rigid-Flex & Hybrid PCB</h3>
+          <p>Rigid-flex and hybrid laminated boards combining rigid and flexible sections for compact, robust assemblies.</p>
+          <a class="btn" href="products.html#rigidflex">View</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="blind-buried.png" alt="Blind & Buried Via PCB">
+        <div class="body">
+          <h3>Blind & Buried Via PCB</h3>
+          <p>Blind, buried and stacked via capabilities for high-density boards and advanced layer interconnections.</p>
+          <a class="btn" href="products.html#vias">View</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="impedance.png" alt="Impedance Controlled PCB">
+        <div class="body">
+          <h3>Impedance Controlled PCB</h3>
+          <p>Controlled-impedance multilayer designs with tight tolerances for high-speed digital and RF applications.</p>
+          <a class="btn" href="products.html#impedance">View</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="multilayer.png" alt="Mixed / Custom PCB">
+        <div class="body">
+          <h3>Mixed / Custom Laminates</h3>
+          <p>Hybrid laminates and special material combinations (FR4 + Rogers, thick copper, metal-core options) on request.</p>
+          <a class="btn" href="products.html#custom">View</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 下面是每个分类的简短展开，可保留或移除 -->
+    <div style="margin-top:28px;">
+      <section id="multilayer" class="card" style="margin-bottom:14px;">
+        <h3>Multilayer PCB — Details</h3>
+        <p>Typical: 4–10 layers standard; up to 40 layers possible with engineering review. Surface finishes: ENIG, HASL, OSP.</p>
+      </section>
+
+      <section id="hdi" class="card" style="margin-bottom:14px;">
+        <h3>HDI PCB — Details</h3>
+        <p>Support microvias, buried/blind vias, laser via drilling, line/space down to design rules. 3rd-order HDI supported on request.</p>
+      </section>
+
+      <section id="highfreq" class="card" style="margin-bottom:14px;">
+        <h3>High-Frequency PCB — Details</h3>
+        <p>Materials: Rogers, PTFE, Taconic, etc. Controlled dielectric constant and low-loss materials for RF applications.</p>
+      </section>
+
+      <section id="rigidflex" class="card" style="margin-bottom:14px;">
+        <h3>Rigid-Flex / Hybrid — Details</h3>
+        <p>Single-sided flex, multi-layer rigid-flex, coverlay and thermal management available; design guidance provided.</p>
+      </section>
+
+      <section id="vias" class="card" style="margin-bottom:14px;">
+        <h3>Blind / Buried Vias — Details</h3>
+        <p>Blind and buried via drilling, via filling and stacked via processes supported for compact designs.</p>
+      </section>
+
+      <section id="impedance" class="card" style="margin-bottom:14px;">
+        <h3>Impedance Control — Details</h3>
+        <p>Impedance calculations and test reports, tolerance per request (typical ±8% or tighter by agreement).</p>
+      </section>
+
+      <section id="custom" class="card" style="margin-bottom:14px;">
+        <h3>Custom & Hybrid Laminates — Details</h3>
+        <p>Special laminates, thick copper, metal-core PCBs and mixed-material stackups available upon consultation.</p>
+      </section>
+    </div>
+
   </main>
 
   <footer>
