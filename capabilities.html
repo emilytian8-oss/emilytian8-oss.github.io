@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Capabilities | Dongguan Yuda PCB Co., Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f7fb; color: #222; }
-    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 20px; font-weight: 600; }
-    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
-    h1 { font-size: 24px; color: #0b3f8c; margin-top: 0; }
-    h2 { font-size: 18px; color: #0b3f8c; margin-top: 18px; }
-    .card { background: #fff; border-radius: 10px; padding: 20px 18px; margin-bottom: 18px;
-            box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
-    th, td { padding: 8px 6px; border-bottom: 1px solid #e0e4f0; text-align: left; }
-    th { background: #f0f3ff; font-weight: 600; }
-    ul { padding-left: 18px; font-size: 14px; }
-    p { font-size: 14px; }
-    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; }
+    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-size:20px; font-weight:600; }
+    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
+    nav a:hover { text-decoration:underline; }
+
+    .hero { background: linear-gradient(135deg, #0b67ff, #0f3f9f); color:#fff; padding:26px 20px; }
+    .hero h1 { margin:0 0 8px; font-size:26px; }
+    .hero p { margin:0; opacity:.95; max-width:1040px; }
+
+    main { max-width:1040px; margin:24px auto; padding:0 20px 40px; }
+    .card { background:#fff; border-radius:10px; padding:20px 18px; margin-bottom:18px; box-shadow:0 4px 10px rgba(15,35,95,.08); }
+    h2 { margin:0 0 10px; font-size:18px; color:#0b3f8c; }
+    p, li { font-size:14px; line-height:1.65; }
+    ul { padding-left:18px; margin:8px 0; }
+    .note { font-size:13px; color:#666; }
+
+    .table-img { margin-top:12px; text-align:center; }
+    .table-img img { max-width:100%; height:auto; border-radius:8px; border:1px solid #e6ebff; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; margin-top:10px; }
+    .mini { background:#f6f8ff; border:1px solid #e6ebff; border-radius:10px; padding:14px 12px; }
+    .mini strong { color:#0b3f8c; }
+
+    footer { text-align:center; font-size:13px; color:#888; padding:20px 10px 30px; }
+    code { background:#f2f4ff; padding:2px 6px; border-radius:6px; }
   </style>
 </head>
 <body>
@@ -35,90 +45,49 @@
     </nav>
   </header>
 
+  <section class="hero">
+    <h1>Manufacturing Capability</h1>
+    <p>
+      Below is our PCB manufacturing capability overview. For special materials, tighter tolerances,
+      or complex stackups, please email your Gerber files to <strong>sales@yudapcb.com</strong>.
+    </p>
+  </section>
+
   <main>
     <section class="card">
-      <h1>Manufacturing Capabilities</h1>
-      <p>
-        Yuda PCB has manufacturing capabilities similar to mainstream Dongguan PCB factories,
-        covering standard FR-4 PCBs and multilayer boards. The table below shows our general
-        capability range. For special requirements, please contact us for confirmation.
+      <h2>Capability Table</h2>
+      <p class="note">
+        Image-based table is provided for quick reference. If you want, I can also convert it into an
+        editable HTML table for better SEO.
+      </p>
+
+      <div class="table-img">
+        <img src="capability.png" alt="Yuda PCB Manufacturing Capability Table" />
+      </div>
+
+      <p class="note" style="margin-top:10px;">
+        If the image does not display, please confirm the file name matches exactly:
+        <code>capability.png</code> (case-sensitive) and it is in the same folder as <code>capabilities.html</code>.
       </p>
     </section>
 
     <section class="card">
-      <h2>Technical Capability Overview</h2>
-      <table>
-        <tr>
-          <th>Item</th>
-          <th>Capability</th>
-          <th>Remarks</th>
-        </tr>
-        <tr>
-          <td>Layer count</td>
-          <td>1–8 layers (higher on request)</td>
-          <td>Standard FR-4 multilayer PCBs</td>
-        </tr>
-        <tr>
-          <td>Board size</td>
-          <td>Max. panel size around 610 × 510 mm</td>
-          <td>Custom panelization available</td>
-        </tr>
-        <tr>
-          <td>Board thickness</td>
-          <td>0.6–2.0 mm (typical)</td>
-          <td>Other thickness can be discussed</td>
-        </tr>
-        <tr>
-          <td>Copper thickness</td>
-          <td>1 oz standard, up to 2 oz</td>
-          <td>Heavier copper on request</td>
-        </tr>
-        <tr>
-          <td>Min. trace / space</td>
-          <td>4 / 4 mil (0.10 / 0.10 mm)</td>
-          <td>Smaller design may be evaluated</td>
-        </tr>
-        <tr>
-          <td>Min. finished hole</td>
-          <td>0.20 mm</td>
-          <td>Via in pad and microvias on request</td>
-        </tr>
-        <tr>
-          <td>Surface finish</td>
-          <td>HASL, Lead-free HASL, ENIG</td>
-          <td>Other finishes can be discussed</td>
-        </tr>
-        <tr>
-          <td>Solder mask color</td>
-          <td>Green (standard), red, blue, black, white</td>
-          <td>Special colors require confirmation</td>
-        </tr>
-        <tr>
-          <td>Silkscreen color</td>
-          <td>White, black</td>
-          <td>Other colors on request</td>
-        </tr>
-        <tr>
-          <td>Testing</td>
-          <td>100% electrical test for batch orders</td>
-          <td>Flying probe or fixture test</td>
-        </tr>
-      </table>
+      <h2>Highlights</h2>
+      <div class="grid">
+        <div class="mini"><strong>Layer Count</strong><br>Up to 40 layers (engineering review required for high layer count)</div>
+        <div class="mini"><strong>HDI</strong><br>Up to <strong>3rd-order HDI</strong> (3-stage build-up)</div>
+        <div class="mini"><strong>Impedance</strong><br>Impedance control supported (tolerance per stackup confirmation)</div>
+        <div class="mini"><strong>Surface Finish</strong><br>Lead-free HASL, ENIG, OSP, etc. (see table for details)</div>
+      </div>
     </section>
 
     <section class="card">
-      <h2>Quality & Process Control</h2>
+      <h2>How to Request a Quote</h2>
       <ul>
-        <li>Incoming material inspection and supplier control</li>
-        <li>Process monitoring and inspection for each key step</li>
-        <li>AOI inspection for inner and outer layers (if applicable)</li>
-        <li>100% electrical test for volume orders</li>
-        <li>Final visual inspection and packaging</li>
+        <li>Email: <strong>sales@yudapcb.com</strong></li>
+        <li>Tel: <strong>+86 135 3804 3239</strong></li>
+        <li>Please include: layer count, material, thickness, copper weight, surface finish, solder mask color, quantity, and delivery requirement.</li>
       </ul>
-      <p>
-        We continuously improve our production process and quality system to provide stable and
-        reliable PCBs for long-term cooperation customers.
-      </p>
     </section>
   </main>
 
