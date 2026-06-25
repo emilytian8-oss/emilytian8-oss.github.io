@@ -13,28 +13,34 @@
 
     .hero { background: linear-gradient(135deg,#0b67ff,#0f3f9f); color:#fff; padding:30px 20px; text-align:center; }
     .hero h1 { margin:0 0 10px; font-size:28px; }
-    .hero p { margin:0; opacity:.95; max-width:900px; margin-left:auto;margin-right:auto; }
+    .hero p { margin:0; opacity:.95; max-width:900px; margin:0 auto; }
 
     main { max-width:1100px; margin:30px auto; padding:0 18px 40px; }
     .section-title { font-size:22px; color:#0b3f8c; margin:18px 0; }
 
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap:18px;
-    }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
     .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(15,35,95,0.08); transition:transform .18s; }
     .card:hover { transform:translateY(-6px); }
-    .card img { width:100%; height:170px; object-fit:cover; display:block; }
+    
+    /* 预览图高度固定，点击光标变为放大镜 */
+    .card img { width:100%; height:200px; object-fit: cover; display:block; cursor: zoom-in; }
+    
     .card .body { padding:16px; }
     .card h3 { margin:0 0 8px; color:#0b3f8c; font-size:18px; }
-    .card p { margin:0 0 12px; font-size:14px; color:#333; line-height:1.6; }
-    .card a.btn { display:inline-block; padding:8px 12px; border-radius:6px; background:#0b67ff; color:#fff; text-decoration:none; font-weight:600; font-size:14px; }
+    .card p { margin:0 0 15px; font-size:14px; color:#333; line-height:1.6; height: 4.8em; overflow: hidden; }
+    
+    .view-btn { display:inline-block; padding:8px 20px; border-radius:6px; background:#0b67ff; color:#fff; text-decoration:none; font-weight:600; font-size:14px; cursor: pointer; border:none; outline: none; }
+    .view-btn:hover { background: #004ecc; }
+
+    /* 全屏放大层样式 */
+    #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
+    #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
+
     footer { text-align:center; font-size:13px; color:#888; padding:22px 10px 36px; }
-    @media (max-width:600px){ .card img{height:140px;} .hero h1{font-size:22px;} }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Yuda PCB</div>
     <nav>
@@ -48,118 +54,90 @@
 
   <section class="hero">
     <h1>Our PCB Products</h1>
-    <p>We provide a broad range of PCB solutions: multilayer, HDI, high-frequency, rigid-flex, blind/buried vias, impedance-controlled boards and hybrid laminates.</p>
+    <p>Professional PCB solutions including Multilayer, HDI, High-Frequency, and more.</p>
   </section>
 
   <main>
     <h2 class="section-title">Product Categories</h2>
+    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">* Click on image or "View" button to see full size.</p>
 
     <div class="grid">
-
+      <!-- Multilayer PCB -->
       <div class="card">
-        <img src="multilayer.png" alt="Multilayer PCB">
+        <img src="multilayer.png" alt="Multilayer PCB" onclick="openImg(this.src)">
         <div class="body">
           <h3>Multilayer PCB</h3>
-          <p>Standard multilayer boards for telecom, industrial and consumer applications. Typical 4–40 layers, custom stack-ups available.</p>
-          <a class="btn" href="products.html#multilayer">View</a>
+          <p>Standard multilayer boards from 4 to 40 layers. Reliable performance for industrial and telecom applications.</p>
+          <button class="view-btn" onclick="openImg('multilayer.png')">View</button>
         </div>
       </div>
 
+      <!-- HDI PCB -->
       <div class="card">
-        <img src="hdi.png" alt="HDI PCB">
+        <img src="hdi.png" alt="HDI PCB" onclick="openImg(this.src)">
         <div class="body">
           <h3>HDI PCB</h3>
-          <p>High Density Interconnect with microvias and fine lines. Support up to 3rd‑order HDI (3+N+3) and stacked vias.</p>
-          <a class="btn" href="products.html#hdi">View</a>
+          <p>High Density Interconnect with microvias. Support up to 3rd-order HDI (3+N+3).</p>
+          <button class="view-btn" onclick="openImg('hdi.png')">View</button>
         </div>
       </div>
 
+      <!-- High Frequency PCB -->
       <div class="card">
-        <img src="high-frequency.png" alt="High Frequency PCB">
+        <img src="high-frequency.png" alt="High Frequency PCB" onclick="openImg(this.src)">
         <div class="body">
           <h3>High-Frequency PCB</h3>
-          <p>RF and microwave PCBs using Rogers, PTFE and other low-loss laminates for high-speed signal integrity.</p>
-          <a class="btn" href="products.html#highfreq">View</a>
+          <p>Using Rogers, PTFE materials for RF and high-speed signal applications.</p>
+          <button class="view-btn" onclick="openImg('high-frequency.png')">View</button>
         </div>
       </div>
 
+      <!-- Rigid-Flex PCB -->
       <div class="card">
-        <img src="hybrid.png" alt="Rigid-Flex / Hybrid PCB">
+        <img src="rigid-flex.png" alt="Rigid-Flex PCB" onclick="openImg(this.src)">
         <div class="body">
-          <h3>Rigid-Flex & Hybrid PCB</h3>
-          <p>Rigid-flex and hybrid laminated boards combining rigid and flexible sections for compact, robust assemblies.</p>
-          <a class="btn" href="products.html#rigidflex">View</a>
+          <h3>Rigid-Flex PCB</h3>
+          <p>Combination of rigid and flexible boards for compact and reliable device design.</p>
+          <button class="view-btn" onclick="openImg('rigid-flex.png')">View</button>
         </div>
       </div>
 
+      <!-- Blind & Buried Via PCB -->
       <div class="card">
-        <img src="blind-buried.png" alt="Blind & Buried Via PCB">
+        <img src="blind-buried.png" alt="Blind & Buried Via PCB" onclick="openImg(this.src)">
         <div class="body">
           <h3>Blind & Buried Via PCB</h3>
-          <p>Blind, buried and stacked via capabilities for high-density boards and advanced layer interconnections.</p>
-          <a class="btn" href="products.html#vias">View</a>
+          <p>Advanced via structures for high-density interconnections.</p>
+          <button class="view-btn" onclick="openImg('blind-buried.png')">View</button>
         </div>
       </div>
 
+      <!-- Impedance PCB -->
       <div class="card">
-        <img src="impedance.png" alt="Impedance Controlled PCB">
+        <img src="impedance.png" alt="Impedance PCB" onclick="openImg(this.src)">
         <div class="body">
-          <h3>Impedance Controlled PCB</h3>
-          <p>Controlled-impedance multilayer designs with tight tolerances for high-speed digital and RF applications.</p>
-          <a class="btn" href="products.html#impedance">View</a>
+          <h3>Impedance PCB</h3>
+          <p>Tight tolerance control for high-speed digital and RF signal integrity.</p>
+          <button class="view-btn" onclick="openImg('impedance.png')">View</button>
         </div>
       </div>
 
+      <!-- Hybrid PCB -->
       <div class="card">
-        <img src="multilayer.png" alt="Mixed / Custom PCB">
+        <img src="hybrid.png" alt="Hybrid PCB" onclick="openImg(this.src)">
         <div class="body">
-          <h3>Mixed / Custom Laminates</h3>
-          <p>Hybrid laminates and special material combinations (FR4 + Rogers, thick copper, metal-core options) on request.</p>
-          <a class="btn" href="products.html#custom">View</a>
+          <h3>Hybrid Lamination PCB</h3>
+          <p>Special lamination combining different materials (FR4 + Rogers/Aluminum).</p>
+          <button class="view-btn" onclick="openImg('hybrid.png')">View</button>
         </div>
       </div>
-
     </div>
-
-    <!-- 下面是每个分类的简短展开，可保留或移除 -->
-    <div style="margin-top:28px;">
-      <section id="multilayer" class="card" style="margin-bottom:14px;">
-        <h3>Multilayer PCB — Details</h3>
-        <p>Typical: 4–10 layers standard; up to 40 layers possible with engineering review. Surface finishes: ENIG, HASL, OSP.</p>
-      </section>
-
-      <section id="hdi" class="card" style="margin-bottom:14px;">
-        <h3>HDI PCB — Details</h3>
-        <p>Support microvias, buried/blind vias, laser via drilling, line/space down to design rules. 3rd-order HDI supported on request.</p>
-      </section>
-
-      <section id="highfreq" class="card" style="margin-bottom:14px;">
-        <h3>High-Frequency PCB — Details</h3>
-        <p>Materials: Rogers, PTFE, Taconic, etc. Controlled dielectric constant and low-loss materials for RF applications.</p>
-      </section>
-
-      <section id="rigidflex" class="card" style="margin-bottom:14px;">
-        <h3>Rigid-Flex / Hybrid — Details</h3>
-        <p>Single-sided flex, multi-layer rigid-flex, coverlay and thermal management available; design guidance provided.</p>
-      </section>
-
-      <section id="vias" class="card" style="margin-bottom:14px;">
-        <h3>Blind / Buried Vias — Details</h3>
-        <p>Blind and buried via drilling, via filling and stacked via processes supported for compact designs.</p>
-      </section>
-
-      <section id="impedance" class="card" style="margin-bottom:14px;">
-        <h3>Impedance Control — Details</h3>
-        <p>Impedance calculations and test reports, tolerance per request (typical ±8% or tighter by agreement).</p>
-      </section>
-
-      <section id="custom" class="card" style="margin-bottom:14px;">
-        <h3>Custom & Hybrid Laminates — Details</h3>
-        <p>Special laminates, thick copper, metal-core PCBs and mixed-material stackups available upon consultation.</p>
-      </section>
-    </div>
-
   </main>
+
+  <!-- 放大图片显示的黑底层 -->
+  <div id="overlay" onclick="this.style.display='none'">
+    <img id="overlayImg" src="">
+  </div>
 
   <footer>
     © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
@@ -167,6 +145,12 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // 放大图片函数
+    function openImg(src) {
+      document.getElementById('overlayImg').src = src;
+      document.getElementById('overlay').style.display = 'flex';
+    }
   </script>
 </body>
 </html>
