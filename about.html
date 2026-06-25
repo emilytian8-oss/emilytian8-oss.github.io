@@ -12,4 +12,83 @@
     nav a:hover { text-decoration: underline; }
     main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
     h1 { font-size: 24px; color: #0b3f8c; margin-top: 0; }
-    h2 { font
+    h2 { font-size: 18px; color: #0b3f8c; margin-top: 18px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px 18px; margin-bottom: 18px;
+            box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
+    p, li { font-size: 14px; line-height: 1.6; }
+    ul { padding-left: 18px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; font-size: 14px; }
+    .stat-item { background: #eef2ff; border-radius: 8px; padding: 8px 10px; }
+    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Yuda PCB</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>About Dongguan Yuda PCB Co., Ltd</h1>
+      <p>
+        Dongguan Yuda PCB Co., Ltd is a professional printed circuit board (PCB) manufacturer
+        located in Dongguan, Guangdong Province, China. Founded in 2015, Yuda PCB has grown
+        into a stable and reliable PCB supplier with around 500 employees and a production
+        area of about 8,000 m².
+      </p>
+
+      <p style="margin-top: 12px; text-align: center;">
+        <img src="images/factory.jpg" alt="Yuda PCB factory building" style="max-width:100%; border-radius:8px;">
+      </p>
+
+      <p>
+        We are dedicated to providing cost-effective and high-quality PCB fabrication services
+        for customers in different industries, including consumer electronics, communication,
+        industrial control, power electronics and more. With rich manufacturing experience and
+        strict quality control, we aim to be your long-term and trustworthy PCB partner in China.
+      </p>
+
+      <div class="stats">
+        <div class="stat-item"><strong>Founded:</strong> 2015</div>
+        <div class="stat-item"><strong>Employees:</strong> approx. 500</div>
+        <div class="stat-item"><strong>Plant area:</strong> about 8,000 m²</div>
+        <div class="stat-item"><strong>Location:</strong> Dongguan, Guangdong, China</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Main Business</h2>
+      <ul>
+        <li>Single-sided and double-sided FR‑4 PCBs</li>
+        <li>4–8 layer standard multilayer PCBs (higher on request)</li>
+        <li>Prototype, small batch and volume production</li>
+        <li>Quick-turn prototype service for urgent projects</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Tel:</strong> +86 135 3804 3239</li>
+        <li><strong>Email:</strong> sales@yudapcb.com</li>
+        <li><strong>Website:</strong> https://yudapcb.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
