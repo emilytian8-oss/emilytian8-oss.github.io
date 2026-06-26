@@ -16,28 +16,23 @@
         h1, h2, h3 { color: #0b3f8c; margin-top: 0; }
         h2 { border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; text-transform: uppercase; }
         
-        /* Intro Section */
         .intro-flex { display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; }
         .intro-text { flex: 1.5; min-width: 320px; }
         .intro-img { flex: 1; min-width: 320px; text-align: center; }
         .intro-img img { max-width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .intro-text p { font-size: 15px; text-align: justify; }
+        .intro-text p { font-size: 15px; text-align: justify; margin-bottom: 15px; }
 
-        /* Services (What Can We Do) */
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         .service-item { border: 1px solid #edf2f7; padding: 20px; border-radius: 8px; background: #fff; transition: 0.3s; }
-        .service-item:hover { transform: translateY(-5px); border-color: #0b67ff; box-shadow: 0 5px 15px rgba(11,103,255,0.1); }
-        .service-item h4 { margin-top: 0; color: #0b67ff; font-size: 17px; margin-bottom: 10px; }
+        .service-item h4 { margin: 0 0 10px 0; color: #0b67ff; font-size: 17px; }
         .service-item p { font-size: 13px; color: #555; margin: 0; }
 
-        /* Workflow */
         .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .workflow-box { background: #f8faff; padding: 25px; border-radius: 8px; border: 1px solid #eef2f8; }
         .step-list { list-style: none; padding: 0; margin: 0; }
         .step-list li { font-size: 13px; padding: 6px 0; border-bottom: 1px dashed #cedae8; display: flex; align-items: center; }
         .step-num { background: #0b67ff; color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 10px; flex-shrink: 0; }
 
-        /* QA & Advantages */
         .qa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .qa-card { background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; }
         .qa-card h4 { margin: 0 0 8px 0; color: #0b67ff; font-size: 14px; border-bottom: 2px solid #f0f4f8; padding-bottom: 5px; }
@@ -52,4 +47,122 @@
         footer { text-align: center; font-size: 13px; color: #888; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; }
         .footer-address { max-width: 800px; margin: 10px auto; color: #444; }
 
-        @media (max-width: 768px) { .workflow-grid { grid-template-columns: 1fr;
+        @media (max-width: 768px) { .workflow-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Yuda PCB</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    
+    <!-- Section 1: Intro -->
+    <section class="section-card">
+        <div class="intro-flex">
+            <div class="intro-text">
+                <h2>About Yuda PCB</h2>
+                <p><strong>Dongguan Yuda PCB Co., Ltd</strong> is a professional printed circuit board (PCB) manufacturer located in Dongguan, Guangdong Province, China. Founded in 2015, Yuda PCB has grown into a stable and reliable PCB supplier with around 500 employees and a production area of about 8,000 m².</p>
+                <p>We are dedicated to providing cost-effective and high-quality PCB fabrication services for customers in different industries, including consumer electronics, communication, industrial control, power electronics and more. With rich manufacturing experience and strict quality control, we aim to be your long-term and trustworthy PCB partner in China.</p>
+            </div>
+            <div class="intro-img">
+                <img src="factory.jpg" alt="Yuda PCB Factory">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: What Can We Do -->
+    <section class="section-card">
+        <h2>What Can We Do?</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h4>CAD Design</h4>
+                <p>Professional high-speed PCB layout design with 30+ expert designers.</p>
+            </div>
+            <div class="service-item">
+                <h4>PCBA Processing</h4>
+                <p>One-stop SMT assembly, component sourcing, and reliability testing.</p>
+            </div>
+            <div class="service-item">
+                <h4>Prototype Mfg</h4>
+                <p>Rapid 2-40 layer prototype small-batch production with fast delivery.</p>
+            </div>
+            <div class="service-item">
+                <h4>Mass Production</h4>
+                <p>Integrated industry resources for high-efficiency mass manufacturing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Workflow -->
+    <section class="section-card">
+        <h2>Manufacturing Workflow</h2>
+        <div class="workflow-grid">
+            <div class="workflow-box">
+                <h3>Standard PTH Flow</h3>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span>Cutting & Baking</li>
+                    <li><span class="step-num">2</span>Inner Image & Etching</li>
+                    <li><span class="step-num">3</span>AOI & Lamination</li>
+                    <li><span class="step-num">4</span>Drilling & Plating</li>
+                    <li><span class="step-num">5</span>Solder Mask & Legend</li>
+                    <li><span class="step-num">6</span>Surface Finish</li>
+                </ul>
+            </div>
+            <div class="workflow-box">
+                <h3>Advanced HDI Flow</h3>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span>Laser Drilling</li>
+                    <li><span class="step-num">2</span>Plasma Desmearing</li>
+                    <li><span class="step-num">3</span>Blind Via AOI</li>
+                    <li><span class="step-num">4</span>Resin Plugging</li>
+                    <li><span class="step-num">5</span>Pattern Plating</li>
+                    <li><span class="step-num">6</span>Final Testing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: QA & Advantages -->
+    <section class="section-card">
+        <h2>Quality & Advantages</h2>
+        <div class="qa-grid">
+            <div class="qa-card"><h4>Process</h4><p>X-RAY, AOI, SPI, FT</p></div>
+            <div class="qa-card"><h4>Material</h4><p>MRB, MES, AVL System</p></div>
+            <div class="qa-card"><h4>System</h4><p>ECN, PCN, 4M Control</p></div>
+            <div class="qa-card"><h4>NPI</h4><p>DFM & NPI Meetings</p></div>
+        </div>
+        <div class="adv-grid">
+            <div class="adv-item">
+                <div class="adv-icon">95%</div>
+                <div class="adv-text"><h4>Delivery</h4><p>95% on-time delivery rate</p></div>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">1H</div>
+                <div class="adv-text"><h4>Response</h4><p>Feedback within 1 hour</p></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© <span id="year"></span> Dongguan Yuda PCB Co., Ltd | All Rights Reserved</p>
+    <div class="footer-address">
+        Email: sales@yudapcb.com | Tel: +86 135 3804 3239<br>
+        Address: Room 1102, Chengjin C-PARK, Kexin Road, Dalingshan Town, Dongguan, Guangdong, China
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
