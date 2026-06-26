@@ -1,92 +1,55 @@
-<!-- Quality and Advantages Section -->
-<style>
-    .qa-section { background: #fff; padding: 40px 20px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-top: 30px; }
-    .qa-container { display: flex; flex-wrap: wrap; gap: 30px; }
-    .qa-left, .qa-right { flex: 1; min-width: 300px; }
-    
-    .qa-title { color: #0b3f8c; border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; }
-    
-    /* Advantages List Styles */
-    .adv-item { display: flex; align-items: flex-start; margin-bottom: 20px; padding: 15px; background: #f8faff; border-radius: 8px; transition: 0.3s; }
-    .adv-item:hover { background: #eef4ff; transform: translateX(5px); }
-    .adv-icon { background: #0b67ff; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; font-weight: bold; }
-    .adv-text h4 { margin: 0 0 5px 0; color: #0b3f8c; font-size: 16px; }
-    .adv-text p { margin: 0; font-size: 13px; color: #666; line-height: 1.5; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Dongguan Yuda PCB Co., Ltd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7f9; color: #333; line-height: 1.6; }
+        header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 20px; font-weight: 600; }
+        nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
+        nav a:hover { text-decoration: underline; }
 
-    /* QA Grid Styles */
-    .qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .qa-card { border: 1px solid #eef2f8; padding: 15px; border-radius: 8px; }
-    .qa-card h4 { margin: 0 0 8px 0; color: #0b67ff; font-size: 15px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-    .qa-card ul { list-style: none; padding: 0; margin: 0; font-size: 12px; color: #555; }
-    .qa-card ul li { padding: 3px 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section-card { background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        h1, h2, h3 { color: #0b3f8c; margin-top: 0; }
+        h2 { border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; text-transform: uppercase; }
+        
+        /* Intro Section */
+        .intro-flex { display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; }
+        .intro-text { flex: 1.5; min-width: 320px; }
+        .intro-img { flex: 1; min-width: 320px; text-align: center; }
+        .intro-img img { max-width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .intro-text p { font-size: 15px; text-align: justify; }
 
-    @media (max-width: 768px) { .qa-container { flex-direction: column; } }
-</style>
+        /* Services (What Can We Do) */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .service-item { border: 1px solid #edf2f7; padding: 20px; border-radius: 8px; background: #fff; transition: 0.3s; }
+        .service-item:hover { transform: translateY(-5px); border-color: #0b67ff; box-shadow: 0 5px 15px rgba(11,103,255,0.1); }
+        .service-item h4 { margin-top: 0; color: #0b67ff; font-size: 17px; margin-bottom: 10px; }
+        .service-item p { font-size: 13px; color: #555; margin: 0; }
 
-<section class="qa-section main">
-    <div class="qa-container">
-        <!-- Left: Quality Assurance -->
-        <div class="qa-left">
-            <h2 class="qa-title">Quality Assurance</h2>
-            <div class="qa-grid">
-                <div class="qa-card">
-                    <h4>Process Control</h4>
-                    <ul><li>X-RAY / AOI</li><li>Solder Paste Inspection</li><li>FT / Hi-pot</li></ul>
-                </div>
-                <div class="qa-card">
-                    <h4>Document Control</h4>
-                    <ul><li>ECN / PCN</li><li>4M Management</li></ul>
-                </div>
-                <div class="qa-card">
-                    <h4>Material Control</h4>
-                    <ul><li>MRB / MES</li><li>AVL (Approved Vendor)</li></ul>
-                </div>
-                <div class="qa-card">
-                    <h4>NPI System</h4>
-                    <ul><li>NPI Meeting</li><li>DFM Report</li></ul>
-                </div>
-                <div class="qa-card">
-                    <h4>Shipping Control</h4>
-                    <ul><li>AQL Standards</li><li>Ongoing Reliability (ORT)</li></ul>
-                </div>
-                <div class="qa-card">
-                    <h4>Equipment</h4>
-                    <ul><li>Trial Maintenance</li><li>Predictive Calibration</li></ul>
-                </div>
-            </div>
-        </div>
+        /* Workflow */
+        .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .workflow-box { background: #f8faff; padding: 25px; border-radius: 8px; border: 1px solid #eef2f8; }
+        .step-list { list-style: none; padding: 0; margin: 0; }
+        .step-list li { font-size: 13px; padding: 6px 0; border-bottom: 1px dashed #cedae8; display: flex; align-items: center; }
+        .step-num { background: #0b67ff; color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 10px; flex-shrink: 0; }
 
-        <!-- Right: Core Advantages -->
-        <div class="qa-right">
-            <h2 class="qa-title">Core Advantages</h2>
-            <div class="adv-item">
-                <div class="adv-icon">95%</div>
-                <div class="adv-text">
-                    <h4>On-time Delivery Rate</h4>
-                    <p>Highly optimized production scheduling ensuring 95% of orders are delivered on or before the deadline.</p>
-                </div>
-            </div>
-            <div class="adv-item">
-                <div class="adv-icon">1H</div>
-                <div class="adv-text">
-                    <h4>Rapid Response</h4>
-                    <p>Professional customer service and quotation team responding to your inquiries within 1 hour.</p>
-                </div>
-            </div>
-            <div class="adv-item">
-                <div class="adv-icon">6Y+</div>
-                <div class="adv-text">
-                    <h4>Expert Management</h4>
-                    <p>Our core management team members average over 6 years of deep experience in the PCB industry.</p>
-                </div>
-            </div>
-            <div class="adv-item">
-                <div class="adv-icon">$</div>
-                <div class="adv-text">
-                    <h4>Best Value Selection</h4>
-                    <p>Providing top-tier quality at the most competitive price point in the current market.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        /* QA & Advantages */
+        .qa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .qa-card { background: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; }
+        .qa-card h4 { margin: 0 0 8px 0; color: #0b67ff; font-size: 14px; border-bottom: 2px solid #f0f4f8; padding-bottom: 5px; }
+        .qa-card p { font-size: 12px; color: #666; margin: 0; }
+        
+        .adv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .adv-item { display: flex; align-items: center; background: #eef6ff; padding: 15px; border-radius: 8px; }
+        .adv-icon { background: #0b67ff; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; font-weight: bold; }
+        .adv-text h4 { margin: 0; font-size: 15px; color: #0b3f8c; }
+        .adv-text p { margin: 0; font-size: 12px; color: #666; }
+
+        footer { text-align: center; font-size: 13px; color: #888; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; }
+        .footer-address { max-width: 800px; margin: 10px auto; color: #444; }
+
+        @media (max-width: 768px) { .workflow-grid { grid-template-columns: 1fr;
