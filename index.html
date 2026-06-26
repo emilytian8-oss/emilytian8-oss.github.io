@@ -2,34 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dongguan Yuda PCB Co., Ltd | Professional PCB Manufacturer in China</title>
+  <title>Yuda PCB | Professional PCB Manufacturer in Dongguan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f7fb; color: #222; }
-    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 20px; font-weight: 600; }
-    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-    .hero { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0f3f9f); color: #fff; }
-    .hero h1 { margin: 0 0 12px; font-size: 28px; }
-    .hero p { margin: 0; max-width: 760px; margin-inline: auto; opacity: 0.95; }
-    .hero-cta { margin-top: 18px; }
-    .btn { display: inline-block; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; margin: 4px 6px; }
-    .btn-primary { background: #fff; color: #0b67ff; font-weight: 600; }
-    .btn-outline { border: 1px solid #eaf0ff; color: #fff; }
-    main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
-    .section-title { font-size: 22px; color: #0b3f8c; margin-bottom: 10px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .card { background: #fff; border-radius: 10px; padding: 18px 16px; box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
-    .card h3 { margin-top: 0; font-size: 17px; color: #0b3f8c; }
-    .card p { margin: 6px 0; font-size: 14px; }
-    ul { padding-left: 18px; margin: 8px 0; font-size: 14px; }
-    .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; font-size: 14px; }
-    .stat-item { background: #eef2ff; border-radius: 8px; padding: 10px 12px; }
-    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f0f3f8; color: #222; }
+    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .logo { font-size: 22px; font-weight: 700; }
+    nav a { color: #eaf0ff; margin-left: 20px; text-decoration: none; font-size: 15px; font-weight: 500; }
+    nav a:hover { color: #fff; text-decoration: underline; }
+
+    /* Hero */
+    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
+    .hero h1 { margin: 0 0 15px; font-size: 36px; }
+    .hero p { margin: 0 auto; max-width: 800px; font-size: 18px; opacity: 0.9; line-height: 1.6; }
+
+    /* Main Sections */
+    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .section-block { background: #fff; border-radius: 15px; overflow: hidden; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .section-info { padding: 30px; border-bottom: 1px solid #eee; }
+    .section-info h2 { margin: 0 0 10px; color: #0b3f8c; font-size: 24px; }
+    .section-info p { color: #666; font-size: 16px; margin: 0; }
+    
+    /* Image Display */
+    .img-container { padding: 10px; background: #fff; text-align: center; }
+    .img-container img { max-width: 100%; height: auto; display: block; margin: 0 auto; transition: 0.3s; cursor: zoom-in; }
+    .img-container img:hover { opacity: 0.95; }
+
+    /* Footer */
+    footer { text-align: center; font-size: 14px; color: #888; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; }
+    .contact-footer { font-weight: 600; color: #444; margin-top: 10px; }
+
+    /* Fullscreen Overlay (Lightbox) */
+    #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
+    #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 16px; }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Yuda PCB</div>
     <nav>
@@ -42,98 +56,72 @@
   </header>
 
   <section class="hero">
-    <h1>Professional PCB Manufacturer in Dongguan, China</h1>
-    <p>
-      Dongguan Yuda PCB Co., Ltd is a dedicated PCB manufacturer founded in 2015 with around 500 employees.
-      We focus on reliable and cost-effective PCB fabrication services from prototypes to volume production
-      for global customers.
-    </p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="products.html">View Products</a>
-      <a class="btn btn-outline" href="contact.html">Get a Quote</a>
-    </div>
+    <h1>Dongguan Yuda PCB Co., Ltd</h1>
+    <p>Your Reliable Partner for High-Quality PCB Manufacturing since 2015.</p>
   </section>
 
   <main>
-    <section>
-      <h2 class="section-title">Main PCB Products</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Standard FR-4 PCBs</h3>
-          <p>1–8 layer FR-4 PCBs for general electronics applications.</p>
-          <ul>
-            <li>Single-sided and double-sided PCBs</li>
-            <li>Multilayer PCBs for industrial and communication</li>
-            <li>Lead-free HASL / ENIG surface finish</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Multilayer & High Density PCBs</h3>
-          <p>Multilayer PCBs with fine line and via capability.</p>
-          <ul>
-            <li>Up to 8 layers (higher on request)</li>
-            <li>Impedance control designs</li>
-            <li>Small vias and fine pitch</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Prototype & Quick-turn PCBs</h3>
-          <p>Fast prototype service to accelerate your project schedule.</p>
-          <ul>
-            <li>Rapid quotation and engineering support</li>
-            <li>Flexible order quantity</li>
-            <li>Short lead time for urgent projects</li>
-          </ul>
-        </div>
+    <!-- Section 1: Products -->
+    <div class="section-block">
+      <div class="section-info">
+        <h2>PCB Products Gallery</h2>
+        <p>A comprehensive range of PCB types including Multilayer, HDI, Rigid-Flex, and more.</p>
       </div>
-    </section>
+      <div class="img-container">
+        <img src="products.png" alt="PCB Products" onclick="openImg(this.src)">
+      </div>
+    </div>
 
-    <section style="margin-top:28px;">
-      <h2 class="section-title">Why Choose Yuda PCB</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Stable Quality</h3>
-          <p>Strict process control and inspection at each key step ensure stable and reliable PCB quality.</p>
-        </div>
-        <div class="card">
-          <h3>Competitive Cost</h3>
-          <p>Optimized production and material sourcing help provide cost-effective solutions.</p>
-        </div>
-        <div class="card">
-          <h3>On-time Delivery</h3>
-          <p>Efficient production planning supports stable lead time and on-time delivery.</p>
-        </div>
-        <div class="card">
-          <h3>Engineering Support</h3>
-          <p>Professional engineering support for DFM review and quick technical communication.</p>
-        </div>
+    <!-- Section 2: Applications -->
+    <div class="section-block">
+      <div class="section-info">
+        <h2>Industry Applications</h2>
+        <p>Our PCBs are widely used in Telecom, Industrial, Medical, and Automotive electronics.</p>
       </div>
-    </section>
+      <div class="img-container">
+        <img src="application.png" alt="PCB Applications" onclick="openImg(this.src)">
+      </div>
+    </div>
 
-    <section style="margin-top:28px;">
-      <h2 class="section-title">Factory Overview</h2>
-      <div class="card">
-        <p>
-          Dongguan Yuda PCB Co., Ltd is located in Dongguan, Guangdong Province, China. Founded in 2015,
-          Yuda PCB has grown into a professional PCB manufacturer serving customers from electronics,
-          telecommunication, industrial control and other fields.
-        </p>
-        <div class="stats">
-          <div class="stat-item"><strong>Founded:</strong> 2015</div>
-          <div class="stat-item"><strong>Employees:</strong> around 500</div>
-          <div class="stat-item"><strong>Factory area:</strong> about 8,000 m²</div>
-          <div class="stat-item"><strong>Service:</strong> Prototype & batch production</div>
-        </div>
+    <!-- Section 3: Leadtime -->
+    <div class="section-block">
+      <div class="section-info">
+        <h2>Fast Service & Rapid Delivery</h2>
+        <p>Standard lead times and quick-turn services to meet your urgent project requirements.</p>
       </div>
-    </section>
+      <div class="img-container">
+        <img src="leadtime.png" alt="PCB Leadtime" onclick="openImg(this.src)">
+      </div>
+    </div>
+
+    <!-- Section 4: Factory -->
+    <div class="section-block">
+      <div class="section-info">
+        <h2>Our Manufacturing Facility</h2>
+        <p>State-of-the-art equipment and 500+ professional employees in Dongguan, China.</p>
+      </div>
+      <div class="img-container">
+        <img src="factory.png" alt="Yuda PCB Factory" onclick="openImg(this.src)">
+      </div>
+    </div>
   </main>
 
+  <!-- Image Zoom Overlay -->
+  <div id="overlay" onclick="this.style.display='none'">
+    <img id="overlayImg" src="">
+  </div>
+
   <footer>
-    © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com | Tel: +86 135 3804 3239 | Email: sales@yudapcb.com
+    <p>© <span id="year"></span> Dongguan Yuda PCB Co., Ltd | All Rights Reserved</p>
+    <p class="contact-footer">Email: sales@yudapcb.com | Tel: +86 135 3804 3239</p>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    function openImg(src) {
+      document.getElementById('overlayImg').src = src;
+      document.getElementById('overlay').style.display = 'flex';
+    }
   </script>
 </body>
 </html>
