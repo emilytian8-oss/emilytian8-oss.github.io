@@ -1,94 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us | Dongguan Yuda PCB Co., Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f5f7fb; color: #222; }
-    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 20px; font-weight: 600; }
-    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 1040px; margin: 30px auto; padding: 0 20px 40px; }
-    h1 { font-size: 24px; color: #0b3f8c; margin-top: 0; }
-    h2 { font-size: 18px; color: #0b3f8c; margin-top: 18px; }
-    .card { background: #fff; border-radius: 10px; padding: 20px 18px; margin-bottom: 18px;
-            box-shadow: 0 4px 10px rgba(15, 35, 95, 0.08); }
-    p, li { font-size: 14px; line-height: 1.6; }
-    ul { padding-left: 18px; }
-    .stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; font-size: 14px; }
-    .stat-item { background: #eef2ff; border-radius: 8px; padding: 8px 10px; }
-    footer { text-align: center; font-size: 13px; color: #888; padding: 20px 10px 30px; }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">Yuda PCB</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="capabilities.html">Capabilities</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!-- Quality and Advantages Section -->
+<style>
+    .qa-section { background: #fff; padding: 40px 20px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-top: 30px; }
+    .qa-container { display: flex; flex-wrap: wrap; gap: 30px; }
+    .qa-left, .qa-right { flex: 1; min-width: 300px; }
+    
+    .qa-title { color: #0b3f8c; border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; }
+    
+    /* Advantages List Styles */
+    .adv-item { display: flex; align-items: flex-start; margin-bottom: 20px; padding: 15px; background: #f8faff; border-radius: 8px; transition: 0.3s; }
+    .adv-item:hover { background: #eef4ff; transform: translateX(5px); }
+    .adv-icon { background: #0b67ff; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; font-weight: bold; }
+    .adv-text h4 { margin: 0 0 5px 0; color: #0b3f8c; font-size: 16px; }
+    .adv-text p { margin: 0; font-size: 13px; color: #666; line-height: 1.5; }
 
-  <main>
-    <section class="card">
-      <h1>About Dongguan Yuda PCB Co., Ltd</h1>
-      <p>
-        Dongguan Yuda PCB Co., Ltd is a professional printed circuit board (PCB) manufacturer
-        located in Dongguan, Guangdong Province, China. Founded in 2015, Yuda PCB has grown
-        into a stable and reliable PCB supplier with around 500 employees and a production
-        area of about 8,000 m².
-      </p>
+    /* QA Grid Styles */
+    .qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .qa-card { border: 1px solid #eef2f8; padding: 15px; border-radius: 8px; }
+    .qa-card h4 { margin: 0 0 8px 0; color: #0b67ff; font-size: 15px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+    .qa-card ul { list-style: none; padding: 0; margin: 0; font-size: 12px; color: #555; }
+    .qa-card ul li { padding: 3px 0; }
 
-      <p style="margin-top: 12px; text-align: center;">
-        <img src="factory.jpg" alt="Yuda PCB factory building" style="max-width:100%; border-radius:8px;">
-      </p>
+    @media (max-width: 768px) { .qa-container { flex-direction: column; } }
+</style>
 
-      <p>
-        We are dedicated to providing cost-effective and high-quality PCB fabrication services
-        for customers in different industries, including consumer electronics, communication,
-        industrial control, power electronics and more. With rich manufacturing experience and
-        strict quality control, we aim to be your long-term and trustworthy PCB partner in China.
-      </p>
+<section class="qa-section main">
+    <div class="qa-container">
+        <!-- Left: Quality Assurance -->
+        <div class="qa-left">
+            <h2 class="qa-title">Quality Assurance</h2>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <h4>Process Control</h4>
+                    <ul><li>X-RAY / AOI</li><li>Solder Paste Inspection</li><li>FT / Hi-pot</li></ul>
+                </div>
+                <div class="qa-card">
+                    <h4>Document Control</h4>
+                    <ul><li>ECN / PCN</li><li>4M Management</li></ul>
+                </div>
+                <div class="qa-card">
+                    <h4>Material Control</h4>
+                    <ul><li>MRB / MES</li><li>AVL (Approved Vendor)</li></ul>
+                </div>
+                <div class="qa-card">
+                    <h4>NPI System</h4>
+                    <ul><li>NPI Meeting</li><li>DFM Report</li></ul>
+                </div>
+                <div class="qa-card">
+                    <h4>Shipping Control</h4>
+                    <ul><li>AQL Standards</li><li>Ongoing Reliability (ORT)</li></ul>
+                </div>
+                <div class="qa-card">
+                    <h4>Equipment</h4>
+                    <ul><li>Trial Maintenance</li><li>Predictive Calibration</li></ul>
+                </div>
+            </div>
+        </div>
 
-      <div class="stats">
-        <div class="stat-item"><strong>Founded:</strong> 2015</div>
-        <div class="stat-item"><strong>Employees:</strong> approx. 500</div>
-        <div class="stat-item"><strong>Plant area:</strong> about 8,000 m²</div>
-        <div class="stat-item"><strong>Location:</strong> Dongguan, Guangdong, China</div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Main Business</h2>
-      <ul>
-        <li>Single-sided and double-sided FR‑4 PCBs</li>
-        <li>4–8 layer standard multilayer PCBs (higher on request)</li>
-        <li>Prototype, small batch and volume production</li>
-        <li>Quick-turn prototype service for urgent projects</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Contact</h2>
-      <ul>
-        <li><strong>Tel:</strong> +86 135 3804 3239</li>
-        <li><strong>Email:</strong> sales@yudapcb.com</li>
-        <li><strong>Website:</strong> https://yudapcb.com</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <!-- Right: Core Advantages -->
+        <div class="qa-right">
+            <h2 class="qa-title">Core Advantages</h2>
+            <div class="adv-item">
+                <div class="adv-icon">95%</div>
+                <div class="adv-text">
+                    <h4>On-time Delivery Rate</h4>
+                    <p>Highly optimized production scheduling ensuring 95% of orders are delivered on or before the deadline.</p>
+                </div>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">1H</div>
+                <div class="adv-text">
+                    <h4>Rapid Response</h4>
+                    <p>Professional customer service and quotation team responding to your inquiries within 1 hour.</p>
+                </div>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">6Y+</div>
+                <div class="adv-text">
+                    <h4>Expert Management</h4>
+                    <p>Our core management team members average over 6 years of deep experience in the PCB industry.</p>
+                </div>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">$</div>
+                <div class="adv-text">
+                    <h4>Best Value Selection</h4>
+                    <p>Providing top-tier quality at the most competitive price point in the current market.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
