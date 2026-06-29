@@ -56,47 +56,43 @@
   </section>
 
   <main>
+    <!-- Section 1: Products -->
     <div class="section-block">
       <div class="section-info">
         <h2>PCB Products Gallery</h2>
         <p>A comprehensive range of PCB types including Multilayer, HDI, Rigid-Flex, and more.</p>
       </div>
       <div class="img-container">
-        <img src="products.png" alt="PCB Products" onclick="openImg(this.src)">
+        <img src="products.png" alt="PCB Products" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
 
-    <div class="section-block">
-      <div class="section-info">
-        <h2>Industry Applications</h2>
-        <p>Our PCBs are widely used in Telecom, Industrial, Medical, and Automotive electronics.</p>
-      </div>
-      <div class="img-container">
-        <img src="application.png" alt="PCB Applications" onclick="openImg(this.src)">
-      </div>
-    </div>
+    <!-- 已移除 Industry Applications 区块 -->
 
+    <!-- Section 3: Leadtime -->
     <div class="section-block">
       <div class="section-info">
         <h2>Fast Service & Rapid Delivery</h2>
         <p>Standard lead times and quick-turn services to meet your urgent project requirements.</p>
       </div>
       <div class="img-container">
-        <img src="leadtime.png" alt="PCB Leadtime" onclick="openImg(this.src)">
+        <img src="leadtime.png" alt="PCB Leadtime" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
 
+    <!-- Section 4: Factory -->
     <div class="section-block">
       <div class="section-info">
         <h2>Our Manufacturing Facility</h2>
         <p>State-of-the-art equipment and 500+ professional employees in Dongguan, China.</p>
       </div>
       <div class="img-container">
-        <img src="factory.png" alt="Yuda PCB Factory" onclick="openImg(this.src)">
+        <img src="factory.png" alt="Yuda PCB Factory" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
   </main>
 
+  <!-- Image Zoom Overlay -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
