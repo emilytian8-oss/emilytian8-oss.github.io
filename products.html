@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Products | Dongguan Yuda PCB Co., Ltd</title>
+  <title>Products | Yuda Electronic Technology Co., Ltd.</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; }
-    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; }
+    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; position: sticky; top: 0; z-index: 1000; }
     .logo { font-size:20px; font-weight:600; }
     nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
     nav a:hover { text-decoration:underline; }
@@ -22,7 +22,6 @@
     .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(15,35,95,0.08); transition:transform .18s; }
     .card:hover { transform:translateY(-6px); }
     
-    /* 预览图高度固定，点击光标变为放大镜 */
     .card img { width:100%; height:200px; object-fit: cover; display:block; cursor: zoom-in; }
     
     .card .body { padding:16px; }
@@ -32,11 +31,11 @@
     .view-btn { display:inline-block; padding:8px 20px; border-radius:6px; background:#0b67ff; color:#fff; text-decoration:none; font-weight:600; font-size:14px; cursor: pointer; border:none; outline: none; }
     .view-btn:hover { background: #004ecc; }
 
-    /* 全屏放大层样式 */
     #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
     #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
 
-    footer { text-align:center; font-size:13px; color:#888; padding:22px 10px 36px; }
+    footer { text-align:center; font-size:13px; color:#888; padding:22px 10px 36px; border-top: 1px solid #eee; background: #fff; }
+    .footer-contacts { margin-top: 10px; color: #444; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -65,89 +64,91 @@
     <div class="grid">
       <!-- Multilayer PCB -->
       <div class="card">
-        <img src="multilayer.png" alt="Multilayer PCB" onclick="openImg(this.src)">
+        <img src="multilayer.jpg" alt="Multilayer PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>Multilayer PCB</h3>
           <p>Standard multilayer boards from 4 to 40 layers. Reliable performance for industrial and telecom applications.</p>
-          <button class="view-btn" onclick="openImg('multilayer.png')">View</button>
+          <button class="view-btn" onclick="openImg('multilayer.jpg')">View</button>
         </div>
       </div>
 
       <!-- HDI PCB -->
       <div class="card">
-        <img src="hdi.png" alt="HDI PCB" onclick="openImg(this.src)">
+        <img src="hdi.jpg" alt="HDI PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>HDI PCB</h3>
           <p>High Density Interconnect with microvias. Support up to 3rd-order HDI (3+N+3).</p>
-          <button class="view-btn" onclick="openImg('hdi.png')">View</button>
+          <button class="view-btn" onclick="openImg('hdi.jpg')">View</button>
         </div>
       </div>
 
       <!-- High Frequency PCB -->
       <div class="card">
-        <img src="high-frequency.png" alt="High Frequency PCB" onclick="openImg(this.src)">
+        <img src="high-frequency.jpg" alt="High Frequency PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>High-Frequency PCB</h3>
           <p>Using Rogers, PTFE materials for RF and high-speed signal applications.</p>
-          <button class="view-btn" onclick="openImg('high-frequency.png')">View</button>
+          <button class="view-btn" onclick="openImg('high-frequency.jpg')">View</button>
         </div>
       </div>
 
       <!-- Rigid-Flex PCB -->
       <div class="card">
-        <img src="rigid-flex.png" alt="Rigid-Flex PCB" onclick="openImg(this.src)">
+        <img src="rigid-flex.jpg" alt="Rigid-Flex PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>Rigid-Flex PCB</h3>
           <p>Combination of rigid and flexible boards for compact and reliable device design.</p>
-          <button class="view-btn" onclick="openImg('rigid-flex.png')">View</button>
+          <button class="view-btn" onclick="openImg('rigid-flex.jpg')">View</button>
         </div>
       </div>
 
       <!-- Blind & Buried Via PCB -->
       <div class="card">
-        <img src="blind-buried.png" alt="Blind & Buried Via PCB" onclick="openImg(this.src)">
+        <img src="blind-buried.jpg" alt="Blind & Buried Via PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>Blind & Buried Via PCB</h3>
           <p>Advanced via structures for high-density interconnections.</p>
-          <button class="view-btn" onclick="openImg('blind-buried.png')">View</button>
+          <button class="view-btn" onclick="openImg('blind-buried.jpg')">View</button>
         </div>
       </div>
 
       <!-- Impedance PCB -->
       <div class="card">
-        <img src="impedance.png" alt="Impedance PCB" onclick="openImg(this.src)">
+        <img src="impedance.jpg" alt="Impedance PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>Impedance PCB</h3>
           <p>Tight tolerance control for high-speed digital and RF signal integrity.</p>
-          <button class="view-btn" onclick="openImg('impedance.png')">View</button>
+          <button class="view-btn" onclick="openImg('impedance.jpg')">View</button>
         </div>
       </div>
 
       <!-- Hybrid PCB -->
       <div class="card">
-        <img src="hybrid.png" alt="Hybrid PCB" onclick="openImg(this.src)">
+        <img src="hybrid.jpg" alt="Hybrid PCB" loading="lazy" onclick="openImg(this.src)">
         <div class="body">
           <h3>Hybrid Lamination PCB</h3>
           <p>Special lamination combining different materials (FR4 + Rogers/Aluminum).</p>
-          <button class="view-btn" onclick="openImg('hybrid.png')">View</button>
+          <button class="view-btn" onclick="openImg('hybrid.jpg')">View</button>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- 放大图片显示的黑底层 -->
+  <!-- 放大层 -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
 
   <footer>
-    © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
+    <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
+    <div class="footer-contacts">
+      Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com<br>
+      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239
+    </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // 放大图片函数
     function openImg(src) {
       document.getElementById('overlayImg').src = src;
       document.getElementById('overlay').style.display = 'flex';
