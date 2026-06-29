@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | Dongguan Yuda PCB Co., Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin:0; background:#f4f7f9; color:#333; }
+    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-size:20px; font-weight:600; }
+    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
+    nav a:hover { text-decoration:underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 30px 18px 50px; }
+    h1 { font-size:26px; color:#0b3f8c; margin-top:0; }
+    .subtitle { font-size:14px; color:#666; margin-bottom:25px; }
+
+    .faq-section-title { margin-top:26px; margin-bottom:10px; font-size:18px; color:#0b3f8c; border-left:4px solid #0b67ff; padding-left:10px; }
+
+    .faq-item { background:#fff; border-radius:10px; margin-bottom:10px; box-shadow:0 3px 12px rgba(0,0,0,0.05); overflow:hidden; }
+    .faq-question { margin:0; padding:12px 14px; font-size:15px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+    .faq-question span { margin-right:10px; }
+    .faq-toggle { font-weight:bold; color:#0b67ff; }
+    .faq-answer { display:none; padding:0 14px 12px 14px; border-top:1px solid #eef2f7; font-size:14px; color:#444; }
+    .faq-answer p { margin:8px 0; }
+    .faq-answer ul { padding-left:18px; margin:6px 0; }
+    .note { font-size:12px; color:#888; margin-top:8px; }
+
+    footer { text-align:center; font-size:13px; color:#888; padding:30px 10px 40px; background:#fff; border-top:1px solid #e5e8f0; }
+
+    @media (max-width:600px) {
+      h1 { font-size:22px; }
+      .faq-question { font-size:14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Yuda PCB</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="capabilities.html">Capabilities</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Frequently Asked Questions</h1>
+  <p class="subtitle">
+    Here you can find answers to common questions about multilayer PCB, HDI PCB, high-frequency PCB, 
+    rigid-flex PCB, blind &amp; buried via PCB, impedance-controlled PCB and hybrid-lamination PCB.
+    For more details, please contact us at <strong>sales@yudapcb.com</strong>.
+  </p>
+
+  <!-- 1. Multilayer PCB -->
+  <h2 class="faq-section-title">Multilayer PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q1: What information do you need to quote a multilayer PCB?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        For multilayer PCB quotation, please provide your complete Gerber files and the following key parameters:
+      </p>
+      <ul>
+        <li>Layer count (for example: 4L / 6L / 8L)</li>
+        <li>Board thickness and copper thickness (finished)</li>
+        <li>Material type (standard FR‑4 or special requirements, Tg value)</li>
+        <li>Surface finish (HASL, ENIG, OSP, etc.)</li>
+        <li>Solder mask and silkscreen color</li>
+        <li>Quantity and expected lead time</li>
+      </ul>
+      <p>
+        With this information, we can evaluate manufacturability and provide the most suitable price and lead time.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. HDI PCB -->
+  <h2 class="faq-section-title">HDI PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q2: What HDI capability do you support and how should I design microvias?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        We support up to 3rd‑order HDI (3‑step build-up), including blind, buried and stacked microvias.
+        When designing HDI PCBs, please:
+      </p>
+      <ul>
+        <li>Indicate the stack‑up and via types clearly in your drawing (L1‑L2 blind, L2‑L3 buried, etc.).</li>
+        <li>Follow our recommended minimum laser via and capture pad size for better yield.</li>
+        <li>Mark any via‑in‑pad areas and impedance‑controlled traces for engineering review.</li>
+      </ul>
+      <p>
+        Our engineering team will check your HDI design and provide DFM feedback before production.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3. High-Frequency PCB -->
+  <h2 class="faq-section-title">High-Frequency PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q3: How should I choose material and stackup for high-frequency PCBs?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        For high-frequency or high-speed applications, material and stackup selection is critical.
+        We can work with FR‑4 mixed with high-frequency materials such as Rogers, etc.
+        When sending your files, please let us know:
+      </p>
+      <ul>
+        <li>Target impedance values and tolerance</li>
+        <li>Operating frequency range and application type (RF, microwave, high‑speed digital)</li>
+        <li>Preferred material brand and dielectric constant, if you already have a specification</li>
+      </ul>
+      <p>
+        Based on this, we can suggest suitable materials and stackup to achieve both performance
+        and reasonable cost.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4. Rigid-Flex PCB -->
+  <h2 class="faq-section-title">Rigid-Flex PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q4: What should I pay attention to when designing rigid-flex PCBs?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Rigid‑flex PCB design is more complex than standard rigid boards. We recommend:
+      </p>
+      <ul>
+        <li>Clearly defining the rigid and flex areas in the drawing and Gerber files.</li>
+        <li>Avoiding vias and pads in dynamic bending areas of the flex section.</li>
+        <li>Ensuring enough copper balancing and strain relief in transition areas.</li>
+        <li>Providing 3D or mechanical drawings if there are special stacking or bending requirements.</li>
+      </ul>
+      <p>
+        Our engineers will check your files and give DFM suggestions to improve reliability and manufacturability.
+      </p>
+    </div>
+  </div>
+
+  <!-- 5. Blind & Buried Via PCB -->
+  <h2 class="faq-section-title">Blind &amp; Buried Via PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q5: When do I need blind and buried vias and what information should I provide?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Blind and buried vias are typically used in high‑density designs where there is not enough space
+        for traditional through‑holes. When requesting this type of PCB, please:
+      </p>
+      <ul>
+        <li>Indicate the exact via structures in your stack‑up (for example, L1‑L2 blind, L2‑L5 buried).</li>
+        <li>Specify whether stacked or staggered vias are required.</li>
+        <li>Mark any via‑in‑pad locations and critical high‑density areas.</li>
+      </ul>
+      <p>
+        We will evaluate the process flow and confirm if your design is compatible with our manufacturing
+        capabilities.
+      </p>
+    </div>
+  </div>
+
+  <!-- 6. Impedance / “Multilayer impedance PCB” -->
+  <h2 class="faq-section-title">Impedance-Controlled PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q6: What data do you need to control impedance on multilayer PCBs?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        For impedance-controlled PCBs, please provide:
+      </p>
+      <ul>
+        <li>An impedance table or drawing, showing target impedance values and line widths/layer locations.</li>
+        <li>Stack‑up diagram (layer structure), material type and dielectric thickness.</li>
+        <li>Any special tolerance requirement (for example, ±10% or tighter).</li>
+      </ul>
+      <p>
+        We will use our impedance models to calculate and adjust the line width if necessary, and 
+        impedance coupons can be measured to verify the result.
+      </p>
+    </div>
+  </div>
+
+  <!-- 7. Hybrid-Lamination PCB -->
+  <h2 class="faq-section-title">Hybrid-Lamination PCB</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q7: What is a hybrid-lamination PCB and when should I use it?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        A hybrid-lamination PCB uses different materials in one stack‑up, for example combining FR‑4 with
+        high-frequency material or metal‑core to balance cost, performance and heat dissipation.
+        You may consider hybrid‑lamination when:
+      </p>
+      <ul>
+        <li>Part of the circuit requires high‑frequency or low‑loss material, while the rest can use FR‑4.</li>
+        <li>There are strict thermal management requirements in local areas.</li>
+        <li>You want to optimize overall cost without sacrificing key performance.</li>
+      </ul>
+      <p>
+        Please provide your target performance and cost goals, and our team will help design a suitable
+        hybrid stack‑up solution.
+      </p>
+    </div>
+  </div>
+
+  <p class="note">
+    If your question is not listed here, please email us at <strong>sales@yudapcb.com</strong> with your design files and requirements.
+  </p>
+</div>
+
+<footer>
+  © <span id="year"></span> Dongguan Yuda PCB Co., Ltd | yudapcb.com
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function toggleFaq(el) {
+    var answer = el.nextElementSibling;
+    var icon = el.querySelector('.faq-toggle');
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+      icon.textContent = '+';
+    } else {
+      answer.style.display = 'block';
+      icon.textContent = '–';
+    }
+  }
+</script>
+</body>
+</html>
 
