@@ -1,4 +1,4 @@
-原文件如下，我现在把图片都转换成jpg了，文件名没有改变，要怎样更改代码？<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     nav a { color: #eaf0ff; margin-left: 20px; text-decoration: none; font-size: 15px; font-weight: 500; }
     nav a:hover { color: #fff; text-decoration: underline; }
 
-    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
+    .hero { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
     .hero h1 { margin: 0 0 15px; font-size: 32px; }
     .hero p { margin: 0 auto; max-width: 800px; font-size: 17px; opacity: 0.9; line-height: 1.6; }
 
@@ -63,36 +63,24 @@
         <p>A comprehensive range of PCB types including Multilayer, HDI, Rigid-Flex, and more.</p>
       </div>
       <div class="img-container">
-        <img src="products.png" alt="PCB Products" loading="lazy" onclick="openImg(this.src)">
+        <!-- 后缀已改为 .jpg -->
+        <img src="products.jpg" alt="PCB Products" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
 
-    <!-- 已移除 Industry Applications 区块 -->
-
-    <!-- Section 3: Leadtime -->
-    <div class="section-block">
-      <div class="section-info">
-        <h2>Fast Service & Rapid Delivery</h2>
-        <p>Standard lead times and quick-turn services to meet your urgent project requirements.</p>
-      </div>
-      <div class="img-container">
-        <img src="leadtime.png" alt="PCB Leadtime" loading="lazy" onclick="openImg(this.src)">
-      </div>
-    </div>
-
-    <!-- Section 4: Factory -->
+    <!-- Section 2: Factory -->
     <div class="section-block">
       <div class="section-info">
         <h2>Our Manufacturing Facility</h2>
         <p>State-of-the-art equipment and 500+ professional employees in Dongguan, China.</p>
       </div>
       <div class="img-container">
-        <img src="factory.png" alt="Yuda PCB Factory" loading="lazy" onclick="openImg(this.src)">
+        <!-- 后缀已改为 .jpg -->
+        <img src="factory.jpg" alt="Yuda PCB Factory" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
   </main>
 
-  <!-- Image Zoom Overlay -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
@@ -100,9 +88,8 @@
   <footer>
     <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
     <p class="contact-footer">
-      Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com
-      | Tel: +86 135 3804 3239
-      | WhatsApp: +86-13538043239
+      Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com<br>
+      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239
     </p>
   </footer>
 
