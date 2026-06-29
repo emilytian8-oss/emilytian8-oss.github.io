@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FAQ | Dongguan Yuda PCB Co., Ltd</title>
+  <title>FAQ | Yuda Electronic Technology Co., Ltd.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f4f7f9;color:#333; }
@@ -51,361 +51,198 @@
 </header>
 
 <div class="container">
-  <h1>Frequently Asked Questions (FAQ)</h1>
+  <h1>Frequently Asked Questions 常见问题</h1>
   <p class="subtitle">
-    Below are detailed FAQs for multilayer, HDI, high-frequency, rigid-flex, blind &amp; buried via,
-    impedance-controlled and hybrid-lamination PCBs. For specific projects, please send your files to
-    <strong>sales@yudapcb.com</strong>.
+    Below you can find answers to common questions about our PCB products and capabilities.
+    以下是关于我们 PCB 产品和工艺能力的一些常见问答。
   </p>
 
   <!-- 1. Multilayer PCB -->
-  <h2 class="faq-section-title">1. Multilayer PCB</h2>
-
-  <!-- ML Q1 -->
+  <h2 class="faq-section-title">Multilayer PCB 多层电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q1: What basic data do you need to quote a multilayer PCB?</span>
+      <span>
+        Q1: What information do you need to quote a multilayer PCB?  
+        多层 PCB 报价需要提供哪些资料？
+      </span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
-      <p>
-        We need complete Gerber/ODB++ data and key parameters: layer count, stack-up drawing, finished board
-        thickness, finished copper thickness (inner/outer), material type/Tg, surface finish, solder mask
-        and silkscreen color, quantity and required lead time.  If there are any special tests (impedance,
-        reliability, etc.), please also indicate them in the fabrication notes.
-      </p>
+      <p><strong>EN:</strong> For multilayer PCB quotation, please provide your complete Gerber files and the following key parameters:</p>
+      <ul>
+        <li>Layer count and stack-up (including dielectric thickness and copper weight)</li>
+        <li>Finished board thickness and finished copper thickness</li>
+        <li>Material type (standard FR‑4 or special laminates, Tg value)</li>
+        <li>Surface finish (HASL, ENIG, OSP, etc.)</li>
+        <li>Solder mask / silkscreen color, quantity and required lead time</li>
+      </ul>
+      <p><strong>CN:</strong> 多层 PCB 报价时，请提供完整的 Gerber 文件，并同时注明以下关键信息：</p>
+      <ul>
+        <li>板层数及叠层结构（包括各层介质厚度和铜厚）</li>
+        <li>成品板厚和成品铜厚（内外层）</li>
+        <li>板材类型（标准 FR‑4 或特殊高频/高 Tg 材料，Tg 要求）</li>
+        <li>表面处理方式（喷锡、沉金、OSP 等）</li>
+        <li>阻焊 / 字符颜色、订单数量及要求交期</li>
+      </ul>
       <p class="contact-line">
-        For multilayer PCB RFQs, please email <strong>sales@yudapcb.com</strong>, call
-        <strong>+86 135 3804 3239</strong>, or visit
-        <strong>Room 1102, Chengjin C‑PARK, Kexin Road, Dalingshan Town, Dongguan, Guangdong, China</strong>.
+        EN: For multilayer PCB RFQs, please email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 多层板询价请发送资料至 <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>，
+        电话 <strong>+86 135 3804 3239</strong>，WhatsApp <strong>+86-13538043239</strong>。
       </p>
     </div>
   </div>
-
-  <!-- ML Q2 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q2: What multilayer PCB layer counts and thicknesses can you typically support?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        In general, we fabricate multilayer PCBs from 4 to about 40 layers.  Common finished board thicknesses
-        are 0.6–2.0 mm, but thicker boards are possible depending on the stack-up and mechanical requirements.
-        For very high layer counts or unusual thicknesses, our engineering team will review the design and
-        confirm feasibility with you.
-      </p>
-      <p class="contact-line">
-        For stack-up and thickness confirmation, contact <strong>sales@yudapcb.com</strong> or
-        <strong>+86 135 3804 3239</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q3 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q3: What is your typical trace/space and via capability for multilayer PCBs?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Typical minimum trace/space for standard multilayer PCBs is around 4/4 mil.  Smaller line widths and
-        spacing may be achievable after DFM review.  For vias, finished mechanical drill sizes down to about
-        0.20 mm are standard; 0.15 mm is possible on some designs but requires closer evaluation.  We also
-        support laser microvias for HDI structures.
-      </p>
-      <p class="contact-line">
-        For detailed design rules, please send your design to <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q4 -->
-  <div class="faq-item">
-    <div classfaq-question" onclick="toggleFaq(this)">
-      <span>Q4: Which materials do you usually use for multilayer boards?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Standard multilayer PCBs are typically built with FR‑4 materials from recognized brands, with Tg
-        values such as Tg135, Tg150 or Tg170 according to your requirements.  For applications with higher
-        temperature, higher reliability or special performance, we can also source high‑Tg or low‑loss
-        laminates as requested.
-      </p>
-      <p class="contact-line">
-        For material selection questions, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q5 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q5: What surface finishes are available for multilayer PCBs?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        We can offer HASL, lead‑free HASL, ENIG (immersion gold over nickel), OSP and other surface finishes
-        depending on your design and application.  ENIG and OSP are often preferred for fine‑pitch, BGA and
-        high‑reliability applications, while HASL/lead‑free HASL is commonly used for cost‑sensitive products.
-      </p>
-      <p class="contact-line">
-        For finish selection, please email <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q6 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q6: Can you control impedance on multilayer PCBs and what data do you need?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Yes, we can control impedance on multilayer PCBs.  We need your target impedance (single‑ended and/or
-        differential), a proposed stack‑up, and information about trace width/spacing and which layers the
-        controlled traces are on.  We will use our impedance modelling tools to fine‑tune the dimensions and
-        can provide test coupons and reports upon request.
-      </p>
-      <p class="contact-line">
-        For impedance control inquiries, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q7 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q7: How do you verify the quality of multilayer PCBs before shipment?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        We perform a combination of electrical testing (100% for batch orders), AOI inspection where applicable,
-        solder mask and surface finish checks, and final visual inspection based on IPC standards.  For some
-        projects, we can also perform additional tests such as cross‑sections, reliability coupons, and
-        specific customer‑defined verification.
-      </p>
-      <p class="contact-line">
-        For quality control details, please email <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q8 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q8: What documentation do you provide together with multilayer PCB shipments?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Standard documentation usually includes a packing list, test reports (electrical test), and, if
-        requested, impedance test reports and cross‑section photos.  We can also attach certificates of
-        compliance and material certificates where required by your quality system.
-      </p>
-      <p class="contact-line">
-        For document requirements, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q9 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q9: Can you help to optimize multilayer stack-up for cost and performance?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Yes.  Based on your performance targets, impedance requirements and cost constraints, our engineers
-        can propose alternative stack‑ups, material combinations and copper distribution to make your design
-        more manufacturable and economical, while still meeting your technical needs.
-      </p>
-      <p class="contact-line">
-        For stack-up optimization, send your requirements to <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q10 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q10: What are typical lead times for multilayer prototype and volume production?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Typical lead times for standard multilayer prototypes are around 5–7 working days, small batches
-        7–10 working days, and volume production around 10–15 working days.  Complex HDI, special materials
-        or very thick boards may require additional time.  We also support expedited services after
-        evaluation.
-      </p>
-      <p class="contact-line">
-        For schedule confirmation or expedite requests, call <strong>+86 135 3804 3239</strong> or email
-        <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q11 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q11: Do you support panelization and V-cut for multilayer PCBs?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Yes, we can follow your panelization design or help you design a panel according to your assembly
-        process.  V‑cut, tab‑routing and combination methods are available.  Please indicate panel size
-        limits and assembly requirements when sending your files.
-      </p>
-      <p class="contact-line">
-        For panelization help, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q12 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q12: Can you build multilayer PCBs with different copper thicknesses in inner and outer layers?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Yes.  It is common to have different copper thicknesses for inner vs. outer layers (for example
-        1 oz inner layers and 1.5–2 oz outer layers).  Please specify your exact copper thickness
-        requirements in the stack‑up and notes so that we can evaluate the process accordingly.
-      </p>
-      <p class="contact-line">
-        For copper thickness options, email <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ML Q13–Q20 (示意同样结构，可按需要继续扩展) -->
-  <!-- 为了篇幅，这里你可以按同样结构再复制 8 个 .faq-item，改问题和答案内容即可 -->
-
 
   <!-- 2. HDI PCB -->
-  <h2 class="faq-section-title">2. HDI PCB</h2>
-
-  <!-- HDI Q1 -->
+  <h2 class="faq-section-title">HDI PCB 高密度互连板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q21: What HDI stack-up structures can you manufacture (e.g. 1+N+1, 2+N+2, 3+N+3)?</span>
+      <span>
+        Q2: What HDI structures and microvia capabilities can you support?  
+        你们可以支持哪些 HDI 叠构和微盲孔能力？
+      </span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
-      <p>
-        We can manufacture common HDI stack‑ups such as 1+N+1, 2+N+2 and 3+N+3.  The exact feasible structure
-        depends on your line/space, via dimensions, layer count and reliability requirements.  For more
-        complex build‑ups, our engineers will evaluate the design and confirm the process flow with you.
-      </p>
+      <p><strong>EN:</strong> We support common HDI build-up structures such as 1+N+1, 2+N+2 and up to 3+N+3, including blind vias, buried vias and via-in-pad designs. Typical laser microvias are 0.10–0.15 mm finished, with staggered or stacked configurations depending on your reliability requirements. Please clearly indicate via structures and layer connections in your stack-up drawing.</p>
+      <p><strong>CN:</strong> 我们可实现常见 HDI 叠构，例如 1+N+1、2+N+2，最高可到 3+N+3，支持盲孔、埋孔以及焊盘中孔（via in pad）等结构。常规激光微孔成品孔径约 0.10–0.15 mm，可根据可靠性要求设计为错位叠孔或同轴叠孔。请在叠层图中清晰标注各层的盲/埋孔关系及孔结构。</p>
       <p class="contact-line">
-        For HDI stack-up discussion, contact <strong>sales@yudapcb.com</strong>.
+        EN: For HDI design review, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: HDI 设计评审请联系以上邮箱或拨打电话 <strong>+86 135 3804 3239</strong>，WhatsApp <strong>+86-13538043239</strong>。
       </p>
     </div>
   </div>
-
-  <!-- HDI Q2 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q22: What is your typical laser microvia capability for HDI PCBs?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Our typical HDI laser microvias are designed with a finished hole size around 0.10–0.15 mm, depending
-        on the layer structure and material.  The capture pad and annular ring dimensions should follow our
-        recommended design rules or be agreed upon after DFM review to ensure stable yield.
-      </p>
-      <p class="contact-line">
-        For detailed microvia rules, email <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- HDI Q3 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q23: Do you support stacked microvias and via-in-pad for HDI designs?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Yes, we can support both stacked and staggered microvias, as well as via‑in‑pad designs for BGAs
-        and fine‑pitch components.  Stacked via structures and via‑in‑pad generally require more careful
-        process control and may have stricter design limits, so our engineering team will evaluate and
-        confirm the best approach.
-      </p>
-      <p class="contact-line">
-        For via-in-pad HDI designs, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- HDI Q4 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q24: What information should I include in my HDI PCB drawings to avoid misunderstanding?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        Please include a clear stack‑up diagram, via layer definitions (which layers are connected by blind/
-        buried vias), whether vias are stacked or staggered, any via‑in‑pad locations, minimum line/space and
-        spacing requirements in HDI areas, and any special reliability or test requirements.
-      </p>
-      <p class="contact-line">
-        For HDI documentation review, send your drawing to <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- HDI Q5 -->
-  <div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q25: How do you ensure plating quality for HDI microvias and stacked vias?</span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p>
-        We use controlled laser drilling, desmear and electroless copper processes, followed by optimized
-        electrolytic plating to ensure sufficient copper in microvias and at stacked interfaces.  We may
-        perform cross‑section checks and reliability test coupons as needed to verify plating integrity
-        and long‑term reliability.
-      </p>
-      <p class="contact-line">
-        For HDI plating and reliability questions, contact <strong>sales@yudapcb.com</strong>.
-      </p>
-    </div>
-  </div>
-
-  <!-- HDI Q6–Q20：同样结构，你可以继续复制上面的 .faq-item，改写更多问题和答案，比如关于： -->
-  <!-- 设计注意、阻抗、材料选择、叠层顺序、成本影响、可靠性测试、交期、DFM 评审等 -->
-
 
   <!-- 3. High-Frequency PCB -->
-  <h2 class="faq-section-title">3. High-Frequency PCB</h2>
-
-  <!-- HF Q1 -->
+  <h2 class="faq-section-title">High-Frequency PCB 高频电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>Q41: Which high-frequency materials can you work with and how should I choose?</span>
+      <span>
+        Q3: How do I choose materials and stack-up for high-frequency PCB designs?  
+        高频 / 高速 PCB 应该如何选择材料和叠层结构？
+      </span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
-      <p>
-        We can work with common high‑frequency materials such as Rogers and other low‑loss laminates, as
-        well as high‑Tg FR‑4 and hybrid combinations.  The choice depends on your operating frequency,
-        insertion loss target, cost budget and environmental conditions.  Tell us your requirements and we
-        can recommend suitable materials.
-      </p>
+      <p><strong>EN:</strong> Material and stack-up choice depend on operating frequency, loss budget and cost. We can work with high-frequency laminates such as Rogers and other low-loss materials, as well as hybrid FR‑4 structures. When consulting us, please provide your frequency range, target impedance, loss requirements and any preferred materials so that we can recommend a suitable stack-up.</p>
+      <p><strong>CN:</strong> 高频 / 高速 PCB 的材料与叠层选择与工作频率、损耗指标和成本预算密切相关。我们可加工 Rogers 等高频材料以及 FR‑4 与高频材料混压结构。咨询时请告知大致工作频段、目标阻抗及容差、允许损耗范围以及是否指定材料品牌，我们会基于这些信息推荐合适的叠层方案。</p>
       <p class="contact-line">
-        For material suggestions, email <strong>sales@yudapcb
+        EN: For high-frequency PCB consultation, email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 高频 PCB 选材及叠层咨询，请发送邮件至上述邮箱或通过电话 / WhatsApp 与我们联系。
+      </p>
+    </div>
+  </div>
+
+  <!-- 4. Rigid-Flex PCB -->
+  <h2 class="faq-section-title">Rigid-Flex PCB 刚挠结合板</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>
+        Q4: What should I pay attention to when designing rigid-flex PCBs?  
+        设计刚挠结合 PCB 时需要注意哪些设计要点？
+      </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> For rigid-flex designs, please clearly define rigid and flex areas, avoid vias in dynamic bending zones, route traces along the bending direction where possible, and provide mechanical drawings for complex folding structures. Indicate coverlay openings, stiffener materials and thicknesses in your drawings for accurate manufacturing.</p>
+      <p><strong>CN:</strong> 刚挠结合设计中，应在图纸中清晰区分刚性区与柔性区，避免在反复弯折区域放置过孔和焊盘；走线尽量沿弯折方向布线并避免直角转折；对于复杂折叠结构，建议提供 2D/3D 机械图。还需在图纸中标明 Coverlay 开窗、加强板材质及厚度，以便准确制造。</p>
+      <p class="contact-line">
+        EN: For rigid-flex DFM review, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 刚挠结合 DFM 审核，请发资料至上述邮箱或直接电话 / WhatsApp 联系我们。
+      </p>
+    </div>
+  </div>
+
+  <!-- 5. Blind & Buried Via PCB -->
+  <h2 class="faq-section-title">Blind &amp; Buried Via PCB 盲埋孔电路板</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>
+        Q5: When should I use blind and buried vias and what details are needed?  
+        什么时候需要采用盲孔 / 埋孔结构？需要在资料中说明哪些细节？
+      </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> Blind and buried vias are used in high-density designs to save surface space and improve routing. Please specify which layers are connected by blind and buried vias, whether vias are stacked or staggered, and mark any via-in-pad areas. Providing clear via structures in the stack-up drawing helps us evaluate manufacturability and cost.</p>
+      <p><strong>CN:</strong> 在高密度设计中，为节省表面空间、提高布线自由度，通常会采用盲孔和埋孔结构。请在叠层图中标明各盲孔 / 埋孔的层间关系（如 L1–L2 盲孔、L3–L6 埋孔等），说明是否存在叠孔（stacked）或错位孔（staggered），并在图纸中清晰标注 BGA 焊盘中孔等关键区域，以便我们评估可制造性和成本。</p>
+      <p class="contact-line">
+        EN: For blind &amp; buried via PCB support, email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 关于盲埋孔板的设计与工艺问题，可通过上述邮箱、电话或 WhatsApp 与我们沟通。
+      </p>
+    </div>
+  </div>
+
+  <!-- 6. Impedance-Controlled PCB -->
+  <h2 class="faq-section-title">Impedance-Controlled PCB 阻抗控制电路板</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>
+        Q6: What data do you need for accurate impedance control on multilayer PCBs?  
+        多层阻抗板要实现精准阻抗控制，需要客户提供哪些数据？
+      </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> We need an impedance table or drawing listing target values (single-ended/differential), related layers, and initial line width/spacing. A proposed stack-up with material type and dielectric thickness is also required. We will use our impedance tools to fine-tune trace geometry and can provide impedance coupons and test reports if needed.</p>
+      <p><strong>CN:</strong> 为了实现精确的阻抗控制，我们需要您提供阻抗表或阻抗图，注明各阻抗线（单端 / 差分）的目标阻抗值、所在层和初始线宽 / 线距。同时需要提供拟采用的叠层结构（材料类型、介质厚度等）。我们会通过阻抗仿真工具适当调整线宽线距，并可按照要求提供阻抗测试 Coupon 和测试报告。</p>
+      <p class="contact-line">
+        EN: For impedance-controlled PCB inquiries, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 阻抗板相关问题，请联系上述邮箱或电话 / WhatsApp。
+      </p>
+    </div>
+  </div>
+
+  <!-- 7. Hybrid-Lamination PCB -->
+  <h2 class="faq-section-title">Hybrid-Lamination PCB 混合压合电路板</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>
+        Q7: What is a hybrid-lamination PCB and when is it recommended?  
+        什么是混合压合 PCB？在什么情况下建议使用？
+      </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> A hybrid-lamination PCB combines different laminates in one stack-up, for example FR‑4 with high-frequency materials or metal-core sections. It is recommended when part of the circuit requires special electrical or thermal performance while other areas can use standard materials, allowing you to balance cost and performance.</p>
+      <p><strong>CN:</strong> 混合压合 PCB 是指在同一块板的叠层中同时使用不同类型的基材，例如在关键高频区域使用高频材料，在其他区域使用 FR‑4，或在局部功率区引入金属芯 / 厚铜层。这种方案适用于局部性能要求较高（如高频、散热）的场合，可以在满足性能的前提下有效控制整体成本。</p>
+      <p class="contact-line">
+        EN: For hybrid-lamination PCB solutions, please email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
+        CN: 混合压合方案设计与评估，请通过上述邮箱、电话或 WhatsApp 与我们联系。
+      </p>
+    </div>
+  </div>
+
+  <p class="note">
+    EN: If your question is not listed here, please email <strong>sales@yudapcb.com</strong> with your design files and requirements. We will respond as soon as possible.<br>
+    CN: 如未在此找到您关心的问题，欢迎将 Gerber 资料和需求发送至 <strong>sales@yudapcb.com</strong>，我们会尽快回复。
+  </p>
+</div>
+
+<footer>
+  © <span id="year"></span> Yuda Electronic Technology Co., Ltd. | yudapcb.com
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function toggleFaq(el) {
+    var answer = el.nextElementSibling;
+    var icon = el.querySelector('.faq-toggle');
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+      icon.textContent = '+';
+    } else {
+      answer.style.display = 'block';
+      icon.textContent = '–';
+    }
+  }
+</script>
+</body>
+</html>
