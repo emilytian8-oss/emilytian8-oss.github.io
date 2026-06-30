@@ -6,8 +6,12 @@
   <title>Capabilities | Yuda Electronic Technology Co., Ltd.</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; line-height: 1.6; }
-    header { background:#0b67ff; color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .logo { font-size:20px; font-weight:600; }
+    
+    /* Header & Logo Section */
+    header { background:#0b67ff; color:#fff; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
+    .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
+    
     nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
     nav a:hover { text-decoration:underline; }
 
@@ -16,32 +20,44 @@
     .hero p { margin:0 auto; opacity:.95; max-width:900px; font-size: 16px; }
 
     main { max-width:1100px; margin:30px auto; padding:0 20px 60px; }
-    .card { background:#fff; border-radius:15px; padding:30px; margin-bottom:40px; box-shadow:0 10px 25px rgba(15,35,95,.05); }
+    .card { background:#fff; border-radius:15px; padding:30px; margin-bottom:40px; box-shadow:0 10px 25px rgba(15,35,95,.05); border: 1px solid #eee; }
     h2 { margin:0 0 20px; font-size:24px; color:#0b3f8c; border-left: 5px solid #0b67ff; padding-left: 15px; }
     p { font-size:15px; color: #555; margin-bottom: 20px; }
     
-    .img-display { text-align:center; cursor: zoom-in; transition: 0.3s; }
+    .img-display { text-align:center; cursor: zoom-in; transition: 0.3s; margin: 15px 0; }
     .img-display:hover { opacity: 0.95; }
     .img-display img { max-width:100%; height:auto; border-radius:8px; border:1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+    /* Workflow Styles */
+    .workflow-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+    .workflow-box { background: #f9fbff; border-left: 5px solid #0b67ff; padding: 20px; border-radius: 8px; }
+    .workflow-box h3 { margin-top: 0; color: #0b3f8c; font-size: 18px; border-bottom: 1px solid #dee5f2; padding-bottom: 10px; }
+    .step-list { list-style: none; padding: 0; margin: 0; }
+    .step-list li { padding: 8px 0; border-bottom: 1px dashed #e0e6f0; font-size: 13px; display: flex; align-items: flex-start; }
+    .step-num { background: #0b67ff; color: #fff; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 11px; flex-shrink: 0; margin-top: 2px; }
 
     /* Lightbox Overlay */
     #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
     #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
 
     footer { text-align: center; font-size: 13px; color: #888; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
-    .footer-contacts { color: #444; margin-top: 15px; font-weight: 600; }
+    .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
     .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 26px; }
+      .workflow-container { grid-template-columns: 1fr; }
       .card { padding: 20px; }
+      .logo-img { height: 40px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">Yuda PCB</div>
+    <a href="index.html" class="logo-container">
+      <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
+    </a>
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
@@ -53,38 +69,59 @@
   </header>
 
   <section class="hero">
-    <h1>Manufacturing Capability & Lead Time</h1>
-    <p>Ensuring precision, speed, and reliability for every high-tech PCB project since 2015.</p>
+    <h1>Manufacturing Capabilities</h1>
+    <p>Empowering global innovation with high-precision PCB solutions and rapid delivery since 2015.</p>
   </section>
 
   <main>
     <!-- Section 1: Capability Image -->
     <section class="card">
-      <h2>Technical Capability Table</h2>
-      <p>Our comprehensive manufacturing parameters cover 1-40 layers, high-density HDI, and advanced materials. Click the table below to view in full size.</p>
+      <h2>Technical Specifications</h2>
+      <p>We support a wide range of complex designs from 1 to 40 layers, including 3-stage HDI and special materials. Click the table to zoom.</p>
       <div class="img-display" onclick="openImg('capability.jpg')">
-        <img src="capability.jpg" alt="PCB Manufacturing Capability Table" loading="lazy">
+        <img src="capability.jpg" alt="PCB Capability Table" loading="lazy">
       </div>
     </section>
 
-    <!-- Section 2: Lead Time Image -->
+    <!-- Section 2: Workflow -->
     <section class="card">
-      <h2>Fast Service & Rapid Delivery</h2>
-      <p>We understand that time-to-market is critical. Below is our standard lead time for prototypes and small batches. Click the chart below to view in full size.</p>
-      <div class="img-display" onclick="openImg('leadtime.jpg')">
-        <img src="leadtime.jpg" alt="PCB Manufacturing Lead Time" loading="lazy">
-      </div>
+        <h2>Production Workflow</h2>
+        <div class="workflow-container">
+            <div class="workflow-box">
+                <h3>Standard PTH Process</h3>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span>CAM Prep & Material Cutting</li>
+                    <li><span class="step-num">2</span>Inner Layer Imaging & Etching</li>
+                    <li><span class="step-num">3</span>AOI Inspection & Lamination</li>
+                    <li><span class="step-num">4</span>Drilling, PTH & Copper Plating</li>
+                    <li><span class="step-num">5</span>Solder Mask, Legend & Surface Finish</li>
+                    <li><span class="step-num">6</span>E-Testing, V-Cut & Final Inspection</li>
+                </ul>
+            </div>
+            <div class="workflow-box" style="border-left-color: #0848b3;">
+                <h3>Advanced HDI Process</h3>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span>Laser Drilling (Microvias)</li>
+                    <li><span class="step-num">2</span>Plasma Desmearing & Blind Via Plating</li>
+                    <li><span class="step-num">3</span>Resin Plugging & Plating Filling</li>
+                    <li><span class="step-num">4</span>Pattern Plating & Alkaline Etching</li>
+                    <li><span class="step-num">5</span>High-Precision Outer Layer AOI</li>
+                    <li><span class="step-num">6</span>Final Reliability Testing & Packing</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Section 3: RFQ Note -->
-    <section class="card" style="text-align: center; background: #f0f5ff; border: 1px solid #d0e0ff;">
-      <h3 style="color: #0b3f8c; margin-top: 0;">Ready to start your project?</h3>
-      <p>Send your Gerber files to our sales team for a formal quotation within 1 hour.</p>
-      <p style="font-weight: bold; color: #0b67ff;">Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</p>
+    <!-- Section 3: Leadtime Image -->
+    <section class="card">
+      <h2>Rapid Delivery Schedule</h2>
+      <p>Time-to-market is our priority. Below is our typical lead time for expedited samples and batch production.</p>
+      <div class="img-display" onclick="openImg('leadtime.jpg')">
+        <img src="leadtime.jpg" alt="PCB Delivery Leadtime" loading="lazy">
+      </div>
     </section>
   </main>
 
-  <!-- 全屏放大图片显示 -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
@@ -93,9 +130,9 @@
     <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
     <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
     <div class="footer-contacts">
-      Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com<br>
+      Email: sales@yostarpcb.com, emily@yudapcb.com<br>
       Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-      Address: Room 1102, Chengjin C-PARK, Kexin Road, Dalingshan Town, Dongguan, Guangdong, China
+      Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
     </div>
   </footer>
 
