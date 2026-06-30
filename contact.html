@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7f9; color: #333; }
-    header { background: #0b67ff; color: #fff; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 20px; font-weight: 600; }
+    
+    /* Header & Logo Section */
+    header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
+    .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
+    
     nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
     nav a:hover { text-decoration: underline; }
 
@@ -17,159 +21,72 @@
     .subtitle { font-size: 14px; color: #666; margin-bottom: 30px; }
 
     .flex-wrap { display: flex; flex-wrap: wrap; gap: 24px; }
-    .panel { background: #fff; border-radius: 12px; padding: 24px 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+    .panel { background: #fff; border-radius: 12px; padding: 24px 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.05); border: 1px solid #eee; }
 
     .left { flex: 1.1; min-width: 300px; }
     .right { flex: 1; min-width: 260px; }
 
     .info-block { margin-bottom: 18px; }
-    .info-title { font-weight: 600; color: #0b3f8c; margin-bottom: 4px; }
-    .info-text { font-size: 14px; color: #444; }
+    .info-title { font-weight: 600; color: #0b3f8c; margin-bottom: 4px; font-size: 15px; }
+    .info-text { font-size: 14px; color: #444; line-height: 1.6; }
 
-    .map-btn { display: inline-block; margin-top: 10px; padding: 9px 16px; border-radius: 6px; background: #0b67ff; color: #fff; font-size: 14px; text-decoration: none; }
-    .map-btn:hover { background: #004ecc; }
+    .map-btn { display: inline-block; margin-top: 10px; padding: 9px 16px; border-radius: 6px; background: #0b67ff; color: #fff; font-size: 14px; text-decoration: none; transition: 0.3s; }
+    .map-btn:hover { background: #004ecc; box-shadow: 0 4px 12px rgba(11,103,255,0.2); }
 
+    /* Form Styles */
     form label { display: block; font-size: 13px; margin: 8px 0 4px; color: #444; }
-    form input, form textarea, form select {
-      width: 100%; padding: 8px 10px; border-radius: 6px; border: 1px solid #d0d7e2;
+    form input, form textarea {
+      width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #d0d7e2;
       font-size: 14px; box-sizing: border-box;
     }
-    form textarea { min-height: 90px; resize: vertical; }
+    form textarea { min-height: 100px; resize: vertical; }
     .submit-btn {
-      margin-top: 12px; padding: 10px 18px; border-radius: 6px; border: none;
-      background: #0b67ff; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer;
+      margin-top: 15px; padding: 12px 25px; border-radius: 6px; border: none;
+      background: #0b67ff; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.3s;
     }
     .submit-btn:hover { background: #004ecc; }
-    .form-note { font-size: 12px; color: #888; margin-top: 6px; }
+    .form-note { font-size: 12px; color: #888; margin-top: 10px; }
 
-    .bottom-panel { margin-top: 24px; }
-
-    footer { text-align: center; font-size: 13px; color: #888; padding: 30px 10px 40px; background: #fff; border-top: 1px solid #e5e8f0; }
+    footer { text-align: center; font-size: 13px; color: #888; padding: 40px 10px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
+    .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
+    .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
 
     @media (max-width: 768px) {
       .flex-wrap { flex-direction: column; }
+      .logo-img { height: 40px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Yuda PCB</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="capabilities.html">Capabilities</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
+    <!-- 左上角 LOGO -->
+    <a href="index.html" class="logo-container">
+      <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
+    </a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
 </header>
 
 <div class="container">
   <h1>Contact Us</h1>
   <p class="subtitle">
-    Please feel free to contact Yuda Electronic Technology Co., Ltd. for any PCB quotation or technical support.
-    We will reply to you as soon as possible.
+    Get in touch with <strong>Yuda Electronic Technology Co., Ltd.</strong> for professional PCB solutions. 
+    Our team typically responds to all inquiries within 1 hour.
   </p>
 
   <div class="flex-wrap">
-    <!-- Left: Contact Info + Map Link -->
+    <!-- Left: Contact Details -->
     <div class="panel left">
       <div class="info-block">
-        <div class="info-title">Company</div>
+        <div class="info-title">Company Name</div>
         <div class="info-text">Yuda Electronic Technology Co., Ltd.</div>
       </div>
 
-      <div class="info-block">
-        <div class="info-title">Address</div>
-        <div class="info-text">
-          Room 1102, Chengjin C-PARK,<br>
-          Southeast side of Songhu Xingfu Garden,<br>
-          Kexin Road, Dalingshan Town,<br>
-          Dongguan, Guangdong, China
-        </div>
-        <a
-          class="map-btn"
-          href="https://www.google.com/maps/search/?api=1&query=Room%201102%2C%20Chengjin%20C-PARK%2C%20Dalingshan%2C%20Dongguan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View on Map
-        </a>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Phone</div>
-        <div class="info-text">+86 135 3804 3239</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">WhatsApp</div>
-        <div class="info-text">+86-13538043239</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Email</div>
-        <div class="info-text">
-          sales@yudapcb.com<br>
-          sales01@yudapcb.com<br>
-          sales02@yudapcb.com<br>
-          emily@yudapcb.com
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Working Hours</div>
-        <div class="info-text">Monday – Saturday, 9:00 am – 6:00 pm (China Time)</div>
-      </div>
-    </div>
-
-    <!-- Right: Contact Form (展示用) -->
-    <div class="panel right">
-      <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Send Us a Message</h3>
-      <form>
-        <label for="name">Name *</label>
-        <input id="name" name="name" type="text" placeholder="Your name">
-
-        <label for="email">Email *</label>
-        <input id="email" name="email" type="email" placeholder="Your email">
-
-        <label for="country">Country / Region</label>
-        <input id="country" name="country" type="text" placeholder="Your country">
-
-        <label for="subject">Subject</label>
-        <input id="subject" name="subject" type="text" placeholder="Subject">
-
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="Please describe your PCB requirements, such as layer count, material, thickness, quantity, etc."></textarea>
-
-        <button type="button" class="submit-btn">Submit</button>
-        <div class="form-note">
-          * This form is for display only. Please send detailed inquiries directly to
-          <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>
-          together with your Gerber files.
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="panel bottom-panel">
-    <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Quotation Tips</h3>
-    <p style="font-size:14px; color:#555;">
-      For faster quotation, please send your Gerber files, layer count, board thickness, copper weight,
-      surface finish, solder mask color, quantity and required lead time to:
-      <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>.
-      You can also reach us via WhatsApp at <strong>+86-13538043239</strong>.
-    </p>
-  </div>
-</div>
-
-<footer>
-  © <span id="year"></span> Yuda Electronic Technology Co., Ltd. | yudapcb.com
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+      <div class="info-block
