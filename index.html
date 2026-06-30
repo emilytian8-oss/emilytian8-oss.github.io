@@ -11,24 +11,30 @@
     nav a { color: #eaf0ff; margin-left: 20px; text-decoration: none; font-size: 15px; font-weight: 500; }
     nav a:hover { color: #fff; text-decoration: underline; }
 
-    .hero { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
+    /* Hero Section */
+    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
     .hero h1 { margin: 0 0 15px; font-size: 32px; }
     .hero p { margin: 0 auto; max-width: 800px; font-size: 17px; opacity: 0.9; line-height: 1.6; }
 
+    /* Content Blocks */
     main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
     .section-block { background: #fff; border-radius: 15px; overflow: hidden; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     .section-info { padding: 30px; border-bottom: 1px solid #eee; }
     .section-info h2 { margin: 0 0 10px; color: #0b3f8c; font-size: 24px; }
     .section-info p { color: #666; font-size: 16px; margin: 0; }
+    
     .img-container { padding: 10px; background: #fff; text-align: center; }
     .img-container img { max-width: 100%; height: auto; display: block; margin: 0 auto; transition: 0.3s; cursor: zoom-in; }
     .img-container img:hover { opacity: 0.95; }
 
+    /* Lightbox Overlay */
     #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
     #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
 
-    footer { text-align: center; font-size: 14px; color: #888; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; }
-    .contact-footer { font-weight: 600; color: #444; margin-top: 10px; }
+    /* Footer */
+    footer { text-align: center; font-size: 14px; color: #666; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
+    .footer-contacts { color: #444; margin-top: 15px; font-weight: 600; }
+    .renaming-note { font-style: italic; font-size: 13px; color: #888; margin-bottom: 10px; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 26px; }
@@ -52,45 +58,57 @@
 
   <section class="hero">
     <h1>Yuda Electronic Technology Co., Ltd.</h1>
-    <p>Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026. Your reliable partner for high-quality PCB manufacturing since 2015.</p>
+    <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
+    <p>Professional PCB Manufacturing & Solutions with over 500 employees and 8,000 m² facility in Dongguan, China.</p>
   </section>
 
   <main>
-    <!-- Section 1: Products -->
+    <!-- 1. Products Section -->
     <div class="section-block">
       <div class="section-info">
-        <h2>PCB Products Gallery</h2>
-        <p>A comprehensive range of PCB types including Multilayer, HDI, Rigid-Flex, and more.</p>
+        <h2>PCB Products Range</h2>
+        <p>Expertise in Multilayer, HDI, Rigid-Flex, and special materials.</p>
       </div>
       <div class="img-container">
-        <!-- 后缀已改为 .jpg -->
         <img src="products.jpg" alt="PCB Products" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
 
-    <!-- Section 2: Factory -->
+    <!-- 2. Application Section -->
     <div class="section-block">
       <div class="section-info">
-        <h2>Our Manufacturing Facility</h2>
-        <p>State-of-the-art equipment and 500+ professional employees in Dongguan, China.</p>
+        <h2>Industry Applications</h2>
+        <p>Serving world-class clients in Medical, Telecom, Industrial, AI, and Automotive sectors.</p>
       </div>
       <div class="img-container">
-        <!-- 后缀已改为 .jpg -->
-        <img src="factory.jpg" alt="Yuda PCB Factory" loading="lazy" onclick="openImg(this.src)">
+        <img src="application.jpg" alt="Industry Applications" loading="lazy" onclick="openImg(this.src)">
+      </div>
+    </div>
+
+    <!-- 3. Factory Section -->
+    <div class="section-block">
+      <div class="section-info">
+        <h2>Manufacturing Facility</h2>
+        <p>Advanced equipment ensuring high precision and stable quality for every project.</p>
+      </div>
+      <div class="img-container">
+        <img src="factory.jpg" alt="Yuda PCB Manufacturing Facility" loading="lazy" onclick="openImg(this.src)">
       </div>
     </div>
   </main>
 
+  <!-- 全屏放大图片显示 -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
 
   <footer>
     <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
-    <p class="contact-footer">
+    <div class="footer-contacts">
       Email: sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com<br>
-      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239
-    </p>
+      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
+      Address: Room 1102, Chengjin C-PARK, Kexin Road, Dalingshan Town, Dongguan, Guangdong, China
+    </div>
   </footer>
 
   <script>
