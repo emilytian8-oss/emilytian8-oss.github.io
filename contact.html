@@ -6,12 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7f9; color: #333; }
-    
-    /* Header & Logo Section */
     header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
     .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
-    
     nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
     nav a:hover { text-decoration: underline; }
 
@@ -27,27 +24,28 @@
     .right { flex: 1; min-width: 260px; }
 
     .info-block { margin-bottom: 18px; }
-    .info-title { font-weight: 600; color: #0b3f8c; margin-bottom: 4px; font-size: 15px; }
+    .info-title { font-weight: 600; color: #0b3f8c; margin-bottom: 4px; }
     .info-text { font-size: 14px; color: #444; line-height: 1.6; }
 
-    .map-btn { display: inline-block; margin-top: 10px; padding: 9px 16px; border-radius: 6px; background: #0b67ff; color: #fff; font-size: 14px; text-decoration: none; transition: 0.3s; }
-    .map-btn:hover { background: #004ecc; box-shadow: 0 4px 12px rgba(11,103,255,0.2); }
+    .map-btn { display: inline-block; margin-top: 10px; padding: 9px 16px; border-radius: 6px; background: #0b67ff; color: #fff; font-size: 14px; text-decoration: none; }
+    .map-btn:hover { background: #004ecc; }
 
-    /* Form Styles */
     form label { display: block; font-size: 13px; margin: 8px 0 4px; color: #444; }
     form input, form textarea {
-      width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #d0d7e2;
+      width: 100%; padding: 8px 10px; border-radius: 6px; border: 1px solid #d0d7e2;
       font-size: 14px; box-sizing: border-box;
     }
-    form textarea { min-height: 100px; resize: vertical; }
+    form textarea { min-height: 90px; resize: vertical; }
     .submit-btn {
-      margin-top: 15px; padding: 12px 25px; border-radius: 6px; border: none;
-      background: #0b67ff; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.3s;
+      margin-top: 12px; padding: 10px 18px; border-radius: 6px; border: none;
+      background: #0b67ff; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer;
     }
     .submit-btn:hover { background: #004ecc; }
-    .form-note { font-size: 12px; color: #888; margin-top: 10px; }
+    .form-note { font-size: 12px; color: #888; margin-top: 6px; }
 
-    footer { text-align: center; font-size: 13px; color: #888; padding: 40px 10px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
+    .bottom-panel { margin-top: 24px; }
+
+    footer { text-align: center; font-size: 13px; color: #888; padding: 30px 10px 40px; background: #fff; border-top: 1px solid #e5e8f0; line-height: 1.8; }
     .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
     .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
 
@@ -60,33 +58,109 @@
 <body>
 
 <header>
-    <!-- 左上角 LOGO -->
     <a href="index.html" class="logo-container">
       <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
     </a>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="faq.html">FAQ</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
     </nav>
 </header>
 
 <div class="container">
   <h1>Contact Us</h1>
   <p class="subtitle">
-    Get in touch with <strong>Yuda Electronic Technology Co., Ltd.</strong> for professional PCB solutions. 
-    Our team typically responds to all inquiries within 1 hour.
+    Please feel free to contact <strong>Yuda Electronic Technology Co., Ltd.</strong> for any PCB quotation or technical support.
   </p>
 
   <div class="flex-wrap">
-    <!-- Left: Contact Details -->
+    <!-- Left Panel -->
     <div class="panel left">
       <div class="info-block">
-        <div class="info-title">Company Name</div>
+        <div class="info-title">Company</div>
         <div class="info-text">Yuda Electronic Technology Co., Ltd.</div>
       </div>
 
-      <div class="info-block
+      <div class="info-block">
+        <div class="info-title">Address</div>
+        <div class="info-text">
+          Room 101, No. 15 Xiangyang Road,<br>
+          Huangwudang, Wanjiang Street,<br>
+          Dongguan, Guangdong, China
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=No.15+Xiangyang+Road+Wanjiang+Dongguan" target="_blank">View on Map</a>
+      </div>
+
+      <div class="info-block">
+        <div class="info-title">Phone</div>
+        <div class="info-text">+86 135 3804 3239</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-title">WhatsApp</div>
+        <div class="info-text">+86-13538043239</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-title">Email</div>
+        <div class="info-text">
+          sales@yostarpcb.com<br>
+          emily@yudapcb.com
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-title">Working Hours</div>
+        <div class="info-text">Monday – Saturday, 9:00 am – 6:00 pm (China Time)</div>
+      </div>
+    </div>
+
+    <!-- Right Panel: Form -->
+    <div class="panel right">
+      <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Send Us a Message</h3>
+      <form>
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" placeholder="Your email">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Please describe your PCB requirements..."></textarea>
+
+        <button type="button" class="submit-btn">Submit</button>
+        <div class="form-note">
+          * Please send detailed inquiries and Gerber files to:<br>
+          <strong>sales@yostarpcb.com</strong> or <strong>emily@yudapcb.com</strong>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel bottom-panel">
+    <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Quotation Tips</h3>
+    <p style="font-size:14px; color:#555;">
+      For faster quotation, please send your Gerber files to <strong>sales@yostarpcb.com</strong> or <strong>emily@yudapcb.com</strong>. We will get back to you within 1 hour during working hours.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
+  <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
+  <div class="footer-contacts">
+    Email: sales@yostarpcb.com, emily@yudapcb.com<br>
+    Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
+    Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
