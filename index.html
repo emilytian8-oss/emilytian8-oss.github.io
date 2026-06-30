@@ -6,11 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f0f3f8; color: #222; }
-    
-    /* Header 调整：增加上下间距以适应 LOGO */
     header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     
-    /* LOGO 样式：高度限制为 50px */
     .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
     .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
     
@@ -38,21 +35,20 @@
     #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
 
     /* Footer */
-    footer { text-align: center; font-size: 13px; color: #666; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
+    footer { text-align: center; font-size: 14px; color: #666; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
     .footer-contacts { color: #444; margin-top: 15px; font-weight: 600; }
     .renaming-note { font-style: italic; font-size: 13px; color: #888; margin-bottom: 10px; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 26px; }
       .hero p { font-size: 15px; }
-      .logo-img { height: 40px; } /* 手机端稍微调小一点 */
+      .logo-img { height: 40px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- 左上角 LOGO 图片位置 -->
     <a href="index.html" class="logo-container">
       <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
     </a>
@@ -73,7 +69,7 @@
   </section>
 
   <main>
-    <!-- 1. Products Section -->
+    <!-- Section 1: Products -->
     <div class="section-block">
       <div class="section-info">
         <h2>PCB Products Range</h2>
@@ -84,7 +80,7 @@
       </div>
     </div>
 
-    <!-- 2. Application Section -->
+    <!-- Section 2: Application -->
     <div class="section-block">
       <div class="section-info">
         <h2>Industry Applications</h2>
@@ -95,7 +91,7 @@
       </div>
     </div>
 
-    <!-- 3. Factory Section -->
+    <!-- Section 3: Factory -->
     <div class="section-block">
       <div class="section-info">
         <h2>Manufacturing Facility</h2>
@@ -107,17 +103,17 @@
     </div>
   </main>
 
-  <!-- 全屏放大图片显示 -->
   <div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
   </div>
 
   <footer>
+    <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
     <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
     <div class="footer-contacts">
-      Email: sales@yudapcb.com,  emily@yudapcb.com<br>
+      Email: sales@yostarpcb.com, emily@yudapcb.com<br>
       Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-     
+      Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
     </div>
   </footer>
 
