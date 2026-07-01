@@ -1,124 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Products | Yuda Electronic Technology Co., Ltd.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capabilities | Yuda Electronic Technology Co., Ltd.</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; }
-    header { background:#0b67ff; color:#fff; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    
-    .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
-    .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
-    
-    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
-    nav a:hover { text-decoration:underline; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; margin:0; background:#f5f7fb; color:#222; line-height:1.6; }
 
-    .hero { background: linear-gradient(135deg,#0b67ff,#0f3f9f); color:#fff; padding:40px 20px; text-align:center; }
-    .hero h1 { margin:0 0 10px; font-size:28px; }
-    .hero p { margin:0; opacity:.95; max-width:900px; margin:0 auto; }
-
-    main { max-width:1200px; margin:30px auto; padding:0 18px 40px; }
-    .section-title { font-size:24px; color:#0b3f8c; margin:25px 0; text-align: center; }
-
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+    header {
+      background:#0b67ff; color:#fff; padding:10px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+      position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.1);
     }
-    .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(15,35,95,0.1); transition:transform .2s; cursor: pointer; border: 1px solid #eee; }
-    .card:hover { transform:translateY(-8px); }
-    .card img { width:100%; height: auto; display:block; }
-    .card .info { padding:15px; text-align: center; background: #fff; }
-    .card h3 { margin: 0; color:#0b3f8c; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
-    
-    #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
-    #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
+    .logo-container { display:flex; align-items:center; text-decoration:none; color:#fff; }
+    .logo-img { height:70px; width:auto; }
 
-    footer { text-align:center; font-size:13px; color:#888; padding:40px 10px; background:#fff; border-top: 1px solid #eee; line-height: 1.8; }
-    .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
-    .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
+    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:14px; font-weight:500; }
+    nav a:hover { color:#fff; text-decoration:underline; }
 
-    @media (max-width:600px){ .hero h1{font-size:22px;} .logo-img { height: 40px; } }
+    .hero { background:linear-gradient(135deg,#0b67ff,#0f3f9f); color:#fff; padding:40px 20px; text-align:center; }
+    .hero h1 { margin:0 0 10px; font-size:28px; }
+    .hero p { margin:0 auto; max-width:900px; font-size:15px; opacity:.95; }
+
+    main { max-width:1100px; margin:30px auto; padding:0 20px 60px; }
+    .card {
+      background:#fff; border-radius:15px; padding:28px 22px; margin-bottom:28px;
+      box-shadow:0 6px 20px rgba(15,35,95,.06); border:1px solid #e3e7f0;
+    }
+    h2 { margin:0 0 14px; font-size:22px; color:#0b3f8c; border-left:4px solid #0b67ff; padding-left:10px; }
+    h3 { margin:0 0 10px; font-size:18px; color:#0b3f8c; }
+    p { font-size:14px; color:#444; margin:6px 0 10px 0; }
+
+    .img-wrapper { text-align:center; margin:16px 0; cursor:zoom-in; }
+    .img-wrapper img {
+      max-width:100%; height:auto; border-radius:8px; border:1px solid #e0e6f0;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+    .img-wrapper img:hover { opacity:0.96; }
+
+    ul { margin:8px 0 0 0; padding-left:18px; font-size:13px; color:#555; }
+
+    /* Lightbox */
+    #overlay {
+      display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out;
+    }
+    #overlay img { max-width:95%; max-height:95%; border:2px solid #fff; border-radius:4px; }
+
+    footer {
+      text-align:center; font-size:13px; color:#888; padding:40px 20px;
+      background:#fff; border-top:1px solid #e5e8f0; line-height:1.8;
+    }
+    .footer-contacts { color:#444; font-weight:600; margin-top:10px; }
+    .renaming-note { font-style:italic; font-size:12px; color:#999; margin-bottom:5px; }
+
+    @media (max-width:768px){
+      .logo-img { height:50px; }
+      nav a { margin-left:12px; font-size:13px; }
+      .hero h1 { font-size:24px; }
+      .hero p { font-size:14px; }
+      .card { padding:20px 16px; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <a href="index.html" class="logo-container">
-      <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="capabilities.html">Capabilities</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
-  </header>
+<header>
+  <a href="index.html" class="logo-container">
+    <img src="logo.png" alt="Yuda PCB Logo" class="logo-img">
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="capabilities.html">Capabilities</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>Our PCB Products</h1>
-    <p>We provide high-precision, high-reliability PCB manufacturing solutions for global industries.</p>
+<section class="hero">
+  <h1>PCB Manufacturing Capabilities</h1>
+  <p>From single-layer prototypes to complex HDI and high-layer-count PCBs, we provide stable quality and predictable lead time for your projects.</p>
+</section>
+
+<main>
+  <!-- 工艺能力表 -->
+  <section class="card">
+    <h2>Technical Capability Overview</h2>
+    <p>
+      The table below summarizes our general manufacturing range. For any values beyond the standard window, 
+      our engineering team will evaluate your design and confirm feasibility.
+    </p>
+    <div class="img-wrapper" onclick="openImg('capability.jpg')">
+      <img src="capability.jpg" alt="Yuda PCB Capability Table" loading="lazy">
+    </div>
+    <h3>Main Highlights</h3>
+    <ul>
+      <li>Layer count: 1–40 layers (HDI and special stack-ups upon request).</li>
+      <li>Min. trace/space and via sizes follow strict IPC Class 2/3 standards.</li>
+      <li>Multiple surface finishes: HASL, Lead-free HASL, ENIG, OSP, etc.</li>
+      <li>Support for impedance control, thick copper, and special materials.</li>
+    </ul>
   </section>
 
-  <main>
-    <h2 class="section-title">Product Categories</h2>
-    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 30px;">* Click on any card to view the full product specifications.</p>
-
-    <div class="grid">
-      <div class="card" onclick="openImg('multilayer.jpg')">
-        <img src="multilayer.jpg" alt="Multilayer PCB" loading="lazy">
-        <div class="info"><h3>Multilayer PCB</h3></div>
-      </div>
-      <div class="card" onclick="openImg('hdi.jpg')">
-        <img src="hdi.jpg" alt="HDI PCB" loading="lazy">
-        <div class="info"><h3>HDI PCB</h3></div>
-      </div>
-      <div class="card" onclick="openImg('high-frequency.jpg')">
-        <img src="high-frequency.jpg" alt="High Frequency PCB" loading="lazy">
-        <div class="info"><h3>High Frequency PCB</h3></div>
-      </div>
-      <div class="card" onclick="openImg('rigid-flex.jpg')">
-        <img src="rigid-flex.jpg" alt="Rigid-Flex PCB" loading="lazy">
-        <div class="info"><h3>Rigid-Flex PCB</h3></div>
-      </div>
-      <div class="card" onclick="openImg('blind-buried.jpg')">
-        <img src="blind-buried.jpg" alt="Blind & Buried Via PCB" loading="lazy">
-        <div class="info"><h3>Blind & Buried Via</h3></div>
-      </div>
-      <div class="card" onclick="openImg('impedance.jpg')">
-        <img src="impedance.jpg" alt="Impedance Controlled PCB" loading="lazy">
-        <div class="info"><h3>Impedance Controlled</h3></div>
-      </div>
-      <div class="card" onclick="openImg('hybrid.jpg')">
-        <img src="hybrid.jpg" alt="Hybrid Lamination PCB" loading="lazy">
-        <div class="info"><h3>Hybrid Lamination</h3></div>
-      </div>
+  <!-- 交期表 -->
+  <section class="card">
+    <h2>Standard Lead Time</h2>
+    <p>
+      Time-to-market is critical for R&amp;D teams and small-to-medium batch production. 
+      The lead-time table below is a general reference for expedited samples and small batch orders.
+    </p>
+    <div class="img-wrapper" onclick="openImg('leadtime.jpg')">
+      <img src="leadtime.jpg" alt="Fast Service & Rapid Delivery Lead Time" loading="lazy">
     </div>
-  </main>
+    <h3>Typical Lead-Time Reference</h3>
+    <ul>
+      <li>Expedited prototypes for standard FR-4 PCBs starting from 24–48 hours.</li>
+      <li>Small batches commonly shipped within 3–7 working days depending on complexity.</li>
+      <li>HDI and special material PCBs may require additional time after engineering review.</li>
+    </ul>
+  </section>
 
-  <div id="overlay" onclick="this.style.display='none'">
-    <img id="overlayImg" src="">
+  <!-- 询价引导 -->
+  <section class="card" style="text-align:center; background:#f0f5ff;">
+    <h2 style="border-left:none; padding-left:0;">Need to Confirm a Specific Capability?</h2>
+    <p style="max-width:700px; margin:0 auto 20px; font-size:14px; color:#444;">
+      For detailed capability questions or to confirm if your design is within our process window, 
+      please send your Gerber files and key requirements (layers, thickness, copper, finish) to our engineering team.
+    </p>
+    <p style="font-weight:bold; color:#0b3f8c;">
+      Email: <a href="mailto:sales@yostarpcb.com" style="color:#0b67ff; text-decoration:none;">sales@yostarpcb.com</a> 
+      or <a href="mailto:emily@yudapcb.com" style="color:#0b67ff; text-decoration:none;">emily@yudapcb.com</a>
+    </p>
+  </section>
+</main>
+
+<!-- 放大图层 -->
+<div id="overlay" onclick="this.style.display='none'">
+  <img id="overlayImg" src="">
+</div>
+
+<footer>
+  <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
+  <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
+  <div class="footer-contacts">
+    Email: sales@yostarpcb.com, emily@yudapcb.com<br>
+    Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
+    Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
   </div>
+</footer>
 
-  <footer>
-    <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
-    <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
-    <div class="footer-contacts">
-      Email: sales@yostarpcb.com, emily@yudapcb.com<br>
-      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-      Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function openImg(src) {
-      document.getElementById('overlayImg').src = src;
-      document.getElementById('overlay').style.display = 'flex';
-    }
-  </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function openImg(src) {
+    document.getElementById('overlayImg').src = src;
+    document.getElementById('overlay').style.display = 'flex';
+  }
+</script>
 </body>
 </html>
