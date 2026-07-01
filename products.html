@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Products | Yuda Electronic Technology Co., Ltd.</title>
+  <title>Products | Multilayer, HDI, High-Frequency PCB Manufacturer - Yuda Electronic Technology</title>
+  <meta name="description" content="Yuda Electronic Technology provides multilayer PCBs, HDI PCBs with microvias, high-frequency RF PCBs, rigid-flex PCBs, blind & buried via PCBs, impedance-controlled PCBs and hybrid-lamination PCBs. Prototype and small-to-medium batch production with stable quality and fast lead time." />
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin:0; background:#f5f7fb; color:#222; }
     header { background:#0b67ff; color:#fff; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    
     .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
-    .logo-img { height: 50px; width: auto; border-radius: 4px; background: #fff; padding: 2px; }
-    
-    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; }
+    .logo-img { height:70px; width:auto; }
+    nav a { color:#eaf0ff; margin-left:18px; text-decoration:none; font-size:15px; font-weight:500; }
     nav a:hover { text-decoration:underline; }
 
     .hero { background: linear-gradient(135deg,#0b67ff,#0f3f9f); color:#fff; padding:40px 20px; text-align:center; }
@@ -19,19 +18,39 @@
     .hero p { margin:0; opacity:.95; max-width:900px; margin:0 auto; }
 
     main { max-width:1200px; margin:30px auto; padding:0 18px 40px; }
-    .section-title { font-size:24px; color:#0b3f8c; margin:25px 0; text-align: center; }
+    .section-title { font-size:24px; color:#0b3f8c; margin:18px 0 8px; text-align: center; }
+    .section-intro { font-size:14px; color:#555; max-width:900px; margin:0 auto 18px; text-align:center; }
 
     .grid {
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
-    .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(15,35,95,0.1); transition:transform .2s; cursor: pointer; border: 1px solid #eee; }
-    .card:hover { transform:translateY(-8px); }
-    .card img { width:100%; height: auto; display:block; }
-    .card .info { padding:15px; text-align: center; background: #fff; }
-    .card h3 { margin: 0; color:#0b3f8c; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
-    
+    .card {
+      background:#fff; border-radius:12px; overflow:hidden;
+      box-shadow:0 8px 20px rgba(15,35,95,0.1);
+      transition:transform .2s; cursor: default; border: 1px solid #eee;
+      display:flex; flex-direction:column;
+    }
+    .card:hover { transform:translateY(-6px); }
+    .card img { width:100%; height:auto; display:block; cursor: zoom-in; }
+    .card .body { padding:16px; flex:1; display:flex; flex-direction:column; }
+    .card h3 { margin:0 0 8px; color:#0b3f8c; font-size:18px; }
+    .card p { margin:0 0 10px; font-size:14px; color:#333; line-height:1.6; }
+    .card ul { margin:0 0 10px; padding-left:18px; font-size:13px; color:#555; }
+    .card ul li { margin-bottom:4px; }
+
+    .cta-link {
+      margin-top:auto;
+      font-size:13px;
+      color:#0b67ff;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      margin-top:4px;
+    }
+    .cta-link:hover { text-decoration:underline; }
+
     #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
     #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
 
@@ -39,14 +58,18 @@
     .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
     .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
 
-    @media (max-width:600px){ .hero h1{font-size:22px;} .logo-img { height: 40px; } }
+    @media (max-width:600px){
+      .hero h1{font-size:22px;}
+      .logo-img { height:50px; }
+      nav a { margin-left:12px; font-size:13px; }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <a href="index.html" class="logo-container">
-      <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
+      <img src="logo.png" alt="Yuda PCB Logo" class="logo-img">
     </a>
     <nav>
       <a href="index.html">Home</a>
@@ -60,41 +83,128 @@
 
   <section class="hero">
     <h1>Our PCB Products</h1>
-    <p>We provide high-precision, high-reliability PCB manufacturing solutions for global industries.</p>
+    <p>We provide high-precision, high-reliability PCB fabrication services for global customers, from rapid prototypes to small-to-medium volume orders.</p>
   </section>
 
   <main>
     <h2 class="section-title">Product Categories</h2>
-    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 30px;">* Click on any card to view the full product specifications.</p>
+    <p class="section-intro">
+      Yuda Electronic Technology specializes in multilayer PCBs, HDI PCBs with microvias, high-frequency RF PCBs, rigid-flex PCBs,
+      blind &amp; buried via PCBs, impedance-controlled boards and hybrid-lamination PCB solutions.
+      Below is an overview of our main product types.
+    </p>
 
     <div class="grid">
-      <div class="card" onclick="openImg('multilayer.jpg')">
-        <img src="multilayer.jpg" alt="Multilayer PCB" loading="lazy">
-        <div class="info"><h3>Multilayer PCB</h3></div>
+      <!-- Multilayer PCB -->
+      <div class="card">
+        <img src="multilayer.jpg" alt="Multilayer PCB boards 4-40 layers FR4 stack-up manufactured by Yuda Electronic Technology" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>Multilayer PCB</h3>
+          <p>Standard FR-4 multilayer PCBs from 4 to 40 layers for industrial control, telecom and power applications.</p>
+          <ul>
+            <li>FR-4 base material, Tg135 / Tg170 options.</li>
+            <li>Layer count: 4–40 layers with customized stack-up.</li>
+            <li>Board thickness: 0.6–2.0 mm typical, other thickness on request.</li>
+            <li>Surface finish: HASL, Lead-free HASL, ENIG, OSP.</li>
+          </ul>
+          <a href="capabilities.html" class="cta-link">Check multilayer capability →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('hdi.jpg')">
-        <img src="hdi.jpg" alt="HDI PCB" loading="lazy">
-        <div class="info"><h3>HDI PCB</h3></div>
+
+      <!-- HDI PCB -->
+      <div class="card">
+        <img src="hdi.jpg" alt="HDI PCB with microvias 1+N+1 2+N+2 via in pad manufactured by Yuda PCB" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>HDI PCB</h3>
+          <p>High Density Interconnect PCBs with microvias, suitable for fine-pitch BGA and compact designs.</p>
+          <ul>
+            <li>HDI structures: 1+N+1, 2+N+2, up to 3+N+3 (case by case).</li>
+            <li>Laser microvias, staggered or stacked via options.</li>
+            <li>Via-in-pad for high-density BGA layouts.</li>
+            <li>Impedance control and high-speed routing support.</li>
+          </ul>
+          <a href="faq.html" class="cta-link">Learn more about HDI PCB →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('high-frequency.jpg')">
-        <img src="high-frequency.jpg" alt="High Frequency PCB" loading="lazy">
-        <div class="info"><h3>High Frequency PCB</h3></div>
+
+      <!-- High Frequency PCB -->
+      <div class="card">
+        <img src="high-frequency.jpg" alt="High frequency PCB using Rogers PTFE low loss materials for RF applications" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>High-Frequency PCB</h3>
+          <p>RF and microwave PCBs using Rogers and other low-loss materials for high-frequency designs.</p>
+          <ul>
+            <li>Materials: Rogers, PTFE and hybrid FR-4 combinations.</li>
+            <li>Stable dielectric constant and low insertion loss.</li>
+            <li>Suitable for 5G, base station, RF module applications.</li>
+            <li>Impedance-controlled transmission lines with tight tolerance.</li>
+          </ul>
+          <a href="faq.html" class="cta-link">Learn more about high-frequency PCB →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('rigid-flex.jpg')">
-        <img src="rigid-flex.jpg" alt="Rigid-Flex PCB" loading="lazy">
-        <div class="info"><h3>Rigid-Flex PCB</h3></div>
+
+      <!-- Rigid-Flex PCB -->
+      <div class="card">
+        <img src="rigid-flex.jpg" alt="Rigid-flex PCB for compact devices combining rigid and flexible sections" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>Rigid-Flex PCB</h3>
+          <p>Rigid-flex PCBs combining rigid and flexible sections for compact and high-reliability devices.</p>
+          <ul>
+            <li>PI (polyimide) flex materials for dynamic bending.</li>
+            <li>Optimized for space-constrained designs and reliability.</li>
+            <li>Suitable for medical, wearable and aerospace electronics.</li>
+            <li>Custom stack-ups and coverlay designs available.</li>
+          </ul>
+          <a href="faq.html" class="cta-link">Learn more about rigid-flex PCB →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('blind-buried.jpg')">
-        <img src="blind-buried.jpg" alt="Blind & Buried Via PCB" loading="lazy">
-        <div class="info"><h3>Blind & Buried Via</h3></div>
+
+      <!-- Blind & Buried Via PCB -->
+      <div class="card">
+        <img src="blind-buried.jpg" alt="Blind and buried via PCB for high density interconnect designs" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>Blind &amp; Buried Via PCB</h3>
+          <p>Advanced via structures enabling high-density interconnects without sacrificing signal integrity.</p>
+          <ul>
+            <li>Blind vias and buried vias between specific layer pairs.</li>
+            <li>Stacked or staggered via configurations.</li>
+            <li>Ideal for complex multi-layer and BGA-intensive designs.</li>
+            <li>Via filling and copper capping options.</li>
+          </ul>
+          <a href="faq.html" class="cta-link">Learn more about blind &amp; buried via PCB →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('impedance.jpg')">
-        <img src="impedance.jpg" alt="Impedance Controlled PCB" loading="lazy">
-        <div class="info"><h3>Impedance Controlled</h3></div>
+
+      <!-- Impedance Controlled PCB -->
+      <div class="card">
+        <img src="impedance.jpg" alt="Impedance controlled multilayer PCB for high speed digital and RF signals" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>Impedance-Controlled PCB</h3>
+          <p>Multilayer PCBs with controlled impedance for high-speed digital and RF signal integrity.</p>
+          <ul>
+            <li>Single-ended and differential impedance control.</li>
+            <li>Coordinated stack-up design and line-width adjustment.</li>
+            <li>Impedance coupons and test reports on request.</li>
+            <li>Support for high-speed interfaces and RF circuits.</li>
+          </ul>
+          <a href="capabilities.html" class="cta-link">View impedance capability →</a>
+        </div>
       </div>
-      <div class="card" onclick="openImg('hybrid.jpg')">
-        <img src="hybrid.jpg" alt="Hybrid Lamination PCB" loading="lazy">
-        <div class="info"><h3>Hybrid Lamination</h3></div>
+
+      <!-- Hybrid Lamination PCB -->
+      <div class="card">
+        <img src="hybrid.jpg" alt="Hybrid lamination PCB combining FR4 and high frequency materials" loading="lazy" onclick="openImg(this.src)">
+        <div class="body">
+          <h3>Hybrid Lamination PCB</h3>
+          <p>Hybrid PCBs combining FR-4 with high-frequency materials or metal cores to balance cost and performance.</p>
+          <ul>
+            <li>Mixed dielectric stack-ups (e.g. FR-4 + Rogers).</li>
+            <li>Local high-frequency zones with low-loss materials.</li>
+            <li>Thermal management solutions with metal-core options.</li>
+            <li>Custom stack-up design for special applications.</li>
+          </ul>
+          <a href="faq.html" class="cta-link">Learn more about hybrid PCB →</a>
+        </div>
       </div>
     </div>
   </main>
