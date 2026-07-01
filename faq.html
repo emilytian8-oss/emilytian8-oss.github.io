@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f4f7f9;color:#333; }
-    header { background:#0b67ff;color:#fff;padding:16px 20px;display:flex;align-items:center;justify-content:space-between; }
-    .logo { font-size:20px;font-weight:600; }
-    nav a { color:#eaf0ff;margin-left:18px;text-decoration:none;font-size:15px; }
-    nav a:hover { text-decoration:underline; }
+    header { background:#0b67ff;color:#fff;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .logo-container { display:flex;align-items:center;text-decoration:none;color:#fff; }
+    .logo-img { height:70px;width:auto; }
+    nav a { color:#eaf0ff;margin-left:18px;text-decoration:none;font-size:14px;font-weight:500; }
+    nav a:hover { color:#fff;text-decoration:underline; }
 
     .container { max-width:960px;margin:0 auto;padding:30px 18px 50px; }
     h1 { font-size:26px;color:#0b3f8c;margin-top:0; }
@@ -28,18 +29,24 @@
 
     .note { font-size:12px;color:#888;margin-top:8px; }
 
-    footer { text-align:center;font-size:13px;color:#888;padding:30px 10px 40px;background:#fff;border-top:1px solid #e5e8f0; }
+    footer { text-align:center;font-size:13px;color:#888;padding:30px 10px 40px;background:#fff;border-top:1px solid #e5e8f0;line-height:1.8; }
+    .footer-contacts { color:#444;font-weight:600;margin-top:10px; }
+    .renaming-note { font-style:italic;font-size:12px;color:#999;margin-bottom:5px; }
 
     @media (max-width:600px){
       h1 { font-size:22px; }
       .faq-question { font-size:14px; }
+      .logo-img { height:50px; }
+      nav a { margin-left:12px;font-size:13px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Yuda PCB</div>
+  <a href="index.html" class="logo-container">
+    <img src="logo.png" alt="Yuda PCB Logo" class="logo-img">
+  </a>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
@@ -53,196 +60,202 @@
 <div class="container">
   <h1>Frequently Asked Questions 常见问题</h1>
   <p class="subtitle">
-    Below you can find answers to common questions about our PCB products and capabilities.
+    Below you can find answers to common questions about our PCB products and capabilities, including multilayer PCB, HDI PCB, 
+    high-frequency PCB, rigid-flex PCB, blind &amp; buried via PCB, impedance-controlled PCB and hybrid-lamination PCB.
     以下是关于我们 PCB 产品和工艺能力的一些常见问答。
   </p>
 
-  <!-- 1. Multilayer PCB -->
-  <h2 class="faq-section-title">Multilayer PCB 多层电路板</h2>
+  <!-- DFM 专题（新增） -->
+  <h2 class="faq-section-title" id="dfm-faq">DFM &amp; Design Tips 设计可制造性建议</h2>
+
+  <!-- DFM Q1 -->
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
       <span>
-        Q1: What information do you need to quote a multilayer PCB?  
-        多层 PCB 报价需要提供哪些资料？
+        Q1: What are the most common DFM issues you find when reviewing Gerber files?  
+        在审核 Gerber 文件时，你们最常发现哪些 DFM 问题？
       </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> The most common DFM issues we see include:</p>
+      <ul>
+        <li>Insufficient annular ring on vias, especially for small drill sizes.</li>
+        <li>Trace-to-board edge clearance too small, causing potential short or breakout.</li>
+        <li>Inconsistent solder mask openings (pads partially covered or mask too tight).</li>
+        <li>Text or silkscreen placed on top of pads or in high-density BGA areas.</li>
+      </ul>
+      <p><strong>CN:</strong> 我们在 DFM 审核中最常见到的问题包括：</p>
+      <ul>
+        <li>过孔环宽不足，特别是小孔径设计时环宽太窄。</li>
+        <li>线路与板边距离过小，存在短路或开槽后露铜的风险。</li>
+        <li>阻焊开窗不合理（焊盘被部分覆盖或开窗过紧）。</li>
+        <li>丝印文字压在焊盘上或 BGA 高密度区域，影响贴片质量。</li>
+      </ul>
+      <p class="contact-line">
+        EN: We perform a standard DFM check and will highlight these risks before production.  
+        CN: 我们会在生产前进行标准 DFM 审核，并提前反馈上述风险，避免后期返工。<br>
+        Contact: <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>, Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- DFM Q2 -->
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>
+        Q2: Any special DFM tips for gold fingers and high-speed differential pairs?  
+        关于金手指和高速差分线，有哪些特别的 DFM 建议？
+      </span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      <p><strong>EN:</strong> For gold fingers and high-speed pairs, we recommend:</p>
+      <ul>
+        <li>Keep enough clearance between gold fingers and nearby copper (tracks or planes).</li>
+        <li>Avoid solder mask between differential pairs if controlled impedance is required.</li>
+        <li>Maintain symmetrical routing and consistent spacing for differential pairs.</li>
+        <li>Use chamfered corners for gold fingers and clearly mark “Do not plate solder” areas.</li>
+      </ul>
+      <p><strong>CN:</strong> 对于金手指和高速差分线，我们建议：</p>
+      <ul>
+        <li>金手指与相邻铜（走线或铜皮）保持足够安全距离，避免倒角或铣边时露铜。</li>
+        <li>如需精确阻抗控制，差分线之间尽量不加阻焊油墨，以保证线间介质一致。</li>
+        <li>差分线长度和间距尽量对称一致，避免急剧拐角和突然变化。</li>
+        <li>金手指边角设计为倒角，并在图纸中明确标注“禁止喷锡/锡膏覆盖”区域。</li>
+      </ul>
+      <p class="contact-line">
+        EN: Our engineering team can review your layout and suggest adjustments for better manufacturability and signal integrity.  
+        CN: 我们的工程团队可以对您的线路布局进行评审，并给出更利于生产及信号完整性的调整建议。<br>
+        Contact: <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>, Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- 1. Multilayer PCB -->
+  <h2 class="faq-section-title" id="multilayer-faq">Multilayer PCB 多层电路板</h2>
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Q3: What information do you need to quote a multilayer PCB?  
+        多层 PCB 报价需要提供哪些资料？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> For multilayer PCB quotation, please provide your complete Gerber files and the following key parameters:</p>
       <ul>
-        <li>Layer count and stack-up (including dielectric thickness and copper weight)</li>
-        <li>Finished board thickness and finished copper thickness</li>
-        <li>Material type (standard FR‑4 or special laminates, Tg value)</li>
-        <li>Surface finish (HASL, ENIG, OSP, etc.)</li>
-        <li>Solder mask / silkscreen color, quantity and required lead time</li>
+        <li>Layer count and stack-up (including dielectric thickness and copper weight).</li>
+        <li>Finished board thickness and finished copper thickness.</li>
+        <li>Material type (standard FR‑4 or special laminates, Tg value).</li>
+        <li>Surface finish (HASL, ENIG, OSP, etc.).</li>
+        <li>Solder mask / silkscreen color, quantity and required lead time.</li>
       </ul>
       <p><strong>CN:</strong> 多层 PCB 报价时，请提供完整的 Gerber 文件，并同时注明以下关键信息：</p>
       <ul>
-        <li>板层数及叠层结构（包括各层介质厚度和铜厚）</li>
-        <li>成品板厚和成品铜厚（内外层）</li>
-        <li>板材类型（标准 FR‑4 或特殊高频/高 Tg 材料，Tg 要求）</li>
-        <li>表面处理方式（喷锡、沉金、OSP 等）</li>
-        <li>阻焊 / 字符颜色、订单数量及要求交期</li>
+        <li>板层数及叠层结构（包括各层介质厚度和铜厚）。</li>
+        <li>成品板厚和成品铜厚（内外层）。</li>
+        <li>板材类型（标准 FR‑4 或特殊高频/高 Tg 材料，Tg 要求）。</li>
+        <li>表面处理方式（喷锡、沉金、OSP 等）。</li>
+        <li>阻焊 / 字符颜色、订单数量及要求交期。</li>
       </ul>
       <p class="contact-line">
-        EN: For multilayer PCB RFQs, please email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 多层板询价请发送资料至 <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>，
-        电话 <strong>+86 135 3804 3239</strong>，WhatsApp <strong>+86-13538043239</strong>。
+        For multilayer PCB RFQs, please email <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 2. HDI PCB -->
-  <h2 class="faq-section-title">HDI PCB 高密度互连板</h2>
+  <h2 class="faq-section-title" id="hdi-faq">HDI PCB 高密度互连板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q2: What HDI structures and microvia capabilities can you support?  
-        你们可以支持哪些 HDI 叠构和微盲孔能力？
-      </span>
+      <span>Q4: What HDI structures and microvia capabilities can you support?  
+        你们可以支持哪些 HDI 叠构和微盲孔能力？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> We support common HDI build-up structures such as 1+N+1, 2+N+2 and up to 3+N+3, including blind vias, buried vias and via-in-pad designs. Typical laser microvias are 0.10–0.15 mm finished, with staggered or stacked configurations depending on your reliability requirements. Please clearly indicate via structures and layer connections in your stack-up drawing.</p>
       <p><strong>CN:</strong> 我们可实现常见 HDI 叠构，例如 1+N+1、2+N+2，最高可到 3+N+3，支持盲孔、埋孔以及焊盘中孔（via in pad）等结构。常规激光微孔成品孔径约 0.10–0.15 mm，可根据可靠性要求设计为错位叠孔或同轴叠孔。请在叠层图中清晰标注各层的盲/埋孔关系及孔结构。</p>
       <p class="contact-line">
-        EN: For HDI design review, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: HDI 设计评审请联系以上邮箱或拨打电话 <strong>+86 135 3804 3239</strong>，WhatsApp <strong>+86-13538043239</strong>。
+        For HDI design review, contact <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>, Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 3. High-Frequency PCB -->
-  <h2 class="faq-section-title">High-Frequency PCB 高频电路板</h2>
+  <h2 class="faq-section-title" id="hf-faq">High-Frequency PCB 高频电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q3: How do I choose materials and stack-up for high-frequency PCB designs?  
-        高频 / 高速 PCB 应该如何选择材料和叠层结构？
-      </span>
+      <span>Q5: How do I choose materials and stack-up for high-frequency PCB designs?  
+        高频 / 高速 PCB 应该如何选择材料和叠层结构？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> Material and stack-up choice depend on operating frequency, loss budget and cost. We can work with high-frequency laminates such as Rogers and other low-loss materials, as well as hybrid FR‑4 structures. When consulting us, please provide your frequency range, target impedance, loss requirements and any preferred materials so that we can recommend a suitable stack-up.</p>
       <p><strong>CN:</strong> 高频 / 高速 PCB 的材料与叠层选择与工作频率、损耗指标和成本预算密切相关。我们可加工 Rogers 等高频材料以及 FR‑4 与高频材料混压结构。咨询时请告知大致工作频段、目标阻抗及容差、允许损耗范围以及是否指定材料品牌，我们会基于这些信息推荐合适的叠层方案。</p>
       <p class="contact-line">
-        EN: For high-frequency PCB consultation, email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 高频 PCB 选材及叠层咨询，请发送邮件至上述邮箱或通过电话 / WhatsApp 与我们联系。
+        For high-frequency PCB consultation, email <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 4. Rigid-Flex PCB -->
-  <h2 class="faq-section-title">Rigid-Flex PCB 刚挠结合板</h2>
+  <h2 class="faq-section-title" id="rigidflex-faq">Rigid-Flex PCB 刚挠结合板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q4: What should I pay attention to when designing rigid-flex PCBs?  
-        设计刚挠结合 PCB 时需要注意哪些设计要点？
-      </span>
+      <span>Q6: What should I pay attention to when designing rigid-flex PCBs?  
+        设计刚挠结合 PCB 时需要注意哪些设计要点？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> For rigid-flex designs, please clearly define rigid and flex areas, avoid vias in dynamic bending zones, route traces along the bending direction where possible, and provide mechanical drawings for complex folding structures. Indicate coverlay openings, stiffener materials and thicknesses in your drawings for accurate manufacturing.</p>
       <p><strong>CN:</strong> 刚挠结合设计中，应在图纸中清晰区分刚性区与柔性区，避免在反复弯折区域放置过孔和焊盘；走线尽量沿弯折方向布线并避免直角转折；对于复杂折叠结构，建议提供 2D/3D 机械图。还需在图纸中标明 Coverlay 开窗、加强板材质及厚度，以便准确制造。</p>
       <p class="contact-line">
-        EN: For rigid-flex DFM review, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 刚挠结合 DFM 审核，请发资料至上述邮箱或直接电话 / WhatsApp 联系我们。
+        For rigid-flex DFM review, contact <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 5. Blind & Buried Via PCB -->
-  <h2 class="faq-section-title">Blind &amp; Buried Via PCB 盲埋孔电路板</h2>
+  <h2 class="faq-section-title" id="blindburied-faq">Blind &amp; Buried Via PCB 盲埋孔电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q5: When should I use blind and buried vias and what details are needed?  
-        什么时候需要采用盲孔 / 埋孔结构？需要在资料中说明哪些细节？
-      </span>
+      <span>Q7: When should I use blind and buried vias and what details are needed?  
+        什么时候需要采用盲孔 / 埋孔结构？需要在资料中说明哪些细节？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> Blind and buried vias are used in high-density designs to save surface space and improve routing. Please specify which layers are connected by blind and buried vias, whether vias are stacked or staggered, and mark any via-in-pad areas. Providing clear via structures in the stack-up drawing helps us evaluate manufacturability and cost.</p>
       <p><strong>CN:</strong> 在高密度设计中，为节省表面空间、提高布线自由度，通常会采用盲孔和埋孔结构。请在叠层图中标明各盲孔 / 埋孔的层间关系（如 L1–L2 盲孔、L3–L6 埋孔等），说明是否存在叠孔（stacked）或错位孔（staggered），并在图纸中清晰标注 BGA 焊盘中孔等关键区域，以便我们评估可制造性和成本。</p>
       <p class="contact-line">
-        EN: For blind &amp; buried via PCB support, email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 关于盲埋孔板的设计与工艺问题，可通过上述邮箱、电话或 WhatsApp 与我们沟通。
+        For blind &amp; buried via PCB support, email <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 6. Impedance-Controlled PCB -->
-  <h2 class="faq-section-title">Impedance-Controlled PCB 阻抗控制电路板</h2>
+  <h2 class="faq-section-title" id="impedance-faq">Impedance-Controlled PCB 阻抗控制电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q6: What data do you need for accurate impedance control on multilayer PCBs?  
-        多层阻抗板要实现精准阻抗控制，需要客户提供哪些数据？
-      </span>
+      <span>Q8: What data do you need for accurate impedance control on multilayer PCBs?  
+        多层阻抗板要实现精准阻抗控制，需要客户提供哪些数据？</span>
       <span class="faq-toggle">+</span>
     </div>
     <div class="faq-answer">
       <p><strong>EN:</strong> We need an impedance table or drawing listing target values (single-ended/differential), related layers, and initial line width/spacing. A proposed stack-up with material type and dielectric thickness is also required. We will use our impedance tools to fine-tune trace geometry and can provide impedance coupons and test reports if needed.</p>
       <p><strong>CN:</strong> 为了实现精确的阻抗控制，我们需要您提供阻抗表或阻抗图，注明各阻抗线（单端 / 差分）的目标阻抗值、所在层和初始线宽 / 线距。同时需要提供拟采用的叠层结构（材料类型、介质厚度等）。我们会通过阻抗仿真工具适当调整线宽线距，并可按照要求提供阻抗测试 Coupon 和测试报告。</p>
       <p class="contact-line">
-        EN: For impedance-controlled PCB inquiries, contact <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 阻抗板相关问题，请联系上述邮箱或电话 / WhatsApp。
+        For impedance-controlled PCB inquiries, contact <strong>sales@yostarpcb.com</strong>, <strong>emily@yudapcb.com</strong>,
+        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.
       </p>
     </div>
   </div>
 
   <!-- 7. Hybrid-Lamination PCB -->
-  <h2 class="faq-section-title">Hybrid-Lamination PCB 混合压合电路板</h2>
+  <h2 class="faq-section-title" id="hybrid-faq">Hybrid-Lamination PCB 混合压合电路板</h2>
   <div class="faq-item">
     <div class="faq-question" onclick="toggleFaq(this)">
-      <span>
-        Q7: What is a hybrid-lamination PCB and when is it recommended?  
-        什么是混合压合 PCB？在什么情况下建议使用？
-      </span>
-      <span class="faq-toggle">+</span>
-    </div>
-    <div class="faq-answer">
-      <p><strong>EN:</strong> A hybrid-lamination PCB combines different laminates in one stack-up, for example FR‑4 with high-frequency materials or metal-core sections. It is recommended when part of the circuit requires special electrical or thermal performance while other areas can use standard materials, allowing you to balance cost and performance.</p>
-      <p><strong>CN:</strong> 混合压合 PCB 是指在同一块板的叠层中同时使用不同类型的基材，例如在关键高频区域使用高频材料，在其他区域使用 FR‑4，或在局部功率区引入金属芯 / 厚铜层。这种方案适用于局部性能要求较高（如高频、散热）的场合，可以在满足性能的前提下有效控制整体成本。</p>
-      <p class="contact-line">
-        EN: For hybrid-lamination PCB solutions, please email <strong>sales@yudapcb.com, sales01@yudapcb.com, sales02@yudapcb.com, emily@yudapcb.com</strong>,
-        Tel <strong>+86 135 3804 3239</strong>, WhatsApp <strong>+86-13538043239</strong>.<br>
-        CN: 混合压合方案设计与评估，请通过上述邮箱、电话或 WhatsApp 与我们联系。
-      </p>
-    </div>
-  </div>
-
-  <p class="note">
-    EN: If your question is not listed here, please email <strong>sales@yudapcb.com</strong> with your design files and requirements. We will respond as soon as possible.<br>
-    CN: 如未在此找到您关心的问题，欢迎将 Gerber 资料和需求发送至 <strong>sales@yudapcb.com</strong>，我们会尽快回复。
-  </p>
-</div>
-
-<footer>
-  © <span id="year"></span> Yuda Electronic Technology Co., Ltd. | yudapcb.com
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  function toggleFaq(el) {
-    var answer = el.nextElementSibling;
-    var icon = el.querySelector('.faq-toggle');
-    if (answer.style.display === 'block') {
-      answer.style.display = 'none';
-      icon.textContent = '+';
-    } else {
-      answer.style.display = 'block';
-      icon.textContent = '–';
-    }
-  }
-</script>
-</body>
-</html>
+      <span>Q9: What is a hybrid-lamination PCB and when is it recommended?  
+        什么是混合压合 PCB？在什么情况下建议使用？</span
