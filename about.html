@@ -1,173 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yuda Electronic Technology Co., Ltd. | Professional PCB Manufacturer in Dongguan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f0f3f8; color: #222; }
-    
-    header { 
-      background: #0b67ff; 
-      color: #fff; 
-      padding: 10px 20px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      position: sticky; 
-      top: 0; 
-      z-index: 1000; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-    }
-    .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
-    .logo-img { height: 70px; width: auto; }
+    <meta charset="UTF-8">
+    <title>About Us | Yuda Electronic Technology - Your Professional PCB Partner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7fa; color: #333; line-height: 1.6; }
+        header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
+        .logo-img { height: 70px; width: auto; }
+        nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 14px; font-weight: 500; }
+        nav a:hover { color: #fff; text-decoration: underline; }
 
-    nav a { color: #eaf0ff; margin-left: 20px; text-decoration: none; font-size: 15px; font-weight: 500; }
-    nav a:hover { color: #fff; text-decoration: underline; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section-card { background: #fff; border-radius: 15px; padding: 40px; margin-bottom: 30px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        h1, h2, h3 { color: #0b3f8c; margin-top: 0; }
+        h2 { border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; }
 
-    .hero { padding: 80px 20px 60px; text-align: center; background: linear-gradient(135deg, #0b67ff, #0848b3); color: #fff; }
-    .hero h1 { margin: 0 0 15px; font-size: 32px; }
-    .hero p { margin: 0 auto; max-width: 800px; font-size: 17px; opacity: 0.9; line-height: 1.6; }
-    .renaming-note { font-style: italic; font-size: 13px; color: #e0e7ff; margin-bottom: 6px; }
+        .intro-p { font-size: 16px; color: #4a5568; margin-bottom: 14px; text-align: justify; }
 
-    /* Hero CTA 按钮 */
-    .hero-cta { margin-top: 24px; }
-    .hero-cta a {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      margin: 4px 6px;
-      transition: 0.2s;
-    }
-    .hero-cta .btn-primary {
-      background: #ffffff;
-      color: #0b67ff;
-    }
-    .hero-cta .btn-primary:hover {
-      background: #eef2ff;
-    }
-    .hero-cta .btn-outline {
-      border: 1px solid #ffffff;
-      color: #ffffff;
-    }
-    .hero-cta .btn-outline:hover {
-      background: rgba(255,255,255,0.12);
-    }
+        .img-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 25px 0; }
+        .img-item { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #f0f0f0; text-align: center; transition: 0.3s; cursor: zoom-in; }
+        .img-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .img-item img { width: 100%; height: 240px; object-fit: cover; display: block; }
+        .img-item span { display: block; padding: 12px; font-size: 14px; font-weight: 600; color: #0b3f8c; background: #f9fbff; }
 
-    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-    .section-block { background: #fff; border-radius: 15px; overflow: hidden; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .section-info { padding: 30px; border-bottom: 1px solid #eee; }
-    .section-info h2 { margin: 0 0 10px; color: #0b3f8c; font-size: 24px; }
-    .section-info p { color: #666; font-size: 16px; margin: 0; }
-    
-    .img-container { padding: 10px; background: #fff; text-align: center; }
-    .img-container img { max-width: 100%; height: auto; display: block; margin: 0 auto; transition: 0.3s; cursor: zoom-in; }
-    .img-container img:hover { opacity: 0.95; }
+        #overlay { display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out; }
+        #overlay img { max-width:95%; max-height:95%; border:2px solid #fff; border-radius:4px; }
 
-    #overlay { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
-    #overlay img { max-width: 95%; max-height: 95%; border: 2px solid #fff; border-radius: 4px; }
+        .value-item { margin-bottom: 18px; padding-left: 26px; position: relative; font-size: 14px; color: #444; }
+        .value-item::before { content: '✓'; position: absolute; left: 0; top: 2px; color: #0b67ff; font-weight: bold; font-size: 18px; }
 
-    footer { text-align: center; font-size: 13px; color: #666; padding: 50px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
-    .footer-contacts { color: #444; margin-top: 15px; font-weight: 600; }
+        footer { text-align: center; font-size: 13px; color: #888; padding: 40px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
+        .footer-address { max-width: 850px; margin: 10px auto; color: #444; font-weight: 600; }
+        .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 26px; }
-      .hero p { font-size: 15px; }
-      .logo-img { height: 50px; }
-      nav a { margin-left: 12px; font-size: 13px; }
-      .hero-cta a {
-        display: block;
-        margin: 6px auto;
-        max-width: 220px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .section-card { padding: 25px; }
+            .img-item img { height: 180px; }
+            .logo-img { height: 50px; }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
+<header>
     <a href="index.html" class="logo-container">
       <img src="logo.png" alt="Yuda PCB Logo" class="logo-img">
     </a>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="capabilities.html">Capabilities</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
     </nav>
-  </header>
+</header>
 
-  <section class="hero">
-    <h1>Yuda Electronic Technology Co., Ltd.</h1>
-    <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
-    <p>Professional PCB Manufacturing & Solutions with a strong supply chain in Dongguan, China.</p>
-    <div class="hero-cta">
-      <a href="products.html" class="btn-primary">View Products</a>
-      <a href="contact.html" class="btn-outline">Get a Quote</a>
-    </div>
-  </section>
+<div class="container">
+    <!-- 公司与人设简介 -->
+    <section class="section-card">
+        <h1>About Yuda Electronic Technology Co., Ltd.</h1>
+        <p class="intro-p">
+            <strong>Yuda Electronic Technology Co., Ltd.</strong> (formerly YUDA ELECTRONIC LIMITED / Yostar PCB, renamed in 2026) 
+            is a professional PCB partner based in Dongguan, Guangdong Province, China.
+        </p>
+        <p class="intro-p">
+            Our core team has more than <strong>10 years of hands-on experience</strong> in PCB engineering, quality control and supply chain management. 
+            We focus on helping overseas SMEs, R&amp;D teams and design houses turn complex PCB designs into reliable, manufacturable products.
+        </p>
+        <p class="intro-p">
+            Instead of acting only as a “factory”, we position ourselves as your <strong>technical partner and quality guardian</strong>, 
+            performing DFM review, on-site production follow-up and detailed inspection for every project.
+        </p>
+    </section>
 
-  <main>
-    <!-- Section 1: Products -->
-    <div class="section-block">
-      <div class="section-info">
-        <h2>PCB Products Range</h2>
-        <p>Expertise in Multilayer, HDI, Rigid-Flex, and other advanced PCB types for industrial and communication applications.</p>
-      </div>
-      <div class="img-container">
-        <img src="products.jpg" alt="PCB Products" loading="lazy" onclick="openImg(this.src)">
-      </div>
-    </div>
+    <!-- 微观视界：切片和 SEM -->
+    <section class="section-card">
+        <h2>We See What Others Ignore</h2>
+        <p class="intro-p">
+            Reliability starts from inside each PCB. We perform micro-section and SEM analysis to verify copper plating thickness, 
+            hole wall integrity and layer alignment, especially for high-reliability and high-density designs.
+        </p>
+        <div class="img-row">
+            <div class="img-item" onclick="openImg('cross-section.jpg')">
+                <img src="cross-section.jpg" alt="PCB Micro-section Analysis Cross Section">
+                <span>Micro-section Analysis</span>
+            </div>
+            <div class="img-item" onclick="openImg('sem-view.jpg')">
+                <img src="sem-view.jpg" alt="SEM Electron Microscope View of PCB Structure">
+                <span>SEM Electron Microscope View</span>
+            </div>
+        </div>
+    </section>
 
-    <!-- Section 2: Application -->
-    <div class="section-block">
-      <div class="section-info">
-        <h2>Industry Applications</h2>
-        <p>PCBs widely used in Telecom, Industrial Control, Medical Devices, Automotive Electronics and IoT products.</p>
-      </div>
-      <div class="img-container">
-        <img src="application.jpg" alt="Industry Applications" loading="lazy" onclick="openImg(this.src)">
-      </div>
-    </div>
+    <!-- 检测能力：AOI -->
+    <section class="section-card">
+        <h2>Precision Inspection & Testing</h2>
+        <p class="intro-p">
+            Every batch of PCBs is inspected using high-resolution Automated Optical Inspection (AOI) and electrical testing (E-test).
+            Our goal is to catch defects such as opens, shorts, missing pads or solder mask issues before the boards reach your assembly line.
+        </p>
+        <div class="img-row" style="grid-template-columns: 1fr;">
+            <div class="img-item" onclick="openImg('aoi-test.jpg')">
+                <img src="aoi-test.jpg" alt="Advanced AOI Testing for PCB Quality Control" style="height: 320px;">
+                <span>100% AOI & E-Test Procedures</span>
+            </div>
+        </div>
+    </section>
 
-    <!-- Section 3: Factory -->
-    <div class="section-block">
-      <div class="section-info">
-        <h2>Manufacturing Facility</h2>
-        <p>Working closely with audited plants in Dongguan, we focus on stable quality, flexibility and fast response for small-to-medium volume orders.</p>
-      </div>
-      <div class="img-container">
-        <img src="factory.jpg" alt="Yuda PCB Manufacturing Facility" loading="lazy" onclick="openImg(this.src)">
-      </div>
-    </div>
-  </main>
+    <!-- 包装与物流 -->
+    <section class="section-card">
+        <h2>Professional Packaging & Logistics</h2>
+        <p class="intro-p">
+            Oxidation and transit damage are two major risks during long-distance shipping. To protect your boards, 
+            we apply industry-standard vacuum packaging and ESD-safe cushioning materials.
+        </p>
+        <div class="img-row">
+            <div class="img-item" onclick="openImg('packaging.jpg')">
+                <img src="packaging.jpg" alt="Vacuum Aluminum Moisture-proof Packaging for PCBs">
+                <span>Moisture-proof Vacuum Aluminum Packaging</span>
+            </div>
+            <div class="img-item" onclick="openImg('pcba-package.jpg')">
+                <img src="pcba-package.jpg" alt="ESD Safe Handling and Shockproof Packaging for PCBA and PCBs">
+                <span>ESD Safe Handling & Shockproof Foam</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- Image Zoom Overlay -->
-  <div id="overlay" onclick="this.style.display='none'">
+    <!-- 我们的承诺 -->
+    <section class="section-card">
+        <h2>Our Commitment</h2>
+        <div class="value-item">
+            <strong>DFM as Standard</strong>
+            We review your Gerber files for manufacturability, checking annular ring, trace-to-edge clearance, via structures and impedance considerations.
+        </div>
+        <div class="value-item">
+            <strong>Transparent Supply Chain</strong>
+            We cooperate with audited local plants and monitor production on-site, ensuring your requirements are strictly followed.
+        </div>
+        <div class="value-item">
+            <strong>Full Traceability</strong>
+            Upon request, we provide test reports including AOI images, E-test logs and packaging photos of your shipment.
+        </div>
+    </section>
+
+    <!-- 风险承诺 -->
+    <section class="section-card" style="background: linear-gradient(135deg, #0b3f8c, #0b67ff); color: #fff; text-align: center;">
+        <h2 style="color:#fff; border-left:none; padding-left:0; margin-bottom:15px;">Your Risk-Free Choice</h2>
+        <p style="font-size: 18px; font-weight: 500; margin-bottom: 20px;">100% Quality & Satisfaction Guarantee</p>
+        <div style="max-width: 700px; margin: 0 auto; text-align: left; font-size: 15px;">
+            <p>If our PCB products do not meet your confirmed specifications or IPC Class 2/3 standards:</p>
+            <ul style="margin-top: 10px;">
+                <li>✓ <strong>Immediate Re-production:</strong> We will expedite a new batch for you for free.</li>
+                <li>✓ <strong>Full Refund:</strong> If we can't solve the issue, we provide a 100% refund.</li>
+                <li>✓ <strong>Transparent Communication:</strong> No excuses, just solutions.</li>
+            </ul>
+        </div>
+        <div style="margin-top: 25px;">
+            <a href="contact.html" style="background: #fff; color: #0b67ff; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Get a Risk-Free Quote Now</a>
+        </div>
+    </section>
+
+</div>
+
+<div id="overlay" onclick="this.style.display='none'">
     <img id="overlayImg" src="">
-  </div>
+</div>
 
-  <footer>
+<footer>
     <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
     <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
-    <div class="footer-contacts">
-      Email: sales@yostarpcb.com, emily@yudapcb.com<br>
-      Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-      Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
+    <div class="footer-address">
+        Email: sales@yostarpcb.com, emily@yudapcb.com<br>
+        Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
+        Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
     </div>
-  </footer>
+</footer>
 
-  <script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
     function openImg(src) {
       document.getElementById('overlayImg').src = src;
       document.getElementById('overlay').style.display = 'flex';
     }
-  </script>
+</script>
 </body>
 </html>
