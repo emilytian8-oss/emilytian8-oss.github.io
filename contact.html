@@ -152,7 +152,7 @@ nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
   <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
   <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
   <div class="footer-contacts">
-    Email: sales@yostarpcb.com, sales@yostarpcb.com<br>
+    Email: sales@yostarpcb.com<br>
     Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
     Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
   </div>
@@ -166,7 +166,7 @@ nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
     if (!form.reportValidity()) return;
     const data = new FormData(form);
     const subject = data.get('subject') || 'PCB / PCBA Project Enquiry';
-    const body = 'Name: ' + data.get('name') + '\\nEmail: ' + data.get('email') + '\\nCountry: ' + data.get('country') + '\\n\\nProject details:\\n' + data.get('message');
+    const body = 'Name: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\nCountry: ' + data.get('country') + '\n\nProject details:\n' + data.get('message');
     window.location.href = 'mailto:sales@yostarpcb.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 </script>
