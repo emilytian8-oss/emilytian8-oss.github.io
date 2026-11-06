@@ -1,173 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact YudaPCB | PCB & PCBA Project Enquiries</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7f9; color: #333; }
-    header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
-    .logo-img { height: 70px; width: auto; }
-    nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
-
-    h1 { font-size: 26px; color: #0b3f8c; margin-top: 0; margin-bottom: 8px; }
-    .subtitle { font-size: 14px; color: #666; margin-bottom: 30px; }
-
-    .flex-wrap { display: flex; flex-wrap: wrap; gap: 24px; }
-    .panel { background: #fff; border-radius: 12px; padding: 24px 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.05); border: 1px solid #eee; }
-
-    .left { flex: 1.1; min-width: 300px; }
-    .right { flex: 1; min-width: 260px; }
-
-    .info-block { margin-bottom: 18px; }
-    .info-title { font-weight: 600; color: #0b3f8c; margin-bottom: 4px; }
-    .info-text { font-size: 14px; color: #444; line-height: 1.6; }
-
-    .map-btn { display: inline-block; margin-top: 10px; padding: 9px 16px; border-radius: 6px; background: #0b67ff; color: #fff; font-size: 14px; text-decoration: none; }
-    .map-btn:hover { background: #004ecc; }
-
-    form label { display: block; font-size: 13px; margin: 8px 0 4px; color: #444; }
-    form input, form textarea {
-      width: 100%; padding: 8px 10px; border-radius: 6px; border: 1px solid #d0d7e2;
-      font-size: 14px; box-sizing: border-box;
-    }
-    form textarea { min-height: 90px; resize: vertical; }
-    .submit-btn {
-      margin-top: 12px; padding: 10px 18px; border-radius: 6px; border: none;
-      background: #0b67ff; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer;
-    }
-    .submit-btn:hover { background: #004ecc; }
-    .form-note { font-size: 12px; color: #888; margin-top: 6px; line-height: 1.6; }
-
-    .bottom-panel { margin-top: 24px; }
-
-    footer { text-align: center; font-size: 13px; color: #888; padding: 30px 10px 40px; background: #fff; border-top: 1px solid #e5e8f0; line-height: 1.8; }
-    .footer-contacts { color: #444; font-weight: 600; margin-top: 10px; }
-    .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
-
-    @media (max-width: 768px) {
-      .flex-wrap { flex-direction: column; }
-      .logo-img { height: 50px; }
-      nav a { margin-left: 12px; font-size: 13px; }
-    }
-  
-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-@media(max-width:768px){header{flex-wrap:wrap;gap:10px}nav{width:100%;justify-content:center}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request a Quote | YudaPCB PCB & PCBA</title>
+<meta name="description" content="Request a PCB fabrication or PCBA assembly quote from YudaPCB. Share your specifications and upload Gerber, BOM and assembly files for review.">
+<link rel="canonical" href="https://yudapcb.com/contact.html">
+<style>
+:root{--navy:#102b4e;--blue:#1769aa;--pale:#eef4fa;--ink:#243447;--muted:#627386;--line:#dce5ee;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5f8fb;line-height:1.6}
+header{background:#fff;border-bottom:1px solid var(--line);padding:12px max(20px,calc((100% - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:10}
+.logo-img{height:52px;width:auto}nav{display:flex;flex-wrap:wrap;gap:16px}nav a{color:var(--navy);text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:var(--blue)}
+.hero{background:linear-gradient(120deg,#102b4e,#1a5b91);color:#fff;padding:48px 20px}.hero-inner{max-width:1160px;margin:auto}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b9d8f4;font-weight:700}h1{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:10px 0}.hero p{max-width:760px;color:#e4edf6;margin:0}
+main{max-width:1160px;margin:auto;padding:36px 20px 56px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:24px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 5px 22px rgba(16,43,78,.04)}
+h2{color:var(--navy);font-size:21px;margin:0 0 6px}.intro{color:var(--muted);font-size:14px;margin:0 0 22px}
+.section-title{color:var(--navy);font-size:16px;font-weight:700;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{min-width:0}.field.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:700;color:#33485f;margin:0 0 5px}
+input,select,textarea{width:100%;font:inherit;font-size:14px;color:var(--ink);padding:10px 11px;border:1px solid #cbd7e3;border-radius:6px;background:#fff;min-height:42px}
+textarea{min-height:100px;resize:vertical}input:focus,select:focus,textarea:focus{outline:2px solid #b7d8f5;border-color:var(--blue)}
+.hint{font-size:11px;color:#78899a;margin-top:4px}.required{color:#b42318}
+.choice-row{display:flex;flex-wrap:wrap;gap:10px}.choice{border:1px solid var(--line);border-radius:7px;padding:10px 14px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:700;color:var(--navy);background:#fff}.choice input{width:auto;min-height:0;accent-color:var(--blue)}
+.upload-box{background:#f7fafd;border:1px dashed #b8c9d9;border-radius:8px;padding:14px}.upload-box input{border:0;padding:5px 0;background:transparent}
+.checkline{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);margin-top:18px}.checkline input{width:auto;min-height:0;margin-top:4px}
+.submit{margin-top:20px;background:var(--blue);color:#fff;border:0;border-radius:6px;padding:13px 22px;font-size:15px;font-weight:700;cursor:pointer}.submit:hover{background:#10558b}
+.side h3{color:var(--navy);font-size:16px;margin:0 0 8px}.side p,.side li{font-size:13px;color:var(--muted)}.side ul{padding-left:18px}.side .contact{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;font-size:13px}
+.note{background:#fff8e8;border:1px solid #f0dfb5;border-radius:7px;padding:12px;font-size:12px;color:#735b2d;margin-top:16px}
+.hidden{display:none!important}footer{background:#fff;border-top:1px solid var(--line);text-align:center;padding:24px 20px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.side{order:2}}@media(max-width:600px){header{flex-wrap:wrap}.logo-img{height:44px}nav{gap:10px}nav a{font-size:12px}.grid{grid-template-columns:1fr}.panel{padding:18px}.hero{padding:38px 20px}}
 </style>
 </head>
 <body>
-
-<header>
-  <a href="index.html" class="logo-container">
-    <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
-  </a>
-  <nav>
-    <a href="index.html">Home</a><a href="pcba.html">PCBA</a>
-    <a href="products.html">Products</a>
-    <a href="capabilities.html">Capabilities</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
-</header>
-
-<div class="container">
-  <h1>Contact Us</h1>
-  <p class="subtitle">
-    Contact YudaPCB for PCB fabrication, PCBA assembly coordination and project sourcing enquiries. Send your files and requirements so we can review the best-fit manufacturing route.
-    We will reply to you as soon as possible.
-  </p>
-
-  <div class="flex-wrap">
-    <!-- Left: Contact Info + Map Link -->
-    <div class="panel left">
-      <div class="info-block">
-        <div class="info-title">Company</div>
-        <div class="info-text">Yuda Electronic Technology Co., Ltd.</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Address</div>
-        <div class="info-text">
-          Room 101, No. 15 Xiangyang Road,<br>
-          Huangwudang, Wanjiang Street,<br>
-          Dongguan, Guangdong, China
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=No.15+Xiangyang+Road+Wanjiang+Dongguan" target="_blank">View on Map</a>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Phone</div>
-        <div class="info-text">+86 135 3804 3239</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">WhatsApp</div>
-        <div class="info-text">+86-13538043239</div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Email</div>
-        <div class="info-text">
-          sales@yostarpcb.com
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-title">Working Hours</div>
-        <div class="info-text">Monday – Saturday, 9:00 am – 6:00 pm (China Time)</div>
-      </div>
-    </div>
-
-    <!-- Right: Contact Form -->
-    <div class="panel right">
-      <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Send Us a Message</h3>
-      <form id="contact-form">
-<label for="name">Name *</label><input id="name" name="name" type="text" placeholder="Your name" required>
-<label for="email">Email *</label><input id="email" name="email" type="email" placeholder="Your email" required>
-<label for="country">Country / Region</label><input id="country" name="country" type="text" placeholder="Your country">
-<label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="PCB / PCBA quotation request">
-<label for="message">Message *</label><textarea id="message" name="message" required placeholder="Describe your PCB / PCBA requirements, layers, material, quantity, BOM, finish and target lead time."></textarea>
-<button type="submit" class="submit-btn">Prepare Email</button>
-<div class="form-note">This form opens your default email application with your message prepared. You must press Send in your email app. Add Gerber files, BOMs or drawings as attachments before sending. We use your details only to respond to your enquiry.</div>
-</form>
-    </div>
-  </div>
-
-  <div class="panel bottom-panel">
-    <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Quotation Tips</h3>
-    <p style="font-size:14px; color:#555;">
-      For faster quotation, please include in your email: Gerber files, layer count, board thickness, copper weight,
-      surface finish, solder mask color, quantity and required lead time.
-    </p>
-  </div>
+<header><a href="index.html"><img src="logo.jpg" alt="YudaPCB" class="logo-img"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="products.html">PCB Products</a><a href="pcba.html">PCBA</a><a href="capabilities.html">Capabilities</a><a href="about.html">About</a><a href="contact.html">Request a Quote</a><a href="faq.html">FAQ</a></nav></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Project enquiry · PCB fabrication · PCBA assembly</div><h1>Request a Quote</h1><p>Tell us about your project and share your design files. Our team will review the requirements and coordinate a suitable manufacturing route with our partner facilities.</p></div></section>
+<main><div class="layout">
+<section class="panel">
+<h2>Tell us what you need</h2><p class="intro">Complete the form below. Fields marked <span class="required">*</span> are required. We normally respond by email after reviewing your information.</p>
+<form action="https://formsubmit.co/sales@yostarpcb.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="New YudaPCB Website RFQ">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+<div class="section-title">1. Project type</div>
+<div class="choice-row">
+<label class="choice"><input type="radio" name="Project Type" value="PCB Fabrication" checked onchange="switchType()"> PCB Fabrication</label>
+<label class="choice"><input type="radio" name="Project Type" value="PCBA Assembly" onchange="switchType()"> PCBA Assembly</label>
+<label class="choice"><input type="radio" name="Project Type" value="PCB + PCBA" onchange="switchType()"> PCB + PCBA</label>
 </div>
-
-<footer>
-  
-  <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
-  <div class="footer-contacts">
-    Email: sales@yostarpcb.com<br>
-    Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-    Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
-  </div>
-</footer>
-
+<div class="section-title">2. Your contact information</div>
+<div class="grid">
+<div class="field"><label for="name">Full name <span class="required">*</span></label><input id="name" name="Full Name" required autocomplete="name" placeholder="Your name"></div>
+<div class="field"><label for="company">Company</label><input id="company" name="Company" autocomplete="organization" placeholder="Company name"></div>
+<div class="field"><label for="email">Business email <span class="required">*</span></label><input id="email" name="Email" type="email" required autocomplete="email" placeholder="name@company.com"></div>
+<div class="field"><label for="country">Country / Region <span class="required">*</span></label><input id="country" name="Country / Region" required autocomplete="country-name" placeholder="e.g. United States"></div>
+<div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="Phone / WhatsApp" type="tel" placeholder="Include country code"></div>
+<div class="field"><label for="role">Your role</label><select id="role" name="Your Role"><option value="">Please select</option><option>Engineer / R&D</option><option>Purchasing / Procurement</option><option>Business Owner</option><option>Other</option></select></div>
+</div>
+<div id="pcb-fields">
+<div class="section-title">3. PCB fabrication requirements</div>
+<div class="grid">
+<div class="field"><label for="board-type">Board type</label><select id="board-type" name="PCB Board Type"><option value="">Please select</option><option>Rigid PCB</option><option>HDI PCB</option><option>Flexible PCB (FPC)</option><option>Rigid-Flex PCB</option><option>High-frequency / RF PCB</option><option>Aluminum / Metal Core PCB</option><option>Other / Not sure</option></select></div>
+<div class="field"><label for="layers">Number of layers</label><select id="layers" name="PCB Layers"><option value="">Please select</option><option>1 layer</option><option>2 layers</option><option>4 layers</option><option>6 layers</option><option>8 layers</option><option>10 layers</option><option>12+ layers</option><option>Not sure</option></select></div>
+<div class="field"><label for="material">Base material</label><input id="material" name="PCB Material" placeholder="e.g. FR-4, Rogers, Aluminum"></div>
+<div class="field"><label for="thickness">Board thickness</label><input id="thickness" name="Board Thickness" placeholder="e.g. 1.6 mm"></div>
+<div class="field"><label for="copper">Copper weight</label><input id="copper" name="Copper Weight" placeholder="e.g. 1 oz outer / 0.5 oz inner"></div>
+<div class="field"><label for="finish">Surface finish</label><select id="finish" name="Surface Finish"><option value="">Please select</option><option>HASL (Lead-free)</option><option>ENIG</option><option>OSP</option><option>Immersion Silver</option><option>Immersion Tin</option><option>Other / Not sure</option></select></div>
+<div class="field"><label for="size">Board dimensions</label><input id="size" name="Board Dimensions" placeholder="e.g. 100 × 80 mm"></div>
+<div class="field"><label for="quantity">PCB quantity</label><input id="quantity" name="PCB Quantity" placeholder="e.g. 10 pcs / 500 pcs"></div>
+</div></div>
+<div id="pcba-fields">
+<div class="section-title">4. PCBA assembly requirements</div>
+<div class="grid">
+<div class="field"><label for="assembly-qty">Assembly quantity</label><input id="assembly-qty" name="PCBA Quantity" placeholder="e.g. 20 assembled boards"></div>
+<div class="field"><label for="assembly-type">Assembly process</label><select id="assembly-type" name="Assembly Process"><option value="">Please select</option><option>SMT</option><option>Through-hole / DIP</option><option>SMT + DIP</option><option>Not sure / Please review</option></select></div>
+<div class="field"><label for="sourcing">Component sourcing</label><select id="sourcing" name="Component Sourcing"><option value="">Please select</option><option turnkey (please source all components)</option><option>Partial turnkey (some components supplied)</option><option>Consigned (I supply all components)</option><option>Not sure</option></select></div>
+<div class="field"><label for="testing">Testing requirements</label><select id="testing" name="Testing Requirements"><option value="">Please select</option><option>Visual inspection only</option><option>AOI / X-ray (as applicable)</option><option>Functional test (details in notes)</option><option>Other / To be discussed</option></select></div>
+</div></div>
+<div class="section-title">5. Schedule and project details</div>
+<div class="grid">
+<div class="field"><label for="delivery">Target delivery date</label><input id="delivery" name="Target Delivery Date" type="date"></div>
+<div class="field"><label for="budget">Target budget (optional)</label><input id="budget" name="Target Budget" placeholder="Currency and amount, if available"></div>
+<div class="field full"><label for="details">Project description / special requirements</label><textarea id="details" name="Project Description" placeholder="Tell us about application, technical requirements, quality standards, estimated annual volume, testing, packaging or any questions."></textarea></div>
+</div>
+<div class="section-title">6. Upload your project files</div>
+<div class="grid">
+<div class="field full upload-box"><label for="gerber">Gerber / PCB files</label><input id="gerber" type="file" name="Gerber_and_PCB_Files" multiple accept=".zip,.rar,.7z,.gbr,.ger,.pho,.pdf"><div class="hint">For PCB or PCB + PCBA projects. ZIP archives are recommended.</div></div>
+<div class="field upload-box"><label for="bom">BOM (Excel / CSV / PDF)</label><input id="bom" type="file" name="BOM_File" accept=".xlsx,.xls,.csv,.pdf"><div class="hint">For PCBA projects.</div></div>
+<div class="field upload-box"><label for="pnp">Pick & Place / CPL file</label><input id="pnp" type="file" name="Pick_and_Place_File" accept=".csv,.txt,.xlsx,.xls,.pdf,.zip"><div class="hint">Optional, for assembly quotation.</div></div>
+<div class="field full upload-box"><label for="other">Other drawings / specifications</label><input id="other" type="file" name="Other_Project_Documents" multiple accept=".pdf,.png,.jpg,.jpeg,.zip,.doc,.docx,.xlsx,.xls,.csv"><div class="hint">Optional supporting documents. Keep the total size of all uploaded files within 10 MB.</div></div>
+</div>
+<label class="checkline"><input type="checkbox" name="Privacy Consent" value="Agreed" required><span>I agree that YudaPCB may use the information and files submitted here to review this project, prepare a quotation and contact me about this enquiry. <span class="required">*</span></span></label>
+<button class="submit" type="submit">Submit RFQ</button>
+<p class="hint">After your first submission, FormSubmit will send a one-time activation email to sales@yostarpcb.com. The form will start delivering enquiries after that email address is verified.</p>
+</form>
+</section>
+<aside class="panel side"><h3>What happens next?</h3><ul><li>We review your specifications and files.</li><li>We clarify any missing technical details.</li><li>We check suitable manufacturing partner capability and pricing.</li><li>We email you with questions or a quotation.</li></ul><div class="note"><strong>File size note</strong><br>Free form handling supports a combined upload limit of 10 MB per submission. For larger Gerber or BOM packages, submit the form first and email a download link to us.</div><div class="contact"><strong>Prefer email?</strong><br><a href="mailto:sales@yostarpcb.com">sales@yostarpcb.com</a><br><br><strong>Manufacturing model</strong><br>YudaPCB coordinates projects through selected manufacturing partner facilities. Production is performed by the selected partners.</div></aside>
+</div></main>
+<footer><strong>YudaPCB</strong> · PCB &amp; PCBA Manufacturing Solutions Partner<br>Email: <a href="mailto:sales@yostarpcb.com">sales@yostarpcb.com</a><br>© <span id="year"></span> YudaPCB. All rights reserved.</footer>
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const subject = data.get('subject') || 'PCB / PCBA Project Enquiry';
-    const body = 'Name: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\nCountry: ' + data.get('country') + '\n\nProject details:\n' + data.get('message');
-    window.location.href = 'mailto:sales@yostarpcb.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  });
+document.getElementById('year').textContent=new Date().getFullYear();
+function switchType(){
+ const t=document.querySelector('input[name="Project Type"]:checked').value;
+ document.getElementById('pcb-fields').classList.toggle('hidden',t==='PCBA Assembly');
+ document.getElementById('pcba-fields').classList.toggle('hidden',t==='PCB Fabrication');
+}
+switchType();
+document.querySelector('form').addEventListener('submit',function(e){
+ const files=[...this.querySelectorAll('input[type="file"]')].flatMap(x=>[...x.files]);
+ const total=files.reduce((s,f)=>s+f.size,0);
+ if(total>10*1024*1024){e.preventDefault();alert('The total size of uploaded files must not exceed 10 MB. Please compress your files into a ZIP archive or email us a download link.');}
+});
 </script>
-</body>
-</html>
+</body></html>
