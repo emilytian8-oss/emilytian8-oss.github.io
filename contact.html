@@ -54,7 +54,10 @@
       .logo-img { height: 50px; }
       nav a { margin-left: 12px; font-size: 13px; }
     }
-  </style>
+  
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+@media(max-width:768px){header{flex-wrap:wrap;gap:10px}nav{width:100%;justify-content:center}}
+</style>
 </head>
 <body>
 
@@ -75,7 +78,7 @@
 <div class="container">
   <h1>Contact Us</h1>
   <p class="subtitle">
-    Please feel free to contact <strong>Yuda Electronic Technology Co., Ltd.</strong> for any PCB quotation or technical support.
+    Contact YudaPCB for PCB fabrication, PCBA assembly coordination and project sourcing enquiries. Send your files and requirements so we can review the best-fit manufacturing route.
     We will reply to you as soon as possible.
   </p>
 
@@ -111,7 +114,7 @@
         <div class="info-title">Email</div>
         <div class="info-text">
           sales@yostarpcb.com<br>
-          emily@yudapcb.com
+          sales@yostarpcb.com
         </div>
       </div>
 
@@ -124,29 +127,15 @@
     <!-- Right: Contact Form -->
     <div class="panel right">
       <h3 style="margin-top:0; font-size:18px; color:#0b3f8c;">Send Us a Message</h3>
-      <form>
-        <label for="name">Name *</label>
-        <input id="name" name="name" type="text" placeholder="Your name">
-
-        <label for="email">Email *</label>
-        <input id="email" name="email" type="email" placeholder="Your email">
-
-        <label for="country">Country / Region</label>
-        <input id="country" name="country" type="text" placeholder="Your country">
-
-        <label for="subject">Subject</label>
-        <input id="subject" name="subject" type="text" placeholder="Subject">
-
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="Please describe your PCB requirements (layers, material, thickness, quantity, finish, etc.)"></textarea>
-
-        <!-- 按钮文案说明这是展示用，同时引导发邮件 -->
-        <button type="button" class="submit-btn">Submit (Please also email us)</button>
-        <div class="form-note">
-          * This form is for display only. For a faster and guaranteed response, please send your Gerber files and requirements directly to:<br>
-          <strong>sales@yostarpcb.com</strong> or <strong>emily@yudapcb.com</strong>.
-        </div>
-      </form>
+      <form id="contact-form">
+<label for="name">Name *</label><input id="name" name="name" type="text" placeholder="Your name" required>
+<label for="email">Email *</label><input id="email" name="email" type="email" placeholder="Your email" required>
+<label for="country">Country / Region</label><input id="country" name="country" type="text" placeholder="Your country">
+<label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="PCB / PCBA quotation request">
+<label for="message">Message *</label><textarea id="message" name="message" required placeholder="Describe your PCB / PCBA requirements, layers, material, quantity, BOM, finish and target lead time."></textarea>
+<button type="submit" class="submit-btn">Prepare Email</button>
+<div class="form-note">This form opens your default email application with your message prepared. You must press Send in your email app. Add Gerber files, BOMs or drawings as attachments before sending. We use your details only to respond to your enquiry.</div>
+</form>
     </div>
   </div>
 
@@ -163,7 +152,7 @@
   <p class="renaming-note">Formerly YUDA ELECTRONIC LIMITED (Yostar PCB), renamed in 2026.</p>
   <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
   <div class="footer-contacts">
-    Email: sales@yostarpcb.com, emily@yudapcb.com<br>
+    Email: sales@yostarpcb.com<br>
     Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
     Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
   </div>
@@ -171,6 +160,15 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const subject = data.get('subject') || 'PCB / PCBA Project Enquiry';
+    const body = 'Name: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\nCountry: ' + data.get('country') + '\n\nProject details:\n' + data.get('message');
+    window.location.href = 'mailto:sales@yostarpcb.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
 </script>
 </body>
 </html>
