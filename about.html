@@ -1,194 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About YudaPCB | PCB & PCBA Manufacturing Solutions Partner</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f7fa; color: #333; line-height: 1.6; }
-        
-        /* Header & Nav */
-        header { background: #0b67ff; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo-container { display: flex; align-items: center; text-decoration: none; color: #fff; }
-        .logo-img { height: 70px; width: auto; }
-        nav a { color: #eaf0ff; margin-left: 18px; text-decoration: none; font-size: 14px; font-weight: 500; }
-        nav a:hover { color: #fff; text-decoration: underline; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        .section-card { background: #fff; border-radius: 15px; padding: 40px; margin-bottom: 30px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        h1, h2, h3 { color: #0b3f8c; margin-top: 0; }
-        h2 { border-left: 5px solid #0b67ff; padding-left: 15px; margin-bottom: 25px; font-size: 24px; }
-
-        .intro-p { font-size: 16px; color: #4a5568; margin-bottom: 14px; text-align: justify; }
-
-        .img-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 25px 0; }
-        .img-item { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #f0f0f0; text-align: center; transition: 0.3s; cursor: zoom-in; }
-        .img-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .img-item img { width: 100%; height: 240px; object-fit: cover; display: block; }
-        .img-item span { display: block; padding: 12px; font-size: 14px; font-weight: 600; color: #0b3f8c; background: #f9fbff; }
-
-        #overlay { display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out; }
-        #overlay img { max-width:95%; max-height:95%; border:2px solid #fff; border-radius:4px; }
-
-        .value-item { margin-bottom: 18px; padding-left: 26px; position: relative; font-size: 14px; color: #444; }
-        .value-item::before { content: '✓'; position: absolute; left: 0; top: 2px; color: #0b67ff; font-weight: bold; font-size: 18px; }
-
-        footer { text-align: center; font-size: 13px; color: #888; padding: 40px 20px; background: #fff; border-top: 1px solid #eee; line-height: 1.8; }
-        .footer-address { max-width: 850px; margin: 10px auto; color: #444; font-weight: 600; }
-        .renaming-note { font-style: italic; font-size: 12px; color: #999; margin-bottom: 5px; }
-
-        @media (max-width: 768px) {
-            .section-card { padding: 25px; }
-            .img-item img { height: 180px; }
-            .logo-img { height: 50px; }
-        }
-    
-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-@media(max-width:768px){header{flex-wrap:wrap;gap:10px}nav{width:100%;justify-content:center}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About YudaPCB | Your PCB &amp; PCBA Manufacturing Partner</title>
+<meta name="description" content="Learn how YudaPCB coordinates PCB fabrication, component sourcing and PCBA assembly through selected manufacturing partners for electronics companies worldwide.">
+<meta name="keywords" content="about YudaPCB, PCB manufacturing partner, PCBA sourcing, PCB fabrication China, electronics manufacturing support">
+<link rel="canonical" href="https://yudapcb.com/about.html">
+<meta property="og:title" content="About YudaPCB | PCB &amp; PCBA Solutions Partner">
+<meta property="og:description" content="One point of contact for PCB fabrication and PCBA assembly coordination.">
+<meta property="og:type" content="website">
+<style>
+:root{--navy:#102b4e;--blue:#1769aa;--pale:#eef4fa;--ink:#243447;--muted:#627386;--line:#dce5ee}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6f8fb;line-height:1.65}
+header{background:#fff;border-bottom:1px solid var(--line);padding:12px max(20px,calc((100% - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:20}
+.logo-img{height:54px;width:auto}nav{display:flex;flex-wrap:wrap;gap:14px}nav a{color:var(--navy);text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:var(--blue)}
+.hero{background:linear-gradient(120deg,#102b4e,#1a5b91);color:#fff;padding:64px 20px}.wrap{max-width:1160px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:1.7px;font-size:12px;font-weight:700;color:#b9d8f4}
+h1{font-size:clamp(32px,5vw,47px);line-height:1.15;margin:12px 0 16px}.hero p{max-width:850px;color:#e4edf6;font-size:17px}
+main{max-width:1160px;margin:auto;padding:46px 20px}.intro{max-width:920px;margin-bottom:30px}.intro h2,.section-head h2{color:var(--navy);font-size:27px;line-height:1.25;margin:0 0 10px}.intro p,.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:9px;padding:22px}.card h3{color:var(--navy);font-size:18px;margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}
+.section{margin-top:46px}.section-head{margin-bottom:18px}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:9px;padding:24px}.panel h3{color:var(--navy);margin:0 0 10px}.panel p{font-size:14px;color:var(--muted);margin:0 0 10px}.panel ul{padding-left:19px;color:var(--muted);font-size:14px;margin:8px 0 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{background:var(--pale);border-radius:8px;padding:17px}.step b{display:block;color:var(--navy);margin-bottom:5px}.step p{font-size:13px;color:var(--muted);margin:0}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.gallery-item{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;cursor:zoom-in}.gallery-item img{width:100%;height:190px;object-fit:cover;display:block}.gallery-item span{display:block;padding:11px 13px;color:var(--navy);font-size:13px;font-weight:700}
+.note{background:#eef4fa;border-left:4px solid var(--blue);border-radius:6px;padding:15px 18px;color:#43576b;font-size:14px;margin-top:18px}
+.cta{background:var(--navy);color:#fff;padding:30px;border-radius:10px;margin-top:46px;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{margin:0 0 6px}.cta p{margin:0;color:#d7e4f0;font-size:14px}.btn{display:inline-block;padding:11px 18px;border-radius:5px;text-decoration:none;font-weight:700;font-size:14px;background:#fff;color:var(--navy);white-space:nowrap}
+#overlay{display:none;position:fixed;z-index:1000;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center;cursor:zoom-out;padding:20px}#overlay img{max-width:95%;max-height:95%;border:2px solid #fff;border-radius:5px}
+footer{background:#fff;border-top:1px solid var(--line);padding:26px 20px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:850px){header{flex-wrap:wrap}nav{width:100%;justify-content:center;gap:10px}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.cta{display:block}.cta .btn{margin-top:16px}}
+@media(max-width:560px){.grid,.steps,.gallery{grid-template-columns:1fr}.hero{padding:46px 20px}main{padding-top:32px}.logo-img{height:46px}.gallery-item img{height:210px}}
 </style>
 </head>
 <body>
-
-<header>
-    <a href="index.html" class="logo-container">
-      <img src="logo.jpg" alt="Yuda PCB Logo" class="logo-img">
-    </a>
-    <nav>
-        <a href="index.html">Home</a><a href="pcba.html">PCBA</a>
-        <a href="products.html">Products</a><a href="industries.html">Industries</a>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-</header>
-
-<div class="container">
-    <!-- 公司与人设简介 -->
-    <section class="section-card">
-        <h1>About YudaPCB</h1>
-        <p class="intro-p">
-            <strong>Yuda Electronic Technology Co., Ltd.</strong> 
-            is an independent PCB and PCBA manufacturing solutions partner based in Dongguan, Guangdong Province, China. We connect customer projects with suitable manufacturing resources through a network of specialized partner facilities. Production is carried out by the selected facilities; YudaPCB coordinates communication and project follow-up.
-        </p>
-        <p class="intro-p">
-            With a background in PCB sales and customer coordination, we help overseas SMEs, R&amp;D teams and design houses source suitable manufacturing solutions for prototypes and production orders.
-        </p>
-        <p class="intro-p">
-            Our role is to understand your technical and commercial requirements, identify suitable manufacturing routes, coordinate DFM feedback and follow up on agreed quality and delivery requirements. This gives customers one point of contact across PCB fabrication and PCBA assembly, while production is completed by the selected manufacturing partners.
-        </p>
-    </section>
-
-    <!-- 微观视界：切片和 SEM -->
-    <section class="section-card">
-        <h2>We See What Others Ignore</h2>
-        <p class="intro-p">
-            Reliability starts from inside each PCB. Selected manufacturing partners may provide micro-section and SEM analysis to verify copper plating thickness, 
-            hole wall integrity and layer alignment, especially for high-reliability and high-density designs.
-        </p>
-        <div class="img-row">
-            <div class="img-item" onclick="openImg('cross-section.jpg')">
-                <img src="cross-section.jpg" alt="PCB Micro-section Analysis Cross Section">
-                <span>Micro-section Analysis</span>
-            </div>
-            <div class="img-item" onclick="openImg('sem-view.jpg')">
-                <img src="sem-view.jpg" alt="SEM Electron Microscope View of PCB Structure">
-                <span>SEM Electron Microscope View</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 检测能力：AOI -->
-    <section class="section-card">
-        <h2>Precision Inspection & Testing</h2>
-        <p class="intro-p">
-            Inspection methods such as Automated Optical Inspection (AOI) and electrical testing (E-test) are coordinated with the selected manufacturing partner according to the agreed specification.
-            Our goal is to catch defects such as opens, shorts, missing pads or solder mask issues before the boards reach your assembly line.
-        </p>
-        <div class="img-row" style="grid-template-columns: 1fr;">
-            <div class="img-item" onclick="openImg('aoi-test.jpg')">
-                <img src="aoi-test.jpg" alt="Advanced AOI Testing for PCB Quality Control" style="height: 320px;">
-                <span>AOI &amp; E-Test, subject to confirmed project scope</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 包装与物流 -->
-    <section class="section-card">
-        <h2>Professional Packaging & Logistics</h2>
-        <p class="intro-p">
-            Oxidation and transit damage are two major risks during long-distance shipping. To protect your boards, 
-            we coordinate suitable moisture-protective packaging and ESD-safe cushioning with the selected manufacturing partner.
-        </p>
-        <div class="img-row">
-            <div class="img-item" onclick="openImg('packaging.jpg')">
-                <img src="packaging.jpg" alt="Vacuum Aluminum Moisture-proof Packaging for PCBs">
-                <span>Moisture-proof Vacuum Aluminum Packaging</span>
-            </div>
-            <div class="img-item" onclick="openImg('pcba-package.jpg')">
-                <img src="pcba-package.jpg" alt="ESD Safe Handling and Shockproof Packaging for PCBA and PCBs">
-                <span>ESD Safe Handling & Shockproof Foam</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 我们的承诺 -->
-    <section class="section-card">
-        <h2>Our Commitment</h2>
-        <div class="value-item">
-            <strong>DFM as Standard</strong>
-            We coordinate a manufacturability review of Gerber files, including annular ring, trace-to-edge clearance, via structures and impedance considerations.
-        </div>
-        <div class="value-item">
-            <strong>Transparent Supply Chain</strong>
-            We work with multiple manufacturing partners and communicate agreed requirements, production progress and issues transparently.
-        </div>
-        <div class="value-item">
-            <strong>Full Traceability</strong>
-            Where available and agreed before production, we coordinate test reports, AOI records, E-test results and packaging photos from the manufacturing partner.
-        </div>
-    </section>
-
-    <!-- 风险承诺 -->
-    <section class="section-card" style="background: linear-gradient(135deg, #0b3f8c, #0b67ff); color: #fff; text-align: center;">
-        <h2 style="color:#fff; border-left:none; padding-left:0; margin-bottom:15px;">Clear Project Scope & Communication</h2>
-        <p style="font-size: 18px; font-weight: 500; margin-bottom: 20px;">Specifications, inspection criteria and remedies are agreed before production.</p>
-        <div style="max-width: 700px; margin: 0 auto; text-align: left; font-size: 15px;">
-            <p>If a delivered order is found not to meet the mutually confirmed specifications:</p>
-            <ul style="margin-top: 10px;">
-                <li>✓ <strong>Issue Review:</strong> We will coordinate a documented review with the manufacturing partner.</li>
-                <li>✓ <strong>Agreed Remedy:</strong> Any rework, replacement or credit will be handled according to the confirmed order terms.</li>
-                <li>✓ <strong>Communication:</strong> We will keep you informed during the resolution process.</li>
-            </ul>
-        </div>
-        <div style="margin-top: 25px;">
-            <a href="contact.html" style="background: #fff; color: #0b67ff; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Discuss Your Project</a>
-        </div>
-    </section>
-
-</div>
-
-<!-- Lightbox -->
-<div id="overlay" onclick="this.style.display='none'">
-    <img id="overlayImg" src="">
-</div>
-
-<footer>
-    
-    <p>© <span id="year"></span> Yuda Electronic Technology Co., Ltd. | All Rights Reserved</p>
-    <div class="footer-address">
-        Email: sales@yudapcb.com<br>
-        Tel: +86 135 3804 3239 | WhatsApp: +86-13538043239<br>
-        Address: Room 101, No. 15 Xiangyang Road, Huangwudang, Wanjiang Street, Dongguan, Guangdong, China
-    </div>
-</footer>
-
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function openImg(src) {
-      document.getElementById('overlayImg').src = src;
-      document.getElementById('overlay').style.display = 'flex';
-    }
-</script>
+<header><a href="index.html"><img src="logo.jpg" alt="YudaPCB" class="logo-img"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="products.html">PCB Products</a><a href="industries.html">Industries</a><a href="pcba.html">PCBA</a><a href="capabilities.html">Capabilities</a><a href="about.html">About</a><a href="contact.html">Request a Quote</a><a href="faq.html">FAQ</a></nav></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">About YudaPCB · Dongguan, China</div><h1>A More Connected Way to Source PCB &amp; PCBA</h1><p>YudaPCB helps electronics businesses navigate PCB fabrication and PCBA assembly with one point of contact. We match each project with suitable manufacturing resources, coordinate technical communication and follow up on agreed requirements from quotation to delivery.</p></div></section>
+<main>
+<section class="intro"><h2>Who we are</h2><p>YudaPCB is an independent PCB and PCBA manufacturing solutions partner based in Dongguan, Guangdong, China. Built on eight years of PCB sales experience and customer project coordination, we understand how important clear specifications, responsive communication and dependable follow-up are to electronics buyers and engineering teams.</p><p>We work with multiple manufacturing partners rather than relying on a single production source. This allows us to review project requirements and identify a suitable route based on board construction, technical needs, order quantity and schedule. Manufacturing is carried out by the selected partner facility; YudaPCB manages customer communication and project coordination.</p></section>
+<section class="grid"><article class="card"><h3>One point of contact</h3><p>Coordinate PCB fabrication, component sourcing and PCBA assembly through one customer-facing contact.</p></article><article class="card"><h3>Multiple manufacturing resources</h3><p>Match project requirements with suitable partner facilities instead of assuming one factory fits every design.</p></article><article class="card"><h3>Clear project communication</h3><p>Keep specifications, open questions, quotation scope and agreed milestones visible throughout the project.</p></article></section>
+<section class="section"><div class="section-head"><h2>How we support your project</h2><p>We focus on connecting the right information, people and manufacturing steps so your team can spend less time coordinating suppliers.</p></div><div class="steps"><div class="step"><b>01 · Understand</b><p>Review your application, Gerber files, BOM, specifications, quantity and target schedule.</p></div><div class="step"><b>02 · Match</b><p>Identify a suitable manufacturing partner and confirm the applicable process window.</p></div><div class="step"><b>03 · Coordinate</b><p>Clarify DFM feedback, quotation details, material choices, assembly scope and inspection needs.</p></div><div class="step"><b>04 · Follow up</b><p>Track agreed production milestones, communicate issues and coordinate packing and shipment.</p></div></div></section>
+<section class="section"><div class="section-head"><h2>What matters in manufacturing coordination</h2><p>Good sourcing is not just about finding a price. It is about making sure the project requirements are understood and agreed before production starts.</p></div><div class="split"><article class="panel"><h3>Engineering &amp; quality communication</h3><p>We help collect and clarify the technical information needed for a manufacturing review, including:</p><ul><li>Gerber data, stack-up and fabrication notes</li><li>Layer count, material, thickness, copper and surface finish</li><li>Impedance, via structures and special process requirements</li><li>BOM, Pick &amp; Place data and assembly drawings for PCBA</li><li>Inspection, test documentation and acceptance criteria</li></ul></article><article class="panel"><h3>Transparent project scope</h3><p>Before an order is placed, we aim to make the key commercial and technical details clear:</p><ul><li>Confirmed manufacturing specifications and quotation scope</li><li>Partner capability and material availability</li><li>Agreed inspection and test requirements</li><li>Production schedule and delivery arrangements</li><li>Issue communication and remedy terms for nonconforming orders</li></ul></article></div><div class="note">Inspection methods, certificates, test reports, special materials and production lead times depend on the selected partner and project scope. They are confirmed before order rather than assumed to be available for every design.</div></section>
+<section class="section"><div class="section-head"><h2>Manufacturing &amp; inspection environment</h2><p>Examples of production, inspection and packaging processes that may be coordinated with selected manufacturing partners, subject to project requirements and availability.</p></div><div class="gallery"><div class="gallery-item" onclick="openImg('cross-section.jpg')"><img src="cross-section.jpg" alt="PCB micro-section analysis" loading="lazy"><span>Micro-section Analysis</span></div><div class="gallery-item" onclick="openImg('sem-view.jpg')"><img src="sem-view.jpg" alt="PCB SEM electron microscope view" loading="lazy"><span>SEM Structure Review</span></div><div class="gallery-item" onclick="openImg('aoi-test.jpg')"><img src="aoi-test.jpg" alt="PCB AOI inspection equipment" loading="lazy"><span>AOI &amp; Electrical Testing</span></div><div class="gallery-item" onclick="openImg('packaging.jpg')"><img src="packaging.jpg" alt="Moisture protective PCB packaging" loading="lazy"><span>Moisture-Protective Packaging</span></div><div class="gallery-item" onclick="openImg('pcba-package.jpg')"><img src="pcba-package.jpg" alt="ESD safe PCBA packaging" loading="lazy"><span>ESD-Safe Handling &amp; Packing</span></div></div></section>
+<section class="cta"><div><h2>Looking for a responsive PCB &amp; PCBA partner?</h2><p>Tell us what you are building. We will review your requirements and coordinate a suitable manufacturing solution.</p></div><a class="btn" href="contact.html">Discuss Your Project</a></section>
+</main>
+<div id="overlay" onclick="this.style.display='none'"><img id="overlayImg" src="" alt="Expanded manufacturing process image"></div>
+<footer><strong>YudaPCB</strong> · PCB &amp; PCBA Sourcing Partner<br>Email: <a href="mailto:sales@yudapcb.com">sales@yudapcb.com</a> · Dongguan, Guangdong, China<br>© <span id="year"></span> YudaPCB. All rights reserved.</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();function openImg(src){document.getElementById('overlayImg').src=src;document.getElementById('overlay').style.display='flex';}</script>
 </body>
 </html>
