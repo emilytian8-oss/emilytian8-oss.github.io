@@ -29,6 +29,7 @@ textarea{min-height:100px;resize:vertical}input:focus,select:focus,textarea:focu
 .note{background:#fff8e8;border:1px solid #f0dfb5;border-radius:7px;padding:12px;font-size:12px;color:#735b2d;margin-top:16px}
 .hidden{display:none!important}footer{background:#fff;border-top:1px solid var(--line);text-align:center;padding:24px 20px;color:var(--muted);font-size:13px}
 @media(max-width:850px){.layout{grid-template-columns:1fr}.side{order:2}}@media(max-width:600px){header{flex-wrap:wrap}.logo-img{height:44px}nav{gap:10px}nav a{font-size:12px}.grid{grid-template-columns:1fr}.panel{padding:18px}.hero{padding:38px 20px}}
+.legal-company-name{margin-top:5px;color:inherit;font-size:12px;opacity:.9}
 </style>
 </head>
 <body>
@@ -96,7 +97,8 @@ textarea{min-height:100px;resize:vertical}input:focus,select:focus,textarea:focu
 </section>
 <aside class="panel side"><h3>What happens next?</h3><ul><li>We review your specifications and files.</li><li>We clarify any missing technical details.</li><li>We check suitable manufacturing partner capability and pricing.</li><li>We email you with questions or a quotation.</li></ul><div class="note"><strong>File size note</strong><br>Keep the combined size of uploaded files below 4 MB. Compress Gerber files into a ZIP archive. For larger packages, submit the enquiry first and email a secure download link to us.</div><div class="contact"><strong>Prefer email?</strong><br><a href="mailto:sales@yudapcb.com">sales@yudapcb.com</a><br><br><strong>Manufacturing model</strong><br>YudaPCB coordinates projects through selected manufacturing partner facilities. Production is performed by the selected partners.</div></aside>
 </div></main>
-<footer><strong>YudaPCB</strong> · PCB &amp; PCBA Manufacturing Solutions Partner<br>Email: <a href="mailto:sales@yudapcb.com">sales@yudapcb.com</a><br>© <span id="year"></span> YudaPCB. All rights reserved.</footer>
+<footer>
+  <div class="legal-company-name">Dongguan Yuda Electronic Technology Co., Ltd.</div><strong>YudaPCB</strong> · PCB &amp; PCBA Manufacturing Solutions Partner<br>Email: <a href="mailto:sales@yudapcb.com">sales@yudapcb.com</a><br>© <span id="year"></span> YudaPCB. All rights reserved.</footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('formsubmit-timestamp').value=Date.now();
